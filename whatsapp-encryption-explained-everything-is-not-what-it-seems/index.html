@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>WhatsApp Encryption Explained — “Everything is not what it seems” &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Russian AK-47 Gun Maker Turns to Future of Autonomous Weapons' href='https://www.sinister-sec.com/russian-ak-47-gun-maker-turns-to-future-of-autonomous-weapons/' />
+<link rel='next' title='Facebook to Help Users Detect if Someone is Impersonating their Profiles' href='https://www.sinister-sec.com/facebook-to-help-users-detect-if-someone-is-impersonating-their-profiles/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/whatsapp-encryption-explained-everything-is-not-what-it-seems/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=49695' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fwhatsapp-encryption-explained-everything-is-not-what-it-seems%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fwhatsapp-encryption-explained-everything-is-not-what-it-seems%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-49695 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/whatsapp-encryption-explained-everything-is-not-what-it-seems/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-49695 post type-post status-publish format-standard hentry category-technology tag-privacy">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">WhatsApp Encryption Explained — “Everything is not what it seems”</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 14, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<p><img class="_top-post-image" src="https://www.hackread.com/wp-content/uploads/2016/04/whatsapp-encryption-explained.jpg?x62286" alt="WhatsApp Encryption Explained — “Everything is not what it seems”"></p>
+</p>
+<div class="theiaPostSlider_preloadedSlide">
+<h4 style="text-align: center"><em><strong>WhatsApp has added end the end encryption but in this article, you will learn “everything is not what it seems”</strong></em></h4>
+<p><span style="color: #000000"><a href="https://www.hackread.com/tag/WhatsApp/" target="_blank"><strong>WhatsApp</strong></a> has been getting plaudits for recently updating their <strong><a href="https://www.hackread.com/tag/Encryption/" target="_blank">encryption</a></strong>. The popular messenger service app recently added </span>end<span style="color: #000000"> to end encryption to its devices thus restricting any outside interferences from seeing messages that are not intended for them. Or is it? Reports indicate that under all the news of encryption that WhatsApp is going to offer they have a right to hold on to large amounts of message data at a time.</span></p>
+<p><span style="color: #000000">A line in the privacy terms of WhatsApp suggests that the company might store the date, time and the recipient of messages sent to the service. Micah Lee, a <em>The Intercept </em>journalist who</span> <strong><a href="https://www.inverse.com/article/13839-here-s-the-information-that-whatsapp-doesn-t-encrypt" target="_blank">revealed</a></strong> <span style="color: #000000">the line, tweeted a pic of the mentioned line. However, WhatsApp claims the actual content of the messages is not held on the servers at all.</span></p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Awesome that <a href="https://twitter.com/WhatsApp">@WhatsApp</a> is encrypted, but keep in mind it doesn&#8217;t hide who you&#8217;re texting <a href="https://t.co/i8G61TUo9i">https://t.co/i8G61TUo9i</a> <a href="https://t.co/PbXN3IF8UJ">pic.twitter.com/PbXN3IF8UJ</a></p>
+<p>— Micah Lee (@micahflee) <a href="https://twitter.com/micahflee/status/717433872560992256">April 5, 2016</a></p>
+</blockquote>
+<p><a href="//platform.twitter.com/widgets.js">//platform.twitter.com/widgets.js</a></p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p><span style="color: #000000">The information that WhatsApp is able to see is still useful to any rogue attacker, which allows them to see the time stamp, the recipient, and sender if the message which they might use for themselves. The government can request for this information as well.</span></p>
+<p><span style="color: #000000">The new encryption system WhatsApp implemented has been a long time coming, taking one and a half years. The messenger app teamed up with Open Whisper Systems to create the encryption system.</span></p>
+<p> <q class="right">WhatsApp Doesn’t Encrypt Everything</q></p>
+<p><span style="color: #000000">However, some people are still not convinced that WhatsApp has put encryption at its forefront. A Twitter user by the name, YourAnonNews, revealed that even though WhatsApp had introduced end-to-end encryption, their parent company Facebook was still suspect in data safety.</span></p>
+<p><span style="color: #000000"><strong>Facebook’s role in this new encryption</strong></span></p>
+<p><span style="color: #000000">With news that WhatsApp increased the encryption, questions were being asked of its parents company’s role, Facebook, in the news. WhatsApp which was bought by Facebook for a reported $19 billion, handles more than 64 billion messages per day and has over a billion active users.</span></p>
+<p><span style="color: #000000">The initial acquisition of the messenger service was met with many questions. The primary one was whether Facebook would still keep the security of users as WhatsApp did before the acquisition. Reports from the White House which showed that</span> <strong><a href="https://www.hackread.com/whatsapp-facebook-privacy-data-share/" target="_blank">Facebook also collects data from its users</a></strong> <span style="color: #000000">and shares it with the government was also another cause for concern.</span></p>
+<p><span style="color: #000000">WhatsApp founder, Jan Koum, wrote at the time that, “If partnering with Facebook meant that we had to change our values, we wouldn’t have done it. Instead, we are forming a partnership that would allow us to continue operating independently and autonomously,” he said. Our fundamental values and beliefs will not change. Our principles will not change. Everything that has made WhatsApp the leader in personal messaging will still be in place.”</span></p>
+<p><span style="color: #000000">There has been a series of security holes in the WhatsApp system and many of them are documented. Dutch security expert, Bass Bosscherrt, said flaws were present in the messenger app which could be used by rogue elements in the society allowing them to create rogue apps. He also explained the security flaws of WhatsApp indicating that the problems were there even before Facebook had purchased the company.</span></p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<div class="must">
+<span>must read</span><a target="_blank" href="https://www.hackread.com/you-can-send-encrypted-messages-to-and-from-android-and-ios/">You can now Send Encrypted Messages to-and-from Android and iOS (FREE!)</a>
+</div>
+</p>
+<div class="col-sm-12 _fullsquaread">
+<a href="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js</a>  <ins class="adsbygoogle"></ins> (adsbygoogle=window.adsbygoogle||).push({});
+</div>
+<div class="middle">
+<a href="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js</a> <ins class="adsbygoogle" style="width:200px;height:90px"></ins> (adsbygoogle=window.adsbygoogle||).push({});
+</div>
+<div class="must">
+<span>must read</span><a target="_blank" href="https://www.hackread.com/kingstons-datatraveler-2000-security-encryption/">Kingston’s DataTraveler 2000 Provides Undisputed Security and Encryption</a>
+</div>
+<p><span style="color: #000000"><strong>What do others use as an alternative?</strong></span></p>
+<p><span style="color: #000000">With so much scrutiny on WhatsApp’s security system and encryption before and after they were a subsidiary of Facebook, one wonders what the best messaging service app to use without compromising yourself is.</span></p>
+<p><span style="color: #000000"><a href="https://www.hackread.com/tag/Snowden/" target="_blank"><strong>Edward Snowden</strong></a>, former CIA and government contractor who stole data from <strong><a href="https://www.hackread.com/tag/NSA/" target="_blank">NSA</a></strong> and leaked it, recently said that he preferred using</span> <strong><a href="https://www.hackread.com/snowden-endorsed-messaging-service-for-desktop/" target="_blank">message app Signal</a></strong>, <span style="color: #000000">for his end to end encrypted texting.</span></p>
+<p><span style="color: #000000">The app which is a product of Open Whisper Systems is available on both the Android Google</span> <strong><a href="https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&amp;hl=en" target="_blank">Play Store</a></strong> <span style="color: #000000">and the</span> <strong><a href="https://itunes.apple.com/us/app/signal-private-messenger/id874139669?mt=8" target="_blank">iOS App Store</a></strong>.</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Don&#8217;t get excited about <a href="https://twitter.com/hashtag/WhatsApp?src=hash">#WhatsApp</a> encryption, they probably have a backdoor, they&#8217;re still owned by <a href="https://twitter.com/hashtag/Facebook?src=hash">#Facebook</a> (government contractor)</p>
+<p>— Anonymous (@YourAnonNews) <a href="https://twitter.com/YourAnonNews/status/717378465104846848">April 5, 2016</a></p>
+</blockquote>
+<p><a href="//platform.twitter.com/widgets.js">//platform.twitter.com/widgets.js</a></p>
+<p><span style="color: #000000">Open Whisper Systems, plans to merge two apps, TextSecure, and RedPhone into one which is Signal. TextSecure users will simply get an update message to get Signal while RedPhone users have to install the new app altogether.</span></p>
+<p><span style="color: #000000">Signal is a messaging app that offers text, group chats and calls on <strong><a href="https://www.hackread.com/tag/iOS/" target="_blank">iOS</a></strong> and <strong><a href="https://www.hackread.com/tag/Android/" target="_blank">Android</a></strong>. Photos and videos are also allowed on the app which uses end to end encryption with all its messages. This allows users to send messages without outside interference. Contacts are added through address book rather than pins.</span></p>
+<p><span style="color: #000000">The app is also open source allowing developers to find if there are irregularities in the system. Open Whisper Systems is the partner in WhatsApp’s own end to end encryption system. The developers have worked on many security systems so they are highly qualified and their app is secure.</span></p>
+</div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/privacy/" rel="tag">privacy</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 14, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/russian-ak-47-gun-maker-turns-to-future-of-autonomous-weapons/"><img width="150" height="150" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/kalishnakov-robot-1024x587-150x150.jpg" class="grayscale grayscale-fade wp-post-image" alt="" /><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/russian-ak-47-gun-maker-turns-to-future-of-autonomous-weapons/">Previous Story:<br/> <strong>Russian AK-47 Gun Maker Turns to Future of Autonomous Weapons</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/facebook-to-help-users-detect-if-someone-is-impersonating-their-profiles/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/facebook-to-help-users-detect-if-someone-is-impersonating-their-profiles/">Next Story:<br/> <strong>Facebook to Help Users Detect if Someone is Impersonating their Profiles</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d536207e13a6"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d536207e13a6"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d53620818ed7"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d53620818ed7"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 7.1573169231415 seconds, on 14-08-19 1:21:12 -->

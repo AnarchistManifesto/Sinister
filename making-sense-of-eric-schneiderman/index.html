@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Making Sense of Eric Schneiderman &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='FBI details top internet scams' href='https://www.sinister-sec.com/fbi-details-top-internet-scams/' />
+<link rel='next' title='Scott Adams tells you when lying matters and when it does not (Video)' href='https://www.sinister-sec.com/scott-adams-tells-you-when-lying-matters-and-when-it-does-not-video/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/making-sense-of-eric-schneiderman/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=41770' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fmaking-sense-of-eric-schneiderman%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fmaking-sense-of-eric-schneiderman%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-41770 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/making-sense-of-eric-schneiderman/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-41770 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-culture tag-feminism tag-feminist tag-me-too tag-ronan-farrow tag-schneiderman">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Making Sense of Eric Schneiderman</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/news/" rel="category tag">News</a>    </p>
+    	
+    </div>
+    
+        
+        <div class="entryhead" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            
+            <a href="https://www.sinister-sec.com/making-sense-of-eric-schneiderman/">
+            
+            	<img width="789" height="460" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/eric-schneiderman-press-conference-2017.jpeg" class="standard grayscale grayscale-fade wp-post-image" alt="" srcset="https://www.sinister-sec.com/wp-content/uploads/2018/05/eric-schneiderman-press-conference-2017.jpeg 789w, https://www.sinister-sec.com/wp-content/uploads/2018/05/eric-schneiderman-press-conference-2017-300x175.jpeg 300w, https://www.sinister-sec.com/wp-content/uploads/2018/05/eric-schneiderman-press-conference-2017-768x448.jpeg 768w" sizes="(max-width: 789px) 100vw, 789px" />            
+            </a>
+        
+        </div><!-- end .entryhead -->
+ 
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 11, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="article-content">
+<figure class="inline-image inline-image--captioned">
+	<img width="789" height="460" src="https://i1.wp.com/www.nationalreview.com/wp-content/uploads/2018/05/eric-schneiderman-press-conference-2017.jpg?fit=789%2C460&amp;ssl=1" class="attachment-featured-single size-featured-single wp-post-image" alt=""><figcaption>
+			New York AG Eric Schneiderman announces a lawsuit concerning DACA recipients in Manhattan, September 6, 2017.							<cite>(Joe Penney/Reuters)</cite><br />
+					</figcaption></figure>
+<p>													<span class="article-header__subtitle">Politics and morality are not one and the same.</span></p>
+<p><span class="drop">T</span>he former attorney general of the state of New York had a pattern of slapping and choking women with whom he was intimate. He also spat at them, demanded threesomes, insulted them, threatened them, and called one (who had dark skin) his “brown slave.” Without warning, he slammed a girlfriend so hard that he broke her eardrum. In another case, his palm left a red welt on a woman’s face that remained visible the following day.</p>
+<p>These and other details about Eric Schneiderman were disclosed by Ronan Farrow and Jane Meyer in <em>The New Yorker</em>. Keep that in mind the next time someone suggests that the liberal media are untethered to reality and serve only partisan purposes. Schneiderman is not only a Democrat, he was a key Trump antagonist, and a champion of the MeToo movement.</p>
+<div class="jw-player-container">
+<div class="jw-player-position">
+<button class="jw-player-close" type="button">x</button></p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<div class="jw-player-wrap">
+		<a href="https://content.jwplatform.com/libraries/wKJ9CRQU.js">https://content.jwplatform.com/libraries/wKJ9CRQU.js</a></p>
+<div id="jwplayer_ZpikPvus_wKJ9CRQU_div"></div>
+<p>				jwplayer(&#8216;jwplayer_ZpikPvus_wKJ9CRQU_div&#8217;).setup(<br />
+				{&#8220;playlist&#8221;:&#8221;https://content.jwplatform.com/feeds/ZpikPvus.json&#8221;,&#8221;ph&#8221;:2}<br />
+			);</p></div>
+</div>
+</div>
+<p>This has left a number of feminists both furious and bewildered. It’s disorienting to see people you admired and assumed to be moral betray everything they supposedly believed in—something conservative women (and men) have experienced too. Samantha Bee, who had often lionized Schneiderman on her show, fumed “This is especially infuriating given his supposed <a href="https://www.urbandictionary.com/define.php?term=woke%20bae" target="_blank" rel="noopener">woke bae-ness</a>,” she said. “Schneiderman positioned himself as a feminist crusader, he championed the #MeToo Movement … he helped craft an anti-choking law even though he’s now accused of choking his girlfriends.”</p>
+<p>The <em>Huffington Post</em> <a href="https://www.huffingtonpost.com/entry/why-male-allies-abuse-women_us_5af35072e4b04d3b2c903373" target="_blank" rel="noopener">consulted</a> a psychologist to help explain how it was possible that “male allies” can become “abusers.” Katha Pollitt, who once flippantly warned “never trust a male feminist,” is almost to the point of condemning all men now. “How simple life would be if only conservatives, or liberals . . . were abusers,” she wrote. “In fact, though, the only thing one can say with assurance is that they’re men. Yes, I know women can be abusers, and I know some men are great, but at the moment #NotAllMen is looking more like a wish than a declarative statement.”</p>
+<p>Samantha Bee’s defiant conclusion is “You know who’s a better advocate for women? Women. The future is female, or at least it better be, because I am done with this.” Katha Pollitt’s resolve is similar: “I have no answers. But here’s what I’m going to do: Vote for women. Support women. Protect women. Believe women.”</p>
+<p>In my forthcoming book, (June 26) <a href="https://www.amazon.com/Sex-Matters-Modern-Feminism-Science/dp/0451498399/ref=tmm_hrd_swatch_0?_encoding=UTF8&amp;qid=1525972366&amp;sr=8-1"><em>Sex Matters: How Modern Feminism Lost Touch with Science, Love, and Common Sense,</em></a> I push back against this feminist tendency to deride men as a class and to disparage masculinity itself as somehow pathological. In the 1970s, some second wave feminists like Ti-Grace Atkinson, president of the New York chapter of the National Organization for Women, were so possessed by hatred for men in general that they lost sight of basic morality. Atkinson urged NOW to take up the cause of Valerie Solanas, founder of SCUM (Society for Cutting Up Men). Solanas shot and attempted to kill Andy Warhol.</p>
+<p>The counterculture of the 1960s and 70s broke down social norms, and then regretted what was unleashed. Today, feminists are grappling with the long roster of supposedly “enlightened” i.e. feminist men who’ve turned out to be serial abusers or worse. Samantha Bee mentioned “powerful weasels” Harvey Weinstein, Garrison Keillor, and Charlie Rose. The roster also includes Louis C.K., Al Franken, John Conyers, Matt Lauer, Mark Halperin, Leon Wieseltier, Bill Clinton, and many more.</p>
+<p>Why are feminists more despairing about these revelations concerning liberal men than conservative women are about equally ugly stories concerning conservative men?</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>The answer, I’d suggest, is that liberals tend to believe that one’s politics and one’s morality are the same thing. If you hold the correct views about abortion, the minimum wage, women’s equality, gay marriage, and guns, it means not just that you agree with me, but that you are a good person. A man who champions the MeToo movement would never hurt a woman, right?</p>
+<p>There is some mirror imaging on the right. Some conservative women are stunned to discover that men they thought were adherents of traditional morality turn out to be louts and even rapists.</p>
+<div class="comments-launch comments-launch--desktop">		<a href="#" class="comments-launch__button--open">			<span class="button-text button-text__comments-count"></span>			<span class="button-text button-text__comments-label">Comments</span>		</a>	</div>
+<p>A key conservative insight is that character is a matter of behavior, not professed beliefs. Judge people by their conduct, not their branding. How do you mold decent conduct? Conscientious parents who teach right from wrong and a culture that reinforces those lessons. The feminists helped to weaken some of the mores and institutions that tended to control male lust and abuse. At the time, they thought they were fighting an unjust “double standard,” but the sexual revolution damaged all standards, and we continue to sift through the fallout.</p>
+<p>©2018 <a href="http://creators.com/">CREATORS.COM</a></p>
+<div class="article-social-comment">
+<nav class="article-utility-nav article-utility-nav article-utility-nav--default">
+<ul class="article-utility-nav__list">
+<li class="article-utility-nav__item">				<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nationalreview.com%2F2018%2F05%2Feric-schneiderman-story-politics-and-morality-not-the-same%2F" title="Share on Facebook">					<span class="circle-svg-icon circle-svg-icon--facebook">						  					</span>				</a>			</li>
+<li class="article-utility-nav__item">				<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.nationalreview.com%2F2018%2F05%2Feric-schneiderman-story-politics-and-morality-not-the-same%2F&amp;text=Making%20Sense%20of%20Eric%20Schneiderman" title="Share on Twitter">					<span class="circle-svg-icon circle-svg-icon--twitter">						  					</span>				</a>			</li>
+<li class="article-utility-nav__item">				<a href="" title="Print this article">					<span class="circle-svg-icon circle-svg-icon--printer">						  					</span>				</a>			</li>
+<li class="article-utility-nav__item">				<a href="mailto:?body=Making%20Sense%20of%20Eric%20Schneiderman%20https://www.nationalreview.com/2018/05/eric-schneiderman-story-politics-and-morality-not-the-same/" title="Email this article">					<span class="circle-svg-icon circle-svg-icon--email">						  					</span>				</a>			</li>
+</ul>
+</nav>
+<div class="comments-launch">		<a href="#" class="comments-launch__button--open">			<span class="button-text button-text__comments-count"></span>			<span class="button-text button-text__comments-label">Comments</span>		</a>	</div>
+</div>
+<aside class="inline-stories inline-stories--more">
+<h2 class="inline-stories__header">
+				<span><br />
+					More in <a href="/culture/">Culture</a>				</span><br />
+			</h2>
+<div class="post-list post-list--inline-related-stories">
+<article class="post-list-article">
+<div class="post-list-article__text">
+<h4 class="post-list-article__title">
+							<a href="https://www.nationalreview.com/2018/05/twitter-cesspool-aggregates-venom-you-can-leave-it/"><br />
+								Stop Complaining about Twitter — Just Leave It							</a><br />
+						</h4>
+<div class="post-list-article__meta"></div>
+</p></div>
+</article>
+<article class="post-list-article">
+<div class="post-list-article__text">
+<h4 class="post-list-article__title">
+							<a href="https://www.nationalreview.com/2018/05/movie-reviews-ray-meets-helen-the-seagull/"><br />
+								Political Romance and Political Tragedy							</a><br />
+						</h4>
+<div class="post-list-article__meta"></div>
+</p></div>
+</article>
+<article class="post-list-article">
+<div class="post-list-article__text">
+<h4 class="post-list-article__title">
+							<a href="https://www.nationalreview.com/2018/05/me-and-my-girl-broadway-2018-delight/"><br />
+								A Blast of Pure Champagne							</a><br />
+						</h4>
+<div class="post-list-article__meta"></div>
+</p></div>
+</article>
+<article class="post-list-article">
+<div class="post-list-article__text">
+<h4 class="post-list-article__title">
+							<a href="https://www.nationalreview.com/2018/05/facebook-anti-conservative-bias-solution/"><br />
+								Time for Facebook to Get Serious about Tackling Anti-Conservative Bias							</a><br />
+						</h4>
+<div class="post-list-article__meta"></div>
+</p></div>
+</article></div>
+</aside>
+<footer class="entry-footer">
+	</footer>
+<p><!-- .entry-footer -->
+			</div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/culture/" rel="tag">Culture</a> <a href="https://www.sinister-sec.com/tag/feminism/" rel="tag">feminism</a> <a href="https://www.sinister-sec.com/tag/feminist/" rel="tag">feminist</a> <a href="https://www.sinister-sec.com/tag/me-too/" rel="tag">me too</a> <a href="https://www.sinister-sec.com/tag/ronan-farrow/" rel="tag">ronan farrow</a> <a href="https://www.sinister-sec.com/tag/schneiderman/" rel="tag">schneiderman</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 11, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/fbi-details-top-internet-scams/"><img width="150" height="150" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/1526046087078-150x150.jpeg" class="grayscale grayscale-fade wp-post-image" alt="" /><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/fbi-details-top-internet-scams/">Previous Story:<br/> <strong>FBI details top internet scams</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/massachusetts-day-care-closes-after-child-diagnosed-with-typhoid-fever/"><img width="150" height="150" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/1526045873355-150x150.jpeg" class="grayscale grayscale-fade wp-post-image" alt="" /><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/massachusetts-day-care-closes-after-child-diagnosed-with-typhoid-fever/">Next Story:<br/> <strong>Massachusetts day care closes after child diagnosed with typhoid fever</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d524d864f3fc"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d524d864f3fc"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d524d867d952"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d524d867d952"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 8.041482925415 seconds, on 13-08-19 5:41:26 -->

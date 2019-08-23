@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Robotics, Part 1 – Where Are We Today? &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Number of Children with Diabetes Jumps 14% Between 2000-2008' href='https://www.sinister-sec.com/number-of-children-with-diabetes-jumps-14-between-2000-2008/' />
+<link rel='next' title='Tokyo Electric Power Company’s Radioactive Lies; The Arsonist Investigating The Fire' href='https://www.sinister-sec.com/tokyo-electric-power-companys-radioactive-lies-the-arsonist-investigating-the-fire/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/robotics-part-1-where-are-we-today/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=70489' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Frobotics-part-1-where-are-we-today%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Frobotics-part-1-where-are-we-today%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-70489 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/robotics-part-1-where-are-we-today/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-70489 post type-post status-publish format-standard hentry category-technology">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Robotics, Part 1 – Where Are We Today?</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 19, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry-content clearfix">
+<p><a href="https://www.activistpost.com/wp-content/uploads/2011/02/knight.gif" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img alt="" border="0" src="https://www.activistpost.com/wp-content/uploads/2011/02/knight.gif"></a>By Doug Hornig, Editor, <a href="http://www.caseyresearch.com/crpmkt/Biotech1.php?ppref=ATP401ED0211A" target="_blank"><i>Casey’s Extraordinary  Technology</i></a></p>
+<p>In the field of robotics, we have no Newton. No one  who, assisted by a falling fruit, cried out, “Eureka, I <i>have it</i>,  and it is called a… I know… a <i>robot</i>.”</p>
+<div style="text-align: left"></div>
+<p>
+No, the concept of a robot first occurred to some unknown  person in  some far distant time, as he or she, engaged in a grinding, repetitive   task, dreamed of a mechanical contrivance that could do some of the  dirty work.  We know that moment was more than five hundred years ago,  because we have  sketchbooks from the incomparable Leonardo da Vinci,  dated 1495, that contain  detailed plans for one.</p>
+<p>There is no hard evidence that Leonardo actually went on to  build his  robot. But such was his genius that, five centuries later, engineer   Mark Rosheim was able to create a fully functional version faithful to  the  technology of the time. It works.</p>
+<p>Leonardo believed that the human body is basically  machine-like in  structure, and that he could duplicate its intricate movements  through  the use of levers and pulleys. A rather simplistic view, of course.   Nevertheless, da Vinci was able to use his remarkable knowledge of  anatomy and  kinetics to design a robot with the capability to walk,  stand, and sit, raise  its arms, move its head from side to side, and  open and close its jaw.</p>
+<p><a name="more"></a>While Leonardo’s creation is often considered the initial  introduction  of a robot in human form, many believe the honor should go instead  to  Al-Jazari, the engineering genius of the Islamic world during the Middle   Ages. The Kurdish Al-Jazari designed, and apparently built in 1206, a  boat that  floated on a lake to entertain guests at royal drinking  parties. Within the  boat were four musical automata – two drummers, a  harpist, and a flutist. They  appear to have been somewhat programmable,  although they lacked the  sophisticated articulations of da Vinci’s  design.</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<div style="float: left;margin-bottom: 2em;margin-right: 1em">
+</div>
+<p>And some researchers want to push the invention of robots  even further  back into antiquity. But whatever the robot’s provenance turns out  to  be, we can date the appearance of the world’s first modern humanoid  robot,  to 1939. <i>Elektro</i>, built by Westinghouse, was placed on  exhibit at  the 1939 World’s Fair in New York. The robot, standing a  robust 6’ 9” tall,  could smoke, blow up balloons, and speak more than  700 words. Elektro was still  around in 1960, when it landed the role of  Thinko in the movie <i>Sex  Kittens Go to College</i>. As if that  weren’t humiliating enough, it was then  decapitated, with its head  given to a retiring Westinghouse employee and its  body sold for scrap.</p>
+<p>Since Elektro, well, <i>electrified</i> audiences  at the World’s  Fair, the robot has entrenched itself in the popular psyche.  It’s been a  real love/hate relationship, too. When they’re not depicted as the   kindly, human-friendly machines typified by C3PO and R2D2 in <i>Star Wars</i>,  they tend to be cast as pure evil, like the malevolent metallic monster lurking  beneath the artificial skin of the <i>Terminator</i>.</p>
+<p>But so much for fiction. Even as the robot was conjuring up  all sorts  of creatures in movie screenwriters’ minds, the science of robotics  has  been progressing out in the real world. So where are we today? Short of  the  Terminator, but well along in other ways. Let’s have a look.</p>
+<p>First, however, we must ask, just what is a robot, anyway?   Unfortunately, there’s no consensus answer, although we generally tend  to think  of clanking metal things constructed more or less along the  lines of a human.  And most people would probably say they know one when  they see one.</p>
+<p>The primary definition, according to <i>Webster’s  Collegiate Dictionary</i> is  “a machine that looks like a human being and  performs various complex  acts (as walking or talking) of a human being.” Many  would expand that  to include any machine that does one or more of the  following: move  around, operate a mechanical limb, sense and manipulate its   environment, and exhibit intelligent behavior – especially behavior that  mimics  humans or other animals. And it’s probably useful to add that a  robot can be  either physically or mentally anthropomorphic, if not  both.</p>
+<p>Designing a robot is a matter of thinking from brain to  bones, so to  speak. We’ve gotten very good at the brain part. Given the giant  leaps  forward in computer software development, we can write programs to do   pretty much anything we want. <i>If</i> we have a device that can  execute the instructions.</p>
+<p>That’s where the external hardware comes in, and it is a  different  story. Spectacular CGI effects have become so commonplace in movies,  we  might be led to think that engineers are constructing the creatures   from <i>Avatar</i> in their Bay Area laboratories. They aren’t.   Physical robotics hasn’t remotely kept up with advances in CGI. We are,   however, slowly closing the gap.</p>
+<div style="float: right;margin-left: 1em;margin-bottom: 1em">
+<a href="http://activistpost.net/infinite-brain.html" target="_blank"><img src="https://lh3.googleusercontent.com/_qLAIskTQXUc/TWWux_GGY4I/AAAAAAAAHCY/Cn215fZLcFE/Todd-200x200_01A.gif"> </a>
+</div>
+<p>Let’s start with brain. Legendary computer scientist Alan  Turing once proposed, in his 1950 paper <i>Computing Machinery and  Intelligence</i>,  a simple test to determine if a computer had achieved true  artificial  intelligence. Let any person have a conversation with both a machine   and another human, both trying to act human, and see if the person can  tell  which respondent is the machine, if either. In order to ensure the  test wasn’t  hampered by the limitations of technologies at the time,  he proposed both  conversations happen not in person, and not via  telephone with synthesized  computer voice, but by a simple text chat.</p>
+<p>As anyone who’s attempted to use one of those interactive  voice  telephone agents now popular with banks, airlines, and other   soul-draining mega-agencies can attest to, we are far, far away from any  system  passing “The Turing Test.”</p>
+<p>Researchers around the world are hard at work on trying to  solve the AI  problem, with mixed success. But in the meantime a whole other  band of  engineers are instead working on creating robots that tackle the   challenge Turing chose to conveniently ignore: Can we make a machine  that not  just communicates via text, but that appears to act and think  like a human,  with all the nuance of non-verbal communication, the  subtlety of speech, and  the myriad other factors that (for now)  separate us from the machines?</p>
+<p>And they are making some impressive, albeit still  elementary, progress. Take the <a href="http://www.youtube.com/watch?v=pkpWCu1k0ZI" target="_blank">Einstein robot, for instance</a>.</p>
+<p>This fairly realistic representation of Einstein’s late-life  head was  built by Hanson Robotics in Texas and programmed by scientists at the   University of California, San Diego.</p>
+<p>That they were able to get it (him?) to move and exhibit  recognizable  human facial expressions is remarkable enough. But the head also   contains a camera, linked to software that can interpret what it sees.  Thus  Einstein can learn who you are, including guessing your age and  gender, respond  to your audio cues, and mimic your own expressions and  simple gestures in a  sort of faux-empathy. Give him a wireless  connection to a decent computer and  he could probably beat any of us at  chess, not unlike his real-life  inspiration. (Well, not quite yet, but  he may be getting there.)</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<div class="code-block code-block-1" style="margin: 0px">
+<div align="center" class="mrf-external">
+<a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1="><img src="https://www.activistpost.com/wp-content/uploads/2018/02/500.jpg"></a></p>
+<h4 style="text-align: center"><a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1=" target="_blank">Secret $1.8 Million Cryptocurrency Script</a></h4>
+</div>
+<p>For another look down “Creepy Lane,” here’s a full-size,  modestly interactive <a href="http://www.youtube.com/watch?v=XHMGQ7j835M&amp;feature=related" target="_blank">Japanese robot</a> from the 2009 Robotec Expo in Brazil.</p>
+<p>As well as demonstrating our present capabilities, these  machines also  dramatically illustrate our limitations. Giving a robot a brain –  the  “intelligence” to move, speak, do some rudimentary learning, play chess –   is the easy part.</p>
+<p>Faithfully recreating even a small part of the human body,  that’s  tough. Our structure does not readily lend itself to simulation.   Muscles, bones, joints, tendons, ligaments are not a series of servos  and  actuators, but a collection of tens of trillions of individual  biological  machines all connected in highly intricate ways that allow  us to laugh and cry,  wrestle with our children, kick a soccer ball, and  assume the lotus position.  Just imagine how much is involved in the  elementary act of stair  climbing, <a href="http://www.youtube.com/watch?v=VTlV0Y5yAww&amp;feature" target="_blank">as Asimo the robot discovered</a> to his chagrin (if “he” could feel embarrassment).</p>
+<p>Speaking of soccer, getting robots to act cooperatively, in  addition to  kicking a ball, might seem like an insurmountable problem given the   state of robotics today. But researchers are working on it. Each year,  there is  a RoboCup soccer match, and each year the participants get  better. The goal (so  to speak) is to field a robotic team by 2050 that  can defeat the human World  Cup champions. For a glimpse of where we  stand with that, check out some of the  “action” from the 2010 <a href="http://technorati.com/videos/article/robots-prepare-to-defeat-humans-in/" target="_blank">RoboCup</a>.</p>
+<p>Neither Einstein’s head, nor the Japanese spokesrobot, nor  Asimo, nor  our mechanical soccer stars are likely to be confused with real  life.</p>
+<p>[<b><a href="http://www.caseyresearch.com/crpmkt/Biotech1.php?ppref=ATP401ED0211A" target="_blank">Casey’s Extraordinary Technology</a></b>  brings you insights in diverse  fields of cutting-edge technology, with  enormous profit potential… from  brand-new biotech applications to  emerging online gaming giants. Try it  risk-free for 3 months, with  money-back guarantee. <a href="http://www.caseyresearch.com/crpmkt/Biotech1.php?ppref=ATP401ED0211A" target="_blank">Details  here</a>.]</p>
+<p><b>RELATED ARTICLES:</b><br />
+<a href="https://www.activistpost.com/2011/02/how-close-are-we-to-nano-based.html"><b>How Close Are We to a Nano-based Surveillance State?</b></a><br />
+<a href="https://www.activistpost.com/2011/02/singularity-movement-immortality-and.html"><b>The Singularity Movement, Immortality, and Removing the Ghost in the Machine</b></a></p>
+<div class="separator" style="clear: both;text-align: center"><a href="http://activistpost.net/teslasecret.html" style="margin-left: 1em;margin-right: 1em"><img alt="" src="https://lh5.googleusercontent.com/_qLAIskTQXUc/TU24I7zUWsI/AAAAAAAAGfw/Mk_JblGSVQc/ad5.jpg"></a></div>
+<div class="swp-content-locator"></div>
+</p></div>
+<nav class="post-nav-wrap">
+<ul class="post-nav clearfix">
+<li class="post-nav-prev">
+<a href="https://www.activistpost.com/2011/02/al-qaeda-stronger-than-ever-expert.html" rel="prev"><i class="fa fa-chevron-left"></i>Previous post</a>
+</li>
+<li class="post-nav-next">
+<a href="https://www.activistpost.com/2011/02/haarp-activity-and-military-maneuvers.html" rel="next">Next post<i class="fa fa-chevron-right"></i></a>
+</li>
+</ul>
+</nav>
+<p>	<!-- Here we load disqus comments --></p>
+<div class="dcl-disqus-thread" id="comments">
+<div id="disqus_thread">
+		</div>
+</p></div>
+<p>	/*  */</p>
+<p>	/*  */</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 19, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/army-of-fake-social-media-friends-to-promote-propaganda/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/army-of-fake-social-media-friends-to-promote-propaganda/">Previous Story:<br/> <strong>Army of Fake Social Media Friends to Promote Propaganda</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/6-threats-to-free-and-open-access-to-the-internet/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/6-threats-to-free-and-open-access-to-the-internet/">Next Story:<br/> <strong>6 Threats to Free and Open Access to the Internet</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d539433a1dfe"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d539433a1dfe"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d539433cc3df"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d539433cc3df"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 4.1391010284424 seconds, on 14-08-19 4:55:15 -->

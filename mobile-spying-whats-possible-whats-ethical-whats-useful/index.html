@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Mobile Spying – what’s possible, what’s ethical, what’s useful? &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Latest Facebook Video Malware Scam Targets Chrome Users' href='https://www.sinister-sec.com/latest-facebook-video-malware-scam-targets-chrome-users/' />
+<link rel='next' title='Prevent Neighbors from Stealing Your Bandwidth with This New Wi-Fi' href='https://www.sinister-sec.com/prevent-neighbors-from-stealing-your-bandwidth-with-this-new-wi-fi/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/mobile-spying-whats-possible-whats-ethical-whats-useful/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=70426' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fmobile-spying-whats-possible-whats-ethical-whats-useful%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fmobile-spying-whats-possible-whats-ethical-whats-useful%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-70426 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/mobile-spying-whats-possible-whats-ethical-whats-useful/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-70426 post type-post status-publish format-standard hentry category-technology tag-privacy">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Mobile Spying – what’s possible, what’s ethical, what’s useful?</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 19, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<p><img class="_top-post-image" src="https://www.hackread.com/wp-content/uploads/2016/04/mobile-spying-whats-possible-whats-ethical-whats-useful.jpg?x62286" alt="Mobile Spying – what’s possible, what’s ethical, what’s useful?"></p>
+</p>
+<div class="theiaPostSlider_preloadedSlide">
+<p align="JUSTIFY"><span style="color: #000000">What was unheard of almost a decade ago is currently in practice at large_ spying on mobiles. Starting with </span>Atir<span style="color: #000000"> Raihan’s brainchild, FlexiSpy in 2003 that he deliberately designed to expose the adultery of his girlfriend, many companies have followed suit and today the market is teeming with duplicate applications, all built with a common purpose in mind_ remote mobile monitoring.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">When it comes to the possibilities of what we can do with such applications, they are numerous and are being improved with every new, booster dose of features injected into these apps regularly. Likewise, there is no denying the usefulness of such cutting edge products but when it comes to ethics, people have different, often conflicting opinions over the use of such technology.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Let’s explore how these applications work and how they can be positively recruited for various purposes, leaving the question of ethics to be dealt at the end.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Possibilities:</b></span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Unlike </span><strong><a href="https://en.wikipedia.org/wiki/Spyware" target="_blank"><span style="font-size: medium">spyware</span></a></strong><span style="font-size: medium;color: #000000"> that can be installed remotely, these </span><strong><a href="https://www.quora.com/Is-it-possible-to-install-cell-phone-spy-software-from-a-remote-location-Is-it-just-a-myth" target="_blank"><span style="font-size: medium">monitoring software require physical access</span></a></strong><span style="font-size: medium;color: #000000"> to the device itself. These applications are normally compatible with different operating systems including Google’s Android, Apple’s iOS, Nokia’s Symbian, BlackBerry and Windows. This means that you can monitor mobiles as well as tablets. </span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">On purchasing the application, the company sends you a welcome email that contains a download link and the credentials you would be needing to sign in to your online control panel. In order to install the application on the target device, you first need to download it. For this, you open up your inbox on the cell phone or the tablet. (Make sure your internet is working properly or you might get into trouble for any delay). Click on the download link provided and the app will automatically be downloaded and installed before disappearing into THE BACKGROUND. Nearly all these </span><strong><a href="https://www.hackread.com/fbi-admits-using-its-secret-spy-tool-stingray-disrupt-phone-service/" target="_blank"><span style="font-size: medium">tracking software work in complete stealth mode</span></a></strong><span style="font-size: medium;color: #000000"> and leave behind no trace to be detected.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Once successfully installed, you are all set to steer your way through the target device. All you need to do is to sign into the online user account, using the username and password provided to you by the company. All the data from the target set flows to the company server from where it is routed to your personal account that you can access at any time and from any place, provided you have a working system and a stable internet connection.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">On the Menu on the user dashboard, you will see a list of items that you can choose from and view details for their activity. Here are a few of them. Let’s explore what each of these can do for you.</span></p>
+<ol>
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Call logs:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">This gives you a complete record of all incoming, outgoing and missed calls with the name of each sender and receiver as well as the date, time and duration of each call. </span></p>
+<ol start="2">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>SMS logs:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">If you are interested in finding out the messages sent and received on the target device, this is for you. You can not only look into the names and numbers of senders and recipients but also read complete messages, each stamped with the date and time at which it took place. Some advanced features include retrieving old and deleted messages but are only provided by a few.</span></p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<ol start="3">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Call Recording:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Call logs give you a general overview of who the target connects with. It reveals the identity and number of each caller and receiver, as well as the duration, date and time for each call. However, this info is not very helpful when it comes to settling your doubts or listening to the telephonic conversation itself. At such times, call recording comes in quite handy. If you want to record and download the calls for a future reference, the call recording feature lets you do that too. Additionally, some spy apps allow for blocking calls from certain numbers remotely, directly from the control panel.</span></p>
+<ol start="4">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Live call interception:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">What if you want to catch someone red handed or save your child from a confrontation in the nick of time? A lot of apps have solved this problem by introducing the live call interception feature. Unlike call recording that gives you past records only, this feature not only gives you the real-time news but also records the conversation and send it down to your control panel. </span></p>
+<ol start="5">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Internet Browsing history:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Whether you are a worried parent or a concerned employee, this feature will help you take a sneak peek at the browsing habits of your kids and employees respectively. Look into the list of visited websites by checking out the internet history. You can also view the duration for which each website was accessed as well as the frequency of visit. What’s more? You can also go through the checked bookmarks to gauge what sort of stuff interests the subject the most. You can block certain websites on account of parental restriction, view Wi-Fi access points, the location from where the Wi-Fi was accessed and the type of connection that was used. </span></p>
+<ol start="6">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>E-mails:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">E-mails are more detailed and are used mainly for official purposes only. So if you want to know what kind of electronic mails is being exchanged right under your nose, a spy app can fulfill your wish. Monitor all incoming and outgoing emails badged with complete details of the senders, recipients, time and day for each mail. Maybe now you can finally take a breath of relief on finding out that your company secrets are safe and protected. In case otherwise, get ready for some serious action!</span></p>
+<ol start="7">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Applications:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Smartphone and tablet owners are very fond of downloading dozens of applications on their devices. Applications can be a lot of fun but at the same time, some of them can be disguised malware and a </span><strong><a href="https://www.hackread.com/mobile-spy-software-maker-mspy-hacked/" target="_blank"><span style="font-size: medium">gateway for hackers</span></a></strong><span style="font-size: medium">. <span style="color: #000000">With this innovative feature, you can remotely control what apps reside on the target phone or device. You can start, pause and stop applications, even delete them at your discretion.</span></span></p>
+<ol start="8">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Contacts:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">With Spy apps, finding your way into the phone’s address book is no longer a figment of your imagination. Scroll through the contact list to not only retrieve name and numbers alone but any kind of information fed on the phone, pertaining to any or all users. Moreover, you can modify the contact list by adding or deleting contact numbers.</span></p>
+<ol start="9">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Reminders and calendar entries:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Want to see what plans the subject has in mind? What is he/she up to? Then dive into the Reminder and Calendar section to find that out. Browsing through the ‘Reminder’ section tells you what important tasks the person intends to perform in the future and the calendar entries tell you about the pre-decided stuff such as any scheduled meetings or appointments. This can give you a good idea of the person’s whereabouts and social activity to look for any signs of suspicion.</span></p>
+<ol start="10">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>GPS Location:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">With Geo Positioning Satellites always on the watch, tracing locations no longer remain far-fetched, especially when there is an in-built GPS tracker on the spy app that you just installed on your phone or tablet. It enables you to find out the target’s current position as well as a complete record of previously visited places. Point to point surveillance is made possible by recording the routes taken, which are represented on the Google’s map for better understanding and representation. Some apps also allow you to practice ‘Geo-fencing’. This means that you can separate ‘allowed’ from ‘forbidden’ zones by sketching out an invisible boundary line on the map. Once up and running, this feature makes sure that you are always notified when the target surpasses the drawn lines.</span></p>
+<ol start="11">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Instant messaging:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Chat rooms are out, instant messaging applications are in! It is difficult to keep count of the numerous IM applications that have clogged the market in the past decade or so. Just imagine the difficulty of monitoring each and every app, given that they are mostly free and always exist as multiples on any person’s list of applications. Thanks to these monitoring apps, you can smoothly sail through multiple IM services simultaneously, without going through the hassle of cracking passwords and the fear of being caught. Spy on IM’s from WhatsApp, Skype, Snapchat, Viber and more. For IM services that allow for free internet calls, you can also view details of those free voice calls.</span></p>
+<ol start="12">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Photos and videos:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">If you are worried about confidential information being leaked out or inappropriate content being watched, this is for you. Steer through multimedia files including photos, MMS, audios and video content on the target phone or device.</span></p>
+<ol start="13">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Camera and mic bug:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="color: #000000"><span style="font-size: medium">This is a highly advanced feature rolled out by certain spy-app companies such as </span><span style="font-size: medium"><b>TheOneSpy</b></span><span style="font-size: medium">. This takes your monitoring experience to a newer level, where you can directly activate the camera and microphone on the device. By doing so, you can capture images of the target’s background and listen to ambient sounds. </span></span></p>
+<ol start="14">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Wipe-up data:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">In the case of loss or theft, you can use this feature to wipe out all data on your device. This saves you from the potential danger of your personal data being misused.</span></p>
+<p align="JUSTIFY"><img class="aligncenter size-full wp-image-40065" src="https://www.hackread.com/wp-content/uploads/2016/04/Mobile-Spying-what%E2%80%99s-possible-what%E2%80%99s-ethical-what%E2%80%99s-useful.gif?x62286" alt="#Mobile #Spying - what’s possible, what’s ethical, what’s useful?" width="500" height="281"></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Uses:</b></span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">The </span><strong><a href="https://www.hackread.com/mobile-spy-app-xnspy/" target="_blank"><span style="font-size: medium">uses of mobile spying applications</span></a></strong><span style="font-size: medium;color: #000000"> are as diverse and numerous as is your imagination and the cause for which it is used. Although most apps proclaim to be designed solely for the purpose of child and employee monitoring, their usefulness extends way beyond that. Just make sure that if you intend to use any of these apps, it is legal to use them in your area. Be careful not to use them to snoop around on people for no good reason.</span></p>
+<p align="JUSTIFY">
+<div class="col-sm-12 _fullsquaread">
+  <ins class="adsbygoogle"></ins>
+</div>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Having said this, let’s analyze a number of situations in which you might find them useful:</span></p>
+<ol>
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Child monitoring:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">What kind of friends does my child have in school or college? What are their most favorite topics of discussion? Which places do they like to visit? What activities they pursue when they are together? </span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">These and other questions of the same kind are a constant source of stress and anxiety for the parental community.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">If you are a cautious parent who spends sleepless nights, worrying about your child, who craves for independence and time out, you will finally be able to take a breath of relief. You can secretly monitor your child at every level, without the need to bring up confrontations. You can bring out the lies and save your child from any potential harm by using the different features of these applications. Use the location tracker to discover the whereabouts of your child and confirm if your son/daughter is really at the place where he/she claims to be. Activate the camera and microphone bug to see for yourself who your child hangs out with and what kind of language they use in their conversations. Check out the address book on their phones to look for any new and unknown contacts. Read their instant messages to find out what kind of ideas and private details are being exchanged and whether or not a potential online predator may be reaching out to your child. Browse through their multimedia files to search for any inappropriate content that your kid might be viewing. Open up their browsing history to look out for any signs of internet misuse. Go through their call and message logs to watch out for strange calls and texts. In short, Spy apps facilitate you to take a more rounded view of </span><strong><a href="http://patch.com/missouri/florissant/supervising-and-ensuring-teens-social-media-comprehensive-guide-0" target="_blank"><span style="font-size: medium">monitoring child’s personal and social life</span></a></strong><span style="font-size: medium;color: #000000">. As a parent, you can also pin down any dangerous and suspicious elements closing in on your child. After all these years of concern and doubt, you would finally be able to sleep soundly. </span></p>
+<ol start="2">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Employee tracking:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Are you a business owner who does not believe in hovering over your employees all the time but still wants to make sure that they are doing their job well? Do you as an entrepreneur fear that loss of company time in personal pursuits may cause a decline in profits? Are you suspicious that some of your employees may be stabbing you behind your back and leaking out company secrets or business formulas to your competitors?</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Is so, there is no better solution to your concerns than monitoring your employees BYOD on the devices given by the company. After all, you own the devices and the company time for which you pay your employees. No law can stop you from checking on your staff, as long as they know that they are being checked upon. </span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">It is commonly observed that employees engage in futile activities such as random net surfing and roaming around on social media websites during office hours. What is even more surprising is that a large percentage of online shopping also occurs from 9 to 5. It is not objectionable if a person turns to such activities for a short while, so as to refresh his/her mind. But regular diversions from work can seriously affect efficiency and results in a loss of productivity and company time. Studies show that a regular person may take at least 20-25 minutes to return back to work after a habitual trip to a social media website such as Facebook. Irresponsible use of internet and downloads may also open up the company’s computers to hacking and malware. If a group of employees is going about harassing others, you as an employer should know about it so as to avoid legal consequences in the future. These and a multitude of other reasons makes it imperative for you to keep an eye on the activities of all workers as you will be ultimately responsible for their actions.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">According to a survey, nearly 45 percent of companies monitor their employees’ e-mail. Of those that do, 73 percent use technology tools that automatically check e-mail content, and 40 percent hire people to manually read employee e-mail. Another 45 percent monitor phone calls and nearly half of respondents use video monitoring to counter theft, violence, and sabotage. Less than 10 percent of employers use video surveillance to track on-the-job performance. A single spy app can do all of that without going through any hassle at all. All you have to do is to install the app on the company phones before handing them over to your employees. Then sit back in your office or any place else and get a bird’s-eye view of everything going around. </span></p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Read their e-mails to see if any important company document files are being exported to a third party. </span><strong><a href="http://www.theonespy.com/features/location-tracker/" target="_blank"><span style="font-size: medium">Use the GPS location tracker</span></a></strong><span style="font-size: medium;color: #000000"> to check out the movements of your employees on the road, especially if they have a field job and make sure that they spend the company time doing their duty not chatting away with acquaintances or dropping their kids off at school. Look for any snapshots of office files intended to be misused and vulgar multimedia files downloaded, watched and circulated amongst colleagues. Peep into the reminders and appointments to watch out for any planned hookups with your competitors. Activate the geofencing to set intangible boundaries for your employees during office hours and location tracker to see for any mysterious or unlawful activity on the road. Keep thinking and I’m sure you would come up with cleverer ways to use these applications.</span></p>
+<ol start="3">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Spouse monitoring:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Have you been feeling that your spouse has been withdrawing from the family for the last couple of months? Does he often come late with unexplained lapses of time? And mysterious warning signs that he/she might be cheating on you? Are the business trips becoming longer and more frequent? Has the workload suddenly increased and makes him/her work late into the night? Do you feel a change in his/her social and calling habits?</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">If so is the situation, you definitely need to take the matter into your own hands and carry out an investigation. But how? How can you find out the reasons without asking or letting him know. By calling his colleagues? Or by following him around? That would neither be feasible nor affordable. Why not download and install a spy app on your spouse’s mobile and free your mind of worries but be careful, some </span><strong><a href="https://www.hackread.com/dating-apps-expose-smartphone-to-hackers/" target="_blank"><span style="font-size: medium">dating apps are stealing data</span></a></strong><span style="font-size: medium">.</span></p>
+<p align="JUSTIFY">
+<div class="middle">
+ <ins class="adsbygoogle" style="width:200px;height:90px"></ins>
+</div>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Trace his locations to see whether he really is out of town on business or staying at a local hotel. Watch out for his/her web surfing habits and check out his conversations over social media and instant messengers. Use the camera and microphone bug to see what is he/she up to and much more.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">By doing so, two of the following could possibly happen. Either your suspicions would be verified and with evidence in your hand, you would be in a better position to confront your partner or your doubts would be dissolved if your partner comes out clean and your relationship would be strengthened. It’s a win-win situation both ways.</span></p>
+<ol start="4">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Boyfriend/ girlfriend monitoring:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Do you suspect that your boyfriend or girlfriend may be cheating on you? Where the forward march of technology makes it easier for people to get their hands in nasty flirtations, it has also made it easier for your girl or boyfriend to catch you red handed. The easiest way to do it by using any of the spy apps readily available. Look out for any recently added contacts under fake names. Trace their real-time locations to check if your friend might be lying to you about his whereabouts. Check his incoming and outgoing call and message logs as well as complete details of his internet use, to smell a newly built affair. </span></p>
+<ol start="5">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Loss/Theft:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Have you been robbed of your phone? Is your phone stolen? Do you think that you lost your phone at your office? </span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">If so, what would become of the personal data on the phone? Do you fear it may be misused by the robbers? Do you want to trace the location of the robbers in the hope of getting your phone back?</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Modern spy apps can help you achieve that all in one go. You can remotely wipe off all data from your device so that your loss may be minimized to the phone itself. You can trace the location of the phone if you have misplaced it, at home or at work. In case it has been stolen, the location tracker may help you trace the location of the thief itself. You can use the call and message logs to identify any accomplice and potentially help the law enforcement agencies catch the entire gang of criminals.</span></p>
+<ol start="6">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Backup for your phone’s data:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Are you confronted with an issue that needs your phone to be factory reset? Do you plan to sell your device and want to create a backup for your phone’s data? Why waste your energies in transferring your data to a remote system, when it can be done without making any effort? </span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Spy apps automatically shift data, in a periodic fashion, to the online account that the company gives you. In case you need to reset your device, just do it with your eyes closed as your data is completely protected and easily accessible from your company account, anytime and anywhere.</span></p>
+<ol start="7">
+<li>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Legal value:</b></span></p>
+</li>
+</ol>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Do you suspect that any of your employees is involved in the viewing and distribution of pornographic content, meant to threaten or harass female co-workers? Do you think that your child is being targeted by a cyber bully? Have your suspicions finally been proved correct that your husband or girlfriend is involved in another relation? </span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Where Mobile spying can save you from a potential lawsuit, it can also assist you in reproducing evidential proof, if and when the need arises. Spy apps can save telephonic and conversation records. They can capture multimedia content meant to be used for wrong purposes. It is interesting that where the legal value of such applications itself remain cloudy and vague, they can help the law discern between the guilty and the innocent. They can produce content needed to prove an attempt of cyberbullying or an act of infidelity. They can help the police close in on the criminals and are therefore of much legal value.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000"><b>Ethics:</b></span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Ever wondered why mobile spying app are proliferating so rapidly? Because the selling of this software in most countries is legal. Most of the spyware companies absolve themselves of any legal responsibilities by resting the entire responsibility of the use of spyware on the buyer. For example, an excerpt from the </span><span style="font-size: medium"><strong><a href="https://www.theonespy.com/disclaimers/" target="_blank">disclaimer of a spy</a></strong> <span style="color: #000000">company</span></span><span style="font-size: medium;color: #000000"> reads as follows:</span></p>
+<p align="JUSTIFY"><span style="color: #000000">“<span style="font-size: medium">It is a federal and state offense in most countries to install monitoring/surveillance software onto a phone which you do not own or have proper authorization to install. It may also be an offense in your jurisdiction to monitor the activities of other individuals. Check all state, federal and local laws before installing any Cell Phone Spy software such as Mobile Spy. You must always notify a person they are being monitored if they are over age 18. Federal or local law governs the use of some types of software; it is the responsibility of the user to follow such laws.”</span></span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">This implies that if the user complies with the laws and uses the software responsibly, it could save him/her from paying the legal cost. There would be nothing that could stop him/her to use these apps. But stop for a moment and think… If something is permissible in the eyes of the law, does it entail that it is ethical too? Not necessarily.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Ethics and Legality are two separate terms and cannot be used interchangeably. Something that is legal may not be ethical and vice versa. It may be legal for parents to spy on their kids as they are the legal guardians and can in no condition see their child in danger and distress, but is it ethical to monitor them without their consent. If you are doing something of this sort, you are probably closing the door to two-way communication with your child and planting the seed of mistrust. But if you take your child in confidence on the reasons for your monitoring and involve his/her will, then it’s a completely different story.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Obviously, it won’t be possible for you to tell your spouse or your boyfriend that you intend to spy on them or to seek their consent, but it won’t be a good idea to plan it in the first place. Everything has a day of disclosure, so why put your relation in jeopardy for the sake of satisfying your suspicions. Why to let your relation trail off to the point where you are left with no other option. Better nip the evil in the bud. There is no better way to let go of your doubts then to initiate an honest, friendly and fair conversation with your partner. Only if your partner is willing to reciprocate. Believe it or not, if it works, there is nothing more relieving. However, if you think your partner is a scumbag of lies, talking to him/her won’t solve problems at all. In such dire circumstances, ethics can be kept aside for a while. After all, everything is fair in love and war.</span></p>
+<p align="JUSTIFY">
+<div class="left" style="height:180px"></p>
+<div id="rcjsload_5d543a"></div>
+</div>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">When it comes to tracking your employees, it is completely legal as far as they know they are being monitored. But ethics speak a slightly different language. Every grown-up has a certain expectation of privacy, even at the workplace. Nothing can stop you from declaring that all their data will be scrutinized and doing so may actually boost productivity for a while, but that may not necessarily win you the trust and respect of your workers. The ethical code of conduct teaches us how to win hearts and that can be only done if you step down to the level of your employees and show them that you trust them and how you expect them as your team, to work for the betterment of the company. It is a time-tested theory that no surveillance works better than self-surveillance. When you let their conscience take the charge and make each of them responsible for their own work, the chances of engaging in unproductive activities would automatically reduce.</span></p>
+<p align="JUSTIFY"><span style="font-size: medium;color: #000000">Having said this, the use of spy apps is not only about being-the-bad-guy and has actually yielded benefits to the society. As far as the monitored party knows about the watching, it never hurts to modify the definition of ‘ethics’ once in a while.</span></p>
+<div class="col-sm-10 _col-center">
+<div class="embed-responsive embed-responsive-16by9">[youtube https://www.youtube.com/watch?v=GQ1TLlx6FLY?rel=0&amp;controls=0&amp;showinfo=0]</div>
+</div>
+<p align="JUSTIFY"><span style="color: #000000"><a style="color: #000000" name="_GoBack"></a><span style="font-size: medium"><b>Author Bio:</b></span></span></p>
+<p align="JUSTIFY"><strong><a href="https://plus.google.com/+brookechloe" target="_blank"><span style="font-size: medium">Brooke</span></a></strong><span style="font-size: medium;color: #000000"> fills in as tech and digital parenting expert. She mostly covers latest technology tip, tricks, and reviews of mobile spying apps, social media norms, parental control. She manages content for </span><strong><a href="https://www.theonespy.com/" target="_blank"><span style="font-size: medium">TheOneSpy cell phone spy</span></a></strong><span style="font-size: medium"><span style="color: #000000"> app. Follow her on twitter</span> <strong><a href="https://twitter.com/brookechloe78" target="_blank">@brookechloe78</a></strong>.</span><b> </b></p>
+</div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/privacy/" rel="tag">privacy</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 19, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/latest-facebook-video-malware-scam-targets-chrome-users/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/latest-facebook-video-malware-scam-targets-chrome-users/">Previous Story:<br/> <strong>Latest Facebook Video Malware Scam Targets Chrome Users</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/prevent-neighbors-from-stealing-your-bandwidth-with-this-new-wi-fi/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/prevent-neighbors-from-stealing-your-bandwidth-with-this-new-wi-fi/">Next Story:<br/> <strong>Prevent Neighbors from Stealing Your Bandwidth with This New Wi-Fi</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d52b504c83f3"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d52b504c83f3"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d52b504f11b6"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d52b504f11b6"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 4.4507870674133 seconds, on 13-08-19 13:03:00 -->

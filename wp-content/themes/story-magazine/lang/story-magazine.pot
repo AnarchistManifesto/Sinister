@@ -1,0 +1,551 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in echo
+#: story-magazine/inc/authorinfo.php:7
+msgid "About the Author"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Accent Color: Background"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Accent Color: Text"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/404-content.php:7
+msgid "All Blog Posts"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Allows you to customize some primary settings for theme."
+msgstr ""
+
+#. Text in echo
+#: story-magazine/archive.php:31
+msgid "Archive"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Audio"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/archive.php:36
+msgid "Author"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Border Color"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/404-content.php:31
+msgid "Categories"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Category"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/comments.php:57
+msgid "Comments are closed."
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Container (ghost) Background Color"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/homepage.php:16
+msgid "Create homepage layout in Appearance > Customize > Widgets "
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Enter full URLs (http:// including)"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Entry Link Color"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/uni-social.php:10
+msgid "Facebook"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Facebook URL"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/widgets/widget-featured.php:1
+#: story-magazine/functions/widgets/widget-featured-small.php:1
+#: story-magazine/functions/widgets/widget-mag1.php:1
+#: story-magazine/functions/widgets/widget-mag2.php:1
+#: story-magazine/functions/widgets/widget-mag3.php:1
+msgid "Featured posts widget."
+msgstr ""
+
+#. Text in echo
+#: story-magazine/functions/widgets/widget-mag3.php:145
+msgid "Filter by Category #1:"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/functions/widgets/widget-mag3.php:168
+msgid "Filter by Category #2:"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/functions/widgets/widget-featured.php:102
+#: story-magazine/functions/widgets/widget-featured-small.php:87
+#: story-magazine/functions/widgets/widget-mag1.php:103
+#: story-magazine/functions/widgets/widget-mag2.php:94
+msgid "Filter by Category:"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Footer 1"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Footer 2"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Footer 3"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Footer 4"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Footer Background Color"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Footer Border Color"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Footer Link Color"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Footer Menu"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Footer Options"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Footer Text Color"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Gallery"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Google + URL"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/uni-social.php:20
+msgid "Google+"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Header Accent Color: Background"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Header Accent Color: Text"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Header Background Color"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Header Link Color"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Header Navigation Color"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Header Options"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Header Text Color"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Homepage Content"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Image"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/uni-social.php:25
+msgid "Instagram"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Instagram URL"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/single-info.php:13
+msgid "Last modified"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Link"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Link Color"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Link Color: Hover"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/uni-social.php:40
+msgid "LinkedIn"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "LinkedIn URL"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Magazine widget section (displayed on the homepage). Add widgets marked as \"Home\" into it."
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Main Menu (Left)"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Main Menu (Right)"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Mosaic Featured Section"
+msgstr ""
+
+#. Text in function
+#: story-magazine/comments.php:46
+msgid "Newer Comments"
+msgstr ""
+
+#. Text in function
+#: story-magazine/single-content.php:71
+msgid "Next"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/nextprev.php:41
+msgid "Next Story"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/404.php:20
+#: story-magazine/archive.php:71
+#: story-magazine/index.php:49
+#: story-magazine/search.php:39
+msgid "Nothing found here"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/functions/widgets/widget-featured.php:113
+#: story-magazine/functions/widgets/widget-featured-small.php:98
+#: story-magazine/functions/widgets/widget-mag1.php:114
+#: story-magazine/functions/widgets/widget-mag2.php:105
+#: story-magazine/functions/widgets/widget-mag3.php:188
+msgid "Number of posts:"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/functions/widgets/widget-mag3.php:181
+msgid "Offset posts #2: "
+msgstr ""
+
+#. Text in echo
+#: story-magazine/functions/widgets/widget-mag1.php:121
+#: story-magazine/functions/widgets/widget-mag2.php:112
+#: story-magazine/functions/widgets/widget-mag3.php:158
+msgid "Offset posts: "
+msgstr ""
+
+#. Text in function
+#: story-magazine/comments.php:45
+msgid "Older Comments"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/404-content.php:23
+msgid "Pages"
+msgstr ""
+
+#. Text in function
+#: story-magazine/page.php:26
+#: story-magazine/template-fullwidth.php:22
+msgid "Pages:"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/404.php:22
+#: story-magazine/archive.php:73
+#: story-magazine/index.php:51
+#: story-magazine/search.php:43
+msgid "Perhaps You will find something interesting from these lists..."
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/uni-social.php:30
+msgid "Pinterest"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Pinterest URL"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:284
+msgid "Powered by %1$s and %2$s."
+msgstr ""
+
+#. Text in function
+#: story-magazine/single-content.php:71
+msgid "Previous"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/nextprev.php:21
+msgid "Previous Story"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Primary (Body) Options"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Quote"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/functions.php:260
+msgid "Read More"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/footer.php:50
+msgid "Scroll To Top"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/search.php:15
+msgid "Search Results"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/searchform.php:8
+msgid "Search..."
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Sidebar"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Sidebar (Sticky)"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Sidebar widget section (displayed on posts / blog)"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Social Networks"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/homepage.php:27
+#: story-magazine/page.php:41
+#: story-magazine/single.php:39
+msgid "Sorry, no posts matched your criteria"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/archive.php:45
+msgid "Tag Archive"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/widgets/widget-social.php:1
+msgid "This is Social Networks widget."
+msgstr ""
+
+#. Text in echo
+#: story-magazine/functions/widgets/widget-mag3.php:163
+msgid "Title #2:"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/functions/widgets/widget-featured.php:97
+#: story-magazine/functions/widgets/widget-featured-small.php:82
+#: story-magazine/functions/widgets/widget-mag1.php:98
+#: story-magazine/functions/widgets/widget-mag2.php:89
+#: story-magazine/functions/widgets/widget-mag3.php:138
+#: story-magazine/functions/widgets/widget-social.php:36
+msgid "Title:"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/uni-social.php:15
+msgid "Twitter"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "Twitter URL"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/homepage.php:16
+msgid "Use widgets marked as \"Home\" to create magazine layout"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Video"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Widget section in footer - center/left"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Widget section in footer - center/right"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Widget section in footer - left"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions.php:254
+msgid "Widget section in footer - right"
+msgstr ""
+
+#. Text in echo
+#: story-magazine/functions.php:233
+msgid "Written by: "
+msgstr ""
+
+#. Text in echo
+#: story-magazine/inc/uni-social.php:35
+msgid "You Tube"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/customizer.php:1
+msgid "You Tube URL"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/widgets/widget-mag1.php:1
+msgid "wpmasters - \"Home 1\""
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/widgets/widget-mag2.php:1
+msgid "wpmasters - \"Home 2\""
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/widgets/widget-mag3.php:1
+msgid "wpmasters - \"Home 3\""
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/widgets/widget-featured.php:1
+msgid "wpmasters - Featured"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/widgets/widget-featured-small.php:1
+msgid "wpmasters - Featured (Small posts)"
+msgstr ""
+
+#. Text in function
+#: story-magazine/functions/widgets/widget-social.php:1
+msgid "wpmasters - Social Networks"
+msgstr ""

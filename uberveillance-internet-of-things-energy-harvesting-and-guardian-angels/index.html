@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Uberveillance: Internet of Things, Energy Harvesting, and Guardian Angels &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Lethality of Roundup ‘Weedkiller’ Extends Beyond Plants To Humans, Study Suggests' href='https://www.sinister-sec.com/lethality-of-roundup-weedkiller-extends-beyond-plants-to-humans-study-suggests/' />
+<link rel='next' title='Young Student Answers Organic Debate With Fruit Flies' href='https://www.sinister-sec.com/young-student-answers-organic-debate-with-fruit-flies/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/uberveillance-internet-of-things-energy-harvesting-and-guardian-angels/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=65370' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fuberveillance-internet-of-things-energy-harvesting-and-guardian-angels%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fuberveillance-internet-of-things-energy-harvesting-and-guardian-angels%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-65370 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/uberveillance-internet-of-things-energy-harvesting-and-guardian-angels/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-65370 post type-post status-publish format-standard hentry category-technology tag-julie-beal">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Uberveillance: Internet of Things, Energy Harvesting, and Guardian Angels</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 18, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry-content clearfix">
+<div class="separator" style="clear: both;text-align: center"><a href="http://getmindsmart.com/images/e322c8c520077665f8909cdb67aa1e5f.png" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img border="0" height="200" src="http://getmindsmart.com/images/e322c8c520077665f8909cdb67aa1e5f.png" width="156"></a></div>
+<p>Julie Beal, <i>Contributor</i><br />
+<b><a href="https://www.activistpost.com/2012/09/uberveillance-internet-of-things-energy.html">Activist Post</a></b></p>
+<p>Animal and product tagging is becoming the norm – this could lead to a tipping point where tagging everything with a microchip will become necessary.</p>
+<p>Surveillance becomes truly ubiquitous (‘uberveillance’ ) and tagging humans is seen as the obvious next step in the perpetual imperative towards improving health and security.</p>
+<p><b>Internet of Things</b></p>
+<div>
+A decade ago, Larry Ellison, the founder and CEO of Oracle Corporation, <a href="http://www.nytimes.com/2002/04/14/magazine/14TECHNO.html?pagewanted=all">asserted</a> his belief that databases of Personally Identifiable Information (PII) would become more centralised, based on Oracle’s business model, which has flourished since 9/11. Eventually, said Ellison, we would have a global database, and it would “track everything”. A <a href="http://www.itu.int/osg/spu/ni/ubiquitous/Papers/RFID%20background%20paper.pdf">Paper</a> prepared for the International Telecommunication Union’s Workshop on Ubiquitous Network Societies in 2005   acknowledged that we were facing a future where “tiny devices the size of a grain of sand might give the wind a pair of eyes, or fingerprint-activated doorknobs may recognize owners by a simple touch”.</p>
+<p>Now global surveillance of citizens is announced with <a href="http://www.microsoft.com/en-us/news/Press/2012/Aug12/08-08NYPDPR.aspx">pride</a> and accepted without question. This is the age of the ‘<a href="http://www.iot2012.org/index.asp">Internet of things</a>’  – everything is to be woven into the Web. Companies like <a href="http://www.ibm.com/smarterplanet/us/en/overview/article/iot_video.html">IBM</a> are busily creating ‘smartworld’ where the Internet becomes the system of systems, linking all devices, people, and even nature.</p>
+<p><a name="more"></a>Everything we buy from the shops, even our food, will one day incorporate smart tags. This practice is on the increase, facilitating what is known in the industry as ‘<a href="http://www.rfidtraxxllc.com/#">asset tracking</a>’, and is being taken up more and more to enable tracking and tracing of documents, equipment, pharmaceuticals, warehouse stock, etc.</p>
+<p>A company called Accenture, involved in establishing the identity ecosystem, released a <a href="http://www.accenture.com/SiteCollectionDocuments/PDF/ultimate_device_pov_rev.pdf">promo</a> more than a decade ago which foretold a world full of wireless sensors, generating data-sets which would be highly profitable:</p>
+<div align="center">
+</div>
+<p>
+As this trend toward embedded and wearable devices continues, computing will become infused into the environment. We will no longer have to look through a small screen to interact with technology. The services we use will rely on the infrastructure in our environment to sense our context. They will know where we are, and what we’re seeing and hearing; they will be all around us, working unobtrusively to sense needs and changes, and triggering actions in response. For businesses, this will bring new meaning to serving the customer on an ‘anytime, anywhere’ basis, and open up a range of possibilities for new products and services.</p>
+<blockquote class="tr_bq">
+<p>Accenture have also developed a large-scale matching system for biometrics data.</p>
+</blockquote>
+<p>Many products will incorporate sensors which use radio waves (or RF) to communicate with other devices. The global <a href="http://www.strategyr.com/Radio_Frequency_Identification_RFID_Technology_Market_Report.asp">market</a> for RFID technology is currently expected to reach US $18.7 billion by 2017, according to a comprehensive <a href="http://news.yahoo.com/global-radio-frequency-identification-rfid-technology-market-reach-140516377.html">report</a> by Global Industry Analysts, Inc., released earlier this year (March, 2012). The booming sales of RFID for commerce and industry are expected to accelerate rapidly over the coming years, due mainly to the increased use of smart tags. Unfortunately, these smart labels are expected to replace bar codes in the future, and be able to interact with ‘smart shelves’, and even with consumers, using NFC to interact with personal devices (a smart phone can act as a ‘reader’).</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p><a href="http://www.wired.com/gadgetlab/2012/06/hands-on-with-imp-the-wi-fi-card-that-wants-to-power-your-internet-of-things/all/">Electric imp cards</a> are a recent invention; they allow almost any device to be connected to the Internet, and the inventors are hoping manufacturers will add a slot for the device in the products they design, so that just about anything can become a part of the Internet of Things.</p>
+<p><b>IPv6</b></p>
+<p>The Internet is undergoing a profound change, with the introduction of IPv6. When the Internet was first implemented, decisions had to be made about how many Internet addresses would be needed. IPv4 is the protocol being used at the moment, but with the explosion in connectivity, we’re running out. <a href="http://www.readwriteweb.com/enterprise/2012/06/world-ipv6-launch-day-is-key-for-the-internet-of-things.php">IPv6</a> aims to fix that by increasing the number of web addresses to 340 trillion trillion trillion.</p>
+<p><a href="http://activistpost.net/privacywar.html" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img alt="" src="https://lh5.googleusercontent.com/--b-DtpFdXiI/T7wqemvSqVI/AAAAAAAAO6g/ysKIhvhbhPE/s270/banner_170.jpg"></a>We currently have in the region of 5.5 billion mobile devices in use around the world, but only about 4 billion Internet addresses available under IPv4 for each device. As RF tagging and mobile computing increase, there is said to be a need for the new protocol, IPv6, which will, staggeringly, create “an entire IPv4 Internet for every <a href="http://www.worldipv6launch.org/infographic/">star</a> in the universe”!!!</p>
+<p>The reason we have managed so far is because Internet service providers have used <a href="http://mashable.com/2012/06/07/ipv6-advertising/">NATs</a> (network address translators) which can “distribute  ‘private’ addresses to devices on a local network. It’s analogous to an apartment building — each unit has the same street address, but their numbers are different.”</p>
+<p>These NATs are provided by network operators like AT&amp;T and Comcast, but will no longer be needed under the new protocol, and are expected to disappear.</p>
+<p>The Internet of Things will take flight. Advertisers are drooling at the prospect, because when attempting to trace someone’s IP address under IPv4, they would be led to the NAT (“<a href="http://thread-marketing.com/ipv6-the-secret-revolution/">like</a> only getting the postcode and not the house or even flat number”)  but with IPv6, it will be much easier for digital marketers to decipher a specific IP address, removing the last screen between them and us. Bob Hinden, chair of the Internet Engineering Task Force (IETF) and one of the architects of IPv6, <a href="http://www.mdgadvertising.com/blog/why-ipv6-win-digital-advertising/">thinks</a> that Google may have supported the transition because of this.</p>
+<p>Although there may be costs associated with switching to IPv6, the transition is happening quickly. <a href="http://www.pcmag.com/article2/0,2817,2408089,00.asp">Pcmag.com</a> reports that requests processed from IPv6 addresses jumped from 3 million in 2011 to over 3 billion in 2012. <a href="http://www.verizonbusiness.com/resources/whitepapers/wp_benefits-of-ipv6-for-enterprises_en_xg.pdf">Verizon</a> has played a big part in helping to facilitate this.</p>
+<p>EPCglobal is an organization to be aware of, since their aim is to achieve adoption of worldwide standards for Electronic Product Code (EPC) technology, eg the use of RFID, and the sharing of data on the internet via the EPC Global Network.</p>
+<p>According to Wikipedia:</p>
+<blockquote class="tr_bq">
+<p><a href="http://en.wikipedia.org/wiki/EPCglobal">EPCglobal</a>‘s board of governors includes representatives from EPCglobal, GS1, Auto-ID Labs, Cisco Systems, DHL/Exel Supply Chain, Haier Group Company, Johnson &amp; Johnson, Kimberly-Clark Corporation, LG Electronics, Lockheed Martin Corporation, <a href="http://en.wikipedia.org/wiki/Metro_AG">METRO AG</a>, Novartis Pharma AG, <a href="http://en.wikipedia.org/wiki/Office_of_the_Secretary_of_Defense">Office of the Secretary of Defense</a>, Procter &amp; Gamble, Sony Corporation, The Dow Chemical Company and Wal-Mart Stores, Inc.</p>
+</blockquote>
+<p><b>Energy Harvesting</b></p>
+<p>As more and more and devices are connected to the Web, the need for power increases. Scientists are looking to solve this by harvesting energy from natural processes; they are developing methods of exploiting the energy <a href="http://www.qmed.com/mpmn/medtechpulse/medtronic-power-struggle-puts-emerging-technologies-spotlight">created</a>,</p>
+<blockquote class="tr_bq">
+<p>from irregular <a href="http://www.qmed.com/mpmn/article/miniature-generator-converts-vibrations-supplemental-power-sources-implants">vibrations such as walking</a>, from <a href="http://www.qmed.com/mpmn/medtechpulse/relying-body-motions-rubber-films-could-eventually-power-pacemakers-and-other-medi">natural body movements</a> such as breathing, from <a href="http://www.qmed.com/mpmn/medtechpulse/wasted-energy-may-someday-power-pacemakers-and-other-implants">wasted energy</a>, and from <a href="http://www.qmed.com/mpmn/article/human-heart-eels-generate-interest-implant-power-sources">differential energy in the chambers of the human heart</a>. Most recently, researchers at the <a href="http://ns.umich.edu/new/releases/20254-heart-powered-pacemaker-could-one-day-eliminate-battery-replacement-surgery">University of Michigan</a> (Ann Arbor) designed a technology to harvest the ambient vibrations from the reverberation of heartbeats through the chest and convert them to electricity to power ICDs and pacemakers.</p>
+</blockquote>
+<p><a href="http://activistpost.net/stirlinggenerator.html" style="float: right;margin-left: 1em;margin-bottom: 1em"><img src="https://lh4.googleusercontent.com/-J4xHp_BRR6k/UCGNstMMDZI/AAAAAAAARPc/H486-97BsBg/s200/ad2200.jpg" alt=""></a>Visitors to the Olympic games in London this year were able to <a href="http://www.energyharvestingjournal.com/articles/heated-trousers-sustainable-walkways-new-ball-game-at-london-olympics-00004630.asp?sessionid=1">power lighting</a> by walking on an energy-harvesting walkway leading to the stadium. Perhaps in the future we’ll power our homes by jogging!</p>
+<p>Flexible, wearable electronic interfaces using wireless communication are creating a surge in military and commercial <a href="http://flextech.org/au-news-detail.aspx?item=29450">applications</a>. The plan is to use energy harvesting to power the technology: industry professionals anticipate “<a href="http://somekillerstories.com/do-just-8-implants-to-become-a-super-man-or-bionic-woman/">bionic man</a>  containing maintenance-free, self-powered devices for his lifetime [and] is an <a href="http://www.idtechex.com/research/reports/energy-harvesting-and-storage-for-electronic-devices-2012-2022-000316.asp">objective</a> for the next few years.“</p>
+<p>There are even <a href="http://www.energyharvestingjournal.com/articles/solar-powered-drone-unveiled-00004639.asp">solar powered drones</a> which can fly silently, loaded with sensors for surveillance missions.</p>
+<p>A company called <a href="http://www.energyharvestingjournal.com/articles/wearable-energy-harvesters-for-the-battlefield-00004633.asp">MC10</a> which specialises in flexible electronics are said to be developing,</p>
+<blockquote class="tr_bq">
+<p>…a variety of products including interventional circuits, that can diagnose and influence tissue function, and ‘seamless sensing’ devices to improve our health and wellbeing.</p>
+</blockquote>
+<p>MC10 has recently won a contract with the US military to develop solar cells which can be incorporated into the fabric cover of combat helmets and rucksacks. </p>
+<p>Another interesting invention, which could one day be a key component of implants, is the ‘blood fuel cell’. First proposed in 2003, it involves placing micro-electrodes inside a living organism, and harnessing the electricity created as glucose is converted to oxygen. In 2008, a new cell phone device, powered by the action of the blood, was <a href="http://phys.org/news122819670.html">proposed</a>.</p>
+<p>This concept steps way beyond the current ‘health applications’ being promoted;  after connecting the electrodes to an artery, electronic ink would be used to create a digital tattoo, which functions as a Bluetooth interface. A cell phone you can’t lose, the device would even be able to display graphics just like a smart phone: the inventor, Mielke, explained that when the phone ‘rings’, “the tattoo comes to life as a digital video of the caller”.</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p><a href="http://www.tititudorancea.com/z/researchers_create_cyborgs_implanting_biofuel_cells_living.htm">Researchers</a> are currently generating electricity from snails, beetles and cockroaches.  The work will be extended to Shitake mushrooms and tree sap. It’s being funded by the U.S. Department of Defense, who hope to develop military uses, such as powering wireless sensors. Other researchers are developing bio-fuel cells to power <a href="http://www.biotechnologie.de/BIO/Navigation/EN/News/people,did=150560.html?view=renderPrint">human</a> implants such as cardiac pacemakers.</p>
+<p><b>Guardian Angels</b></p>
+<p>All of the research related to energy harvesting takes on a whole new light when it comes to a project currently underway in Europe: the “<a href="http://cordis.europa.eu/fp7/ict/fet-proactive/docs/flagship-ws-june10-29-mihai-ionescu_en.pdf">Guardian Angels for a Smarter Life</a>” (GA) FET Flagship <a href="http://www.youtube.com/watch?v=HsTcBGExRQ4">project</a> is developing mini-sensors which will harvest energy from the environment, and probably our own bodies, so they can be continually powered. The <a href="http://www.ga-project.eu/files/content/sites/guardians-angels-neutre/files/pdf/Guardian_Angels_Final_Report_July_2012.pdf">Guardian Angels</a> (GAs) are being developed to act as ‘personal nano-electronic assistants’ which people are expected to want to use “from infancy to old age”.</p>
+<p><a href="http://activistpost.net/teslasecret/" style="clear: right;float: right;margin-bottom: 0em;margin-left: 1em"><img alt="" class="noshadow" src="https://lh4.googleusercontent.com/_qLAIskTQXUc/TaqAcrCPlhI/AAAAAAAAISQ/5uq527jnmDM/book-shape.jpg" style="border: none"></a>Forming a vast wireless sensor network, they are designed to be our “<a href="http://www.ga-project.eu/">companions</a>”  and will perform every sensing and tracking function not already covered by the cameras, device detectors, GPS, biometric scanners, etc – they will be able to monitor a person’s physiological state and even, apparently, their emotions, and assess these in the context of the background data received from environment-sensors (e.g. temperature).</p>
+<p>This data can be fed back for analysis to whoever needs it, as part of the grand Internet of Things. All promos for GAs focus on extolling the benefits to people in ill health. However, they are also being sold to the public as a benefit to everyone; something we can use throughout life, enabling us to be smart, in a smart world.</p>
+<p>They will enhance humanity because they feature “sensing, computation, and communication beyond human capabilities”.</p>
+<p>The <a href="http://www.sciencedirect.com/science?_ob=MiamiCaptionURL&amp;_method=retrieve&amp;_eid=1-s2.0-S1877050911006818&amp;_image=1-s2.0-S1877050911006818-gr2.jpg&amp;_ba=&amp;_fmt=full&amp;_orig=na&amp;_issn=18770509&amp;_pii=S1877050911006818&amp;_acct=C000228598&amp;_version=1&amp;_urlVersion=0&amp;_userid=10&amp;md5=73d8ddfe0caed35133bd5b9069e1ce05">physiological sensors</a> will use bio-compatible nano-materials, and use ultra low power nano-electronics. They will provide feedback on physical actions, and internal physiological processes, and compute what these ‚mean’ to help diagnose and prevent ill health. All of the sensors work together, so this information will be ‚understood’ in the context of the feedback from both the environment sensors, and the <a href="http://www.sciencedirect.com/science/article/pii/S1877050911006818">emotion sensors</a>. The latter <a href="http://www.findbiometrics.com/industry-news/i/9819/">will use</a> silicon and carbon electronics, and brain interface technology. They are designed to assess your emotional state, such as warning you that you’re stressed, and need to take a break!!! This information is combined with all of the other data being received by the GAs, then an algorithm is used to help you make decisions! The Guardian Angels will create a data-producing goldmine, ripe for profiling. They are even expected to “enable unforeseen generations of autonomous robots”.</p>
+<p>The researchers are determined that these sensors will use “zero power”, as they are highly aware of both the ‘era of sustainability’, and the limited power afforded by batteries.</p>
+<p>A recently published <a href="http://getmindsmart.com/www.crenerg.org/.../Prezentare%20Carmen%20Moldovan.ppt" target="_blank">PowerPoint</a> presentation on the ‘zero power’ capability of the Guardian Angels claims,</p>
+<blockquote class="tr_bq">
+<p>The Guardian Angels systems will gather energy wherever it can be found, in the environment surrounding us. The goal of this “zero power” approach is to provide complete autonomy by integrating the most recent technology; light, vibrations and thermal gradients can be used to power electronic circuits. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>Finally, Guardian Angels will incorporate the latest energy storage technologies (such as green batteries), for situations in which energy is just not available.</p>
+</blockquote>
+<p>(It may even be possible to realize the transhumanist dream of linking the mind to the Internet, uploading information to become super-intelligent, with the development by MIT of a brain chip which acts as an <a href="http://www.opinno.com/interview-with-mits-dr-poon-on-his-new-brain-chip/">artificial brain synapse</a> )</p>
+<p>The GA project envisions the use of ‘<a href="http://www.telegraph.co.uk/science/science-news/9169068/The-electronic-skin-patches-that-can-tell-when-youre-ill.html">electronic skin</a>’ as the means by which the sensors can be worn discretely. The ‘skin’ is shown as a patch worn on the lower arm of a child asleep on page 10 of the Final Report; but on page 14, it is suggested that it may sometimes be more appropriate to use “implantable devices”.</p>
+<p>Clearly the researchers are envisaging the current range of devices which are implanted for health reasons; however, it is likely that, should the GAs prove successful, the obvious downsides to relying on adhesive would pave the way towards implantation as a ‘safer’ and easier alternative. The shift away from electronic skin to implanted devices could also be facilitated by the use of ‘blood fuel cells’.</p>
+<p>Although the research project is European, it is to become a global initiative: according to the Final Report on Guardian Angels (April, 2012), partnerships with academics and corporations in the US have already been agreed (with MIT, Stanford, UC Berkeley, IBM and Intel), and further partnerships are planned with leading partners from South Asia and Japan (eg Tokyo Tech, Nissan, and Toshiba)   which“will ensure an even more <a href="http://cordis.europa.eu/fp7/ict/programme/fet/flagship/doc/conf-july2012-07-guardangels_en.pdf">global impact</a> of the GA Flagship”. </p>
+<p><i>CONCLUSION TO FOLLOW SHORTLY e.g. the effects of ‘Anonymous’</i></p>
+</div>
+<p>
+<b>This article first appeared at <a href="http://getmindsmart.com/Smart-UBERVEILLANCE.html">Get Mind Smart</a></b></p>
+<p><b>You can read other articles from this series at Julie Beal’s archive page <a href="https://www.activistpost.com/search/label/Julie%20Beal">HERE</a></b></p>
+<p><i>Julie Beal is a UK-based independent researcher who has been studying the globalist agenda for more than 20 years. Please visit her website, <a href="http://www.getmindsmart.com/">Get Mind Smart</a>, for a wide range of information about Agenda 21, Communitarianism, Ethics, Bioscience, and much more.</i></p>
+<div class="separator" style="clear: both;text-align: center"><a href="http://activistpost.net/privacy-crisis.html"><img src="https://www.activistpost.com/wp-content/uploads/2012/09/PrivacyCrisis46811.jpg"></a></div>
+<div class="linkwithin_div" style="margin-bottom: -2em">
+var linkwithin_site_id = 557381;</p>
+<p>linkwithin_text=’Related Articles:’
+</p>
+</div>
+<div class="swp-content-locator"></div>
+</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/julie-beal/" rel="tag">Julie Beal</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 18, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/identity-profiling-covert-biometrics/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/identity-profiling-covert-biometrics/">Previous Story:<br/> <strong>Identity Profiling: Covert Biometrics</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/smartworld-identity-profiling-with-biometrics/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/smartworld-identity-profiling-with-biometrics/">Next Story:<br/> <strong>Smartworld: Identity Profiling With Biometrics</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d545700cd1c8"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d545700cd1c8"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d54570106144"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d54570106144"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 7.9244980812073 seconds, on 14-08-19 18:46:25 -->

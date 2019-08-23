@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Smartworld: Identity Profiling With Radio Frequency &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Smartworld: Identity Profiling With Radio Frequency Comments Feed" href="https://www.sinister-sec.com/smartworld-identity-profiling-with-radio-frequency/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Aluminum in Vaccines Linked to Alzheimer’s Disease' href='https://www.sinister-sec.com/aluminum-in-vaccines-linked-to-alzheimers-disease/' />
+<link rel='next' title='Health Care Worker Alert: ABC News Misquoted Vaccine Rights Attorney' href='https://www.sinister-sec.com/health-care-worker-alert-abc-news-misquoted-vaccine-rights-attorney/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/smartworld-identity-profiling-with-radio-frequency/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=65374' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fsmartworld-identity-profiling-with-radio-frequency%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fsmartworld-identity-profiling-with-radio-frequency%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-65374 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/smartworld-identity-profiling-with-radio-frequency/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-65374 post type-post status-publish format-standard hentry category-technology tag-julie-beal">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Smartworld: Identity Profiling With Radio Frequency</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 18, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry-content clearfix">
+<table cellpadding="0" cellspacing="0" class="tr-caption-container" style="float: right;margin-left: 1em;text-align: right">
+<tbody>
+<tr>
+<td style="text-align: center"><a href="http://getmindsmart.com/images/20781a7adcfaded13a17ce867c6d60de.jpg" style="clear: right;margin-bottom: 1em;margin-left: auto;margin-right: auto"><img border="0" height="176" src="http://getmindsmart.com/images/20781a7adcfaded13a17ce867c6d60de.jpg" width="200"></a></td>
+</tr>
+<tr>
+<td class="tr-caption" style="text-align: center">Take your medicine</td>
+</tr>
+</tbody>
+</table>
+<p>Julie Beal, <i>Contributor</i><br />
+<b><a href="https://www.activistpost.com/2012/09/smartworld-identity-profiling-with.html">Activist Post</a></b></p>
+<p>RFID, or radio frequency identification (also known as near field communication, or NFC) is used for wireless communication between devices, one of which is a transmitter and the other is a receiver. This involves the use of low frequency radio waves passing between the devices; it is in widespread use, although the impact on <a href="http://arstechnica.com/science/2007/09/rfid-implants-linked-to-cancer-the-lowdown/">health</a> is rarely alluded to. RFID is being used for a multitude of applications involving sensing and communication of information, especially ID verification using smart cards/phones, miniscule sensors known as smart dust, bodily implants, and product tracking.</p>
+<p>There are already many well-established <a href="http://www.investorideas.com/RFID/Stock_List.asp">ID Management companies</a> who are also using or advocating RFID and biometrics. These companies are heavily involved in the emerging global identity ecosystem (eg, the NSTIC program, the work of the ITU, and the European initiatives, including STORK), and include <a href="http://www.accenture.com/us-en/Pages/service-public-identity-management-solutions-summary.aspx">Accenture</a>, <a href="http://www.ibm.com/Search/?q=IDENTITY&amp;v=17&amp;en=utf&amp;lang=en&amp;cc=us">IBM</a>, <a href="http://www.verisign.com/">Verisign</a>/Symantec and Oracle. The industry has grown significantly and the trend looks set to continue – especially considering the heavy investment by leading corporations like Google, IBM, and Microsoft.</p>
+<p>The <a href="http://globalsmart.com/Index">smart card industry</a> is playing a leading role in identity management, indicating that in the near future the public will expect to manage their digitised identity with extrinsic devices such as contactless cards and mobile phones.</p>
+<p><a name="more"></a>In <a href="http://campustechnology.com/articles/2012/07/19/denver-joint-campus-upgrading-to-contactless-smart-cards.aspx">Denver</a>, for instance, Auraria Higher Education Center recently decided to issue new contactless smart cards to students (over 43,000 of them), and to staff. The cards will control door access using RFID, and will even serve as Visa debit cards. The plan is to eventually integrate the cards with other applications for student services, including parking, meal payment, library checkout, event management, emergency incidents, and lab and recreational tracking.</p>
+<div align="center">
+</div>
+<p>
+Assa Abloy, and its subsidiary HID Global, have both been involved with the NSTIC throughout its inception. HID manufactures <a href="http://www.rfidconnect.com/ProductDetails.aspx?id=998895d2-f925-4f8e-a050-1e4b9e22fa35">RFID tags</a> for people/animal-identification, as well as for tracking products. HID recently shipped out further supplies of their “<a href="http://www.hidglobal.com/main/media-center/releases/2012/07/hid-global-ships-over-150-million-eid-solutions-demonstrating-worldwide-adoption-of-its-secure-conta.html">e-ID solutions</a>” to supply over 150 million people with chipped passports/smartcards.</p>
+<p>In due course, however, the problems caused by people losing their smart phones or e-passports, or having them stolen or damaged, will likely signal the need for further security, leading to the uptake of implantable devices, like the VeriChip. There are already problems with the Bring Your Own Device (BYOD) phenomenon – where employees connect with the computing system at work with their own phone, etc – which could be ‘<a href="http://ijesat.org/Volumes/2012_Vol_02_SI_01/IJESAT_2012_02_SI_01_04.pdf">solved</a>’ by implanted chips and identity management.</p>
+<p><a href="http://www.monogramwallets.org/?p=1025">Intercede</a> is a highly <a href="http://www.intercede.com/?q=node/169">successful</a> company in the identity industry, and recently has developed a means of enabling smart phones to use NFC for logical and physical access control, as well as identity verification and attribute management. This method actually replaces the need for smart cards. It works even when the phone isn’t switched on, and claims to avoid ‘skimming’ of personal data held on the phone by necessitating the “conscious consent of the user”.</p>
+<p>Arguments that the chip is liable to hacking, whether it be in a device, card, or implant, are being countered with the advance of a new technology which claims to make the communications between a RF chip and a reader secure. <a href="http://www.aimglobal.org/members/news/templates/template.aspx?articleid=3886&amp;zoneid=45">Active Identity</a> has developed an open protocol called ‘Opacity’ which prevents wireless transmissions being intercepted.</p>
+<p><a href="http://activistpost.net/privacywar.html" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img alt="" src="https://lh3.googleusercontent.com/-_VDc_KgLmQQ/T7wqeoC8OeI/AAAAAAAAO6c/4ajNJleuzIQ/s270/170_animated.gif"></a>The use of identity authentication devices has necessitated the use of passwords or biometrics to <a href="http://www.thirdfactor.com/2012/07/16/natural-security-to-bring-biometric-authentication-to-the-home-and-workplace">validate use</a> of the device. The problem is that the devices can be lost or damaged, and passwords can be forgotten or stolen. But now computer scientists have developed a mobile <a href="https://www.usenix.org/conference/healthsec12/who-wears-me-bioimpedance-passive-biometric">system</a> which provides strong authentication for personal devices – a small device which measures <a href="http://www.cs.dartmouth.edu/~sorber/papers/sorber-amulet.pdf">unique physiological signatures</a> is worn on the wrist (as a watch, or jewelry) and will automatically detect the identity chip it is linked to, whether it be a chip in a phone, or one that has been ingested, or implanted. Currently, mobile phones and smart cards/passports are the main devices used to verify identity, but proving the right person is using a device has been fraught with problems. This system will prevent impersonation because <a href="http://arstechnica.com/security/2012/08/medical-device-hack-attacks/">biometric authentication</a> of the person presenting the identity device is automatically provided at all times. The system works by measuring ‘bioimpedance’, which is claimed to be more effective than other forms of biometrics, such as fingerprint scans.</p>
+<p>All sorts of RF technologies for ID management, from phones to implants, are part of a burgeoning industry, as evidenced by a comprehensive report released in July by UK-based firm Smither Spira; the ‘<a href="http://www.smitherspira.com/ten-year-forecast-of-disruptive-technologies-in-personal-identification-to-2022.aspx">Ten-year Forecast of Disruptive Technologies in Personal Identification</a>’ report,</p>
+<blockquote class="tr_bq">
+<p>
+provides exclusive forecasts of market technology adoption through to 2022, broken down by end use and identity control type. This brand new report identifies 25 technologies that are predicted to have major influence on the personal ID market in the next ten years. Technologies covered include security printing inks, biometrics, national identity registries, encoded taggants, high-resolution optical effects and geolocation. Each of the 25 technologies is explained, analysed and ranked based on the impact it is likely to have on this evolving industry.</p>
+</blockquote>
+<p>Some of the subject headings in the <a href="http://getmindsmart.com/www.smitherspira.com/Core/DownloadDoc.aspx?documentID">contents list</a> include:</p>
+<ul>
+<li>body implanted chips;</li>
+<li>a biometric civil registry;</li>
+<li>a VeriChip implant;</li>
+<li>contact lenses that act like a computer screen;</li>
+<li>geolocation as a security feature in personal identification.</li>
+</ul>
+<p>There is a steady increase in the use of mobile devices for access and control; more and more people are using their phones and smart cards for identity verification, as well as <a href="http://techcrunch.com/2012/03/05/isis-reveals-new-pos-partnerships-with-verifone-ingenico-and-vivotech/">using a phone to pay</a> for things by just waving it near to a ‘<a href="http://www.popsci.com/gadgets/article/2011-09/google-wallet-ditching-cards-and-cash-app">reader</a>’. There is even new technology which allows people to use NFC to <a href="http://www.nfcworld.com/2012/06/20/316338/chinese-city-get-nfc-smart-meters/">scan their smart meter</a> and pay their electricity bill with their smart phone.</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>As the trend of using a mobile device for so many applications continues, and becomes the norm, people will start to consider it awkward to have to even bother to bring the device with them. Why risk it getting lost or stolen when you could get it popped under your skin in no time at all?</p>
+<p>Those who decide to get an implant will be <a href="http://www.forbes.com/sites/andygreenberg/2012/08/13/want-an-rfid-chip-implanted-into-your-hand-heres-what-the-diy-surgery-looks-like-video/">techies</a>, geeks, and transhumanists, busy young professionals, the fashion followers and even the <a href="http://www.youtube.com/watch?v=p3Ql_-bpytA">clubbers</a> and ravers . and then the sheeple will follow. (Or perhaps some will find <a href="http://www.faqs.org/patents/assignee/astraion-llc/">RFID dental implants</a> more acceptable!) Since we’ve come to expect there to ‘be an app for that’, and for things to happen instantly, especially with technology, the idea may even be a thrill to some people. After all, we are being conditioned to see implants as acceptable: they are mainly being used for health reasons, but they could also be used, for instance, to track offenders, or as virtual payment devices, ‘secured’ with biometrics.</p>
+<p>Meanwhile, the technology is advancing at a very fast rate. For instance, HID Global announced in April that it has <a href="http://www.rfidnews.org/2012/04/25/hid-global-embeds-chips-with-a-surface-area-less-than-0-3-mm-square">developed</a> a new manufacturing process which uses direct bonding technology to mount an antenna to a tiny microchip, which is smaller than the pinpoint of a needle (i.e., its surface is less than 0.3 millimetres square). This means that some of the world’s smallest integrated low-frequency (LF) chips ever produced can now be used for contactless ID applications.</p>
+<p><b>Tracking the VeriChip</b></p>
+<p>Implantable devices are subcutaneous, i.e., they are inserted under the skin, and then use radio waves to transmit and receive information. The <a href="http://en.wikipedia.org/wiki/Digital_Angel">first</a> of these tiny devices, the size of an uncooked grain of rice, was the Digital Angel, produced by <a href="http://www.digitalangel.com/">Applied Digital Solutions</a>. There are now <a href="http://www.idtechex.com/knowledgebase/en/nologon.asp">numerous applications</a> for the technology.</p>
+<p><a href="http://activistpost.net/privacy-crisis.html" style="float: right;margin-bottom: 1em;margin-left: 1em"><img alt="" src="https://lh5.googleusercontent.com/_qLAIskTQXUc/TW6zd_MzhbI/AAAAAAAAHPE/DBvoPT_wz5M/pc150x225.gif"></a>In March 2000, Applied Digital Solutions, Inc. (ADS), an Internet communications services provider, <a href="http://www.nytimes.com/2000/03/07/business/company-news-applied-digital-to-acquire-destron-fearing.html?ref=applieddigitalsolutionsinc">acquired</a> the Destron Fearing Corporation, which was a manufacturer of animal identification tags. A year later, Applied Digital <a href="http://www.nytimes.com/2001/02/22/technology/wearing-your-vital-signs-on-your-wrist.html?ref=applieddigitalsolutionsinc">announced</a> their new product: the Digital Angel – this was the prototype of the personal identifier, but was the size of a wristwatch. Another year later, in April of 2002, the company began to <a href="http://www.nytimes.com/2002/04/05/business/technology-briefing-hardware-implantable-chip-headed-for-market.html?ref=applieddigitalsolutionsinc">publicise</a> the VeriChip – they had managed to shrink the device so that it could be implanted, and used for medical identification. To demonstrate this, a wave of <a href="http://www.theregister.co.uk/2002/06/10/first_people_injected_with_id/">chipping</a> took place and the chip was cleared by the FDA in 2004.</p>
+<p>The Digital Angel was originally designed as both a tracking technology and an identity verifier. Peter Zhou, the company’s chief scientist at the time, and President of DigitalAngel.net, Inc. (a subsidiary of ADS), <a href="http://www.sweetliberty.org/issues/privacy/angel_from_hell.htm">described</a> the device as,</p>
+<blockquote class="tr_bq">
+<p>
+a connection from yourself to the electronic world. It will be your guardian, protector. It will bring good things to you … We will be a hybrid of electronic intelligence and our own soul.</p>
+</blockquote>
+<p>It seemed the VeriChip was successful until <a href="http://www.wnd.com/2002/06/14199/">lawsuits</a> were brought against the company and since then it has kept a low profile, with several changes of ownership and name. Like <a href="http://www.investorideas.com/RFID/Stock_List.asp">other RFID companies</a> it is now focussing on the promotion of patient identification technologies, and other health applications.</p>
+<p>In October last year, VeriChip used an “integration partner” to negotiate a deal to <a href="http://creport-cobbreport.blogspot.co.uk/2011/10/positiveid-corporation-receives.html">supply the Israeli military with implants</a> for emergency response operations. Marc Poulshock, PositiveID’s Vice President of Business Development, said,</p>
+<blockquote class="tr_bq">
+<p>
+We believe there are many important applications for the VeriChip and our associated intellectual property including next-generation identification and bio-sensing capabilities. Our partner is looking to help healthcare organizations, militaries including the IDF, and governments with their disaster preparedness and emergency response needs.</p>
+</blockquote>
+<p>In January (2012), the VeriChip technology was <a href="http://us.generation-nt.com/veriteq-acquisition-corporation-verichip-technology-press-3353422.html">acquired by VeriTeQ</a>, thus adding to its range of implantable, RFID technologies for patient identification and sensor applications.</p>
+<p>VeriTeQ also acquired the Health Link personal health record from PositiveID. The long-time champion of large-scale microchipping is Scott Silverman, who was the former Chairman and CEO of PositiveID and VeriChip Corporation, and is now the Chairman and CEO of VeriTeQ (PositiveID has retained an ownership interest in VeriTeQ). <a href="http://lynn-a.blogspot.co.uk/2012/05/scott-silverman-10th-highest-paid.html">Silverman</a>, a qualified attorney, has kept the VeriChip technology going <a href="http://www.uberveillance.com/blog/tag/verichip">throughout</a> all of its business incarnations, from ADS to the Digital Angel Corporation, the VeriChip Corporation, the Xmark Corporation, PositiveID, and now, of course, VeriTeQ. He also ran <a href="http://www.nationalcreditreport.com/">NationalCreditReport.com</a> (a subsidiary of the <a href="http://investing.businessweek.com/research/stocks/private/snapshot.asp?privcapId=367631">Steel Vault Corporation</a>), before yet another profitable <a href="http://www.globenewswire.com/newsroom/news.html?d=227314">sale</a> last Summer, although he remains Chairman of the Steel Vault Corporation, which is <a href="http://www.bloomberg.com/apps/news?pid=newsarchive&amp;sid=aEBrfEpJPEwY">said</a> to be a “premier provider of identity security products and services, including credit monitoring, credit reports, and other identity theft protection services”.</p>
+<p>Anyhow, Silverman now owns and leads VeriTeQ, which has managed to come up with a unique patented healthcare system by marrying the <a href="http://www.youtube.com/watch?v=kSxQ6KqJuBg&amp;feature=player_detailpage">VeriChip</a> with bio-sensors developed by Receptors, LLC. The sensors are implanted into the body, and can then detect rates and levels of various biological processes; the microchip stores the information, which can be read by scanners. The <a href="http://www.positiveidcorp.com/products_glucochip.html">GlucoChip</a> implant, for instance, is able to provide feedback to diabetics on the levels of glucose in their body.</p>
+<p>The device therefore combines three components: the VeriChip, the bio-sensor, and the membrane covering them. The chip is said to be passive so would not need a battery. However, it could easily become an active chip, with the advance of <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3373597/">energy harvesting</a> (see tomorrow’s article: “Uberveillance”) and other innovative power solutions such as the tritium-based betavoltaic power source released by <a href="http://www.energyharvestingjournal.com/articles/city-labs-releases-first-commercially-available-betavoltaic-product-00004486.asp?sessionid=1">City Labs</a>, which can last 20 years or more without being recharged.    </p>
+<p>Active chips can transmit and receive RF signals. The “<a href="http://wireless.sys-con.com/node/2130974">Embedded Bio-Sensor System</a>” developed by VeriTeQ, together with Receptors, LLC, received a licence for the patent in January. The bio-sensing and communicating implant has now surpassed the capabilities of other biosensors because it will use a newly developed and patented semi-permeable, bio-compatible <a href="http://www.positiveidcorp.com/files/Development_of_a_Synthetic,_Closed-Cycle_Sensing_System_for_an_Implantable_Glucose_Sensor.pdf">membrane</a>.</p>
+<p><a href="http://activistpost.net/vaccinetruth.html" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em" target="_blank"><img alt="" src="https://lh5.googleusercontent.com/-MkKSFqq5-DE/TfAbRwTtoXI/AAAAAAAAJRE/itK2KofpgVU/VACCINE-BANNER.gif"></a>VeriTeQ is making full use of this unique patented technology – they have produced a temperature-sensing microchip, which has a range of applications, for example in cancer treatment, and offers the chance to cut expenditure.  Development of alternative biological sensors has begun, such as for monitoring the pulse, and providing statistical feedback on levels of oxygen, medication, and radiation. All will be combined with the new look VeriChip, so that the biological information can be read by a scanner, along with the patient’s unique identification number (<a href="http://www.veriteqcorp.com/sensor_applications.html">UID</a>). The system can be even be used just for <a href="http://www.foxnews.com/health/2012/03/04/microchips-future-medicine/">identifying breast implants</a>.</p>
+<p><a href="http://investing.businessweek.com/research/stocks/people/person.asp?personId=1671055&amp;ticker=PSID">Silverman</a> has been <a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=SOkGYqEiMF0">promoting</a> the <a href="http://www.google.com/patents/US7125382%202004">GlucoChip</a> for several years now, but the rise of medical implants has led investors to <a href="http://www.smallcapnetwork.com/Bigger-is-Not-Always-Better-in-Investing-or-Warfare-AAPL-WMT-NOC/s/via/3420/article/view/p/mid/1/id/856/">speculate</a> that VeriTeQ is due to make huge profits. An investor report by <a href="http://www.thegreenbaron.com/Stock%20Pick%20Profiles/Stock%20Profiles%20PositiveID%20Corporation%20(PSID).htm">GreenBaron.com</a> claims the company is massively undervalued: there are over 30 million diabetics in America alone and the <a href="http://news.yahoo.com/report-world-sensors-market-healthcare-applications-2012-2017-103017224.html">market</a> for all types of sensors is booming. </p>
+<p>The report included an <a href="http://www.thegreenbaron.com/Webcasts.htm">interview</a> with Caragol, discussing the various products PositiveID/VeriTeQ have developed. (Caragol is also Chief Executive Officer of Steel Vault, Inc., and he <a href="http://www.palmbeachpost.com/news/news/palm-beach-county-business-leaders-lift-mitt-romne/nL3qP/">donated</a> the maximum of $2,500 to Mitt Romney’s election campaign last year.) </p>
+<p>In June, it was announced that PositiveID look set to provide an embedded bio-sensor system to the DHS as part of their <a href="http://www.businessweek.com/articles/2012-06-21/the-sky-high-price-of-sniffing-out-anthrax">Biowatch</a> program, to detect a biological attack, such as the release of anthrax spores. Northrop Grumman are also bidding for the contract, which is rumoured to be worth $5.7 billion, but investors are <a href="http://www.hotstocked.com/companies/p/positiveid-corp-PSID-93046.html">backing</a> PositiveID, which has already developed an early warning system, under contract for the Department of Homeland Security (DHS), called ‘<a href="http://news.yahoo.com/positiveid-businessweek-bid-u-5-7-billion-biowatch-071546884.html">M-BAND’ (Microfluidics-based Bioagent Autonomous Networked Detector</a>).</p>
+<p>The company also has a subsidiary called MicroFluidic Systems (MFS), which  has already received <a href="http://www.smallcapnetwork.com/Bigger-is-Not-Always-Better-in-Investing-or-Warfare-AAPL-WMT-NOC/s/via/3420/article/view/p/mid/1/id/856/">US $45 million</a> in government and commercial contracts, with 29 patents or patents pending, according to a <a href="http://www.smallcapnetwork.com/Bigger-is-Not-Always-Better-in-Investing-or-Warfare-AAPL-WMT-NOC/s/via/3420/article/view/p/mid/1/id/856/">report</a> on PositiveID by an investor who believes the potential for profits for companies involved in high-tech and biotech areas of warfare, such as the use of <a href="http://www.popsci.com/technology/article/2012-07/why-next-gen-rovers-could-be-smaller-grain-sand">smartdust</a>, is very high.</p>
+<p>Green Baron <a href="http://www.thegreenbaron.com/Stock%20Pick%20Profiles/Stock%20Profiles%20PositiveID%20Corporation%20(PSID).htm">describes</a> MFS as a company which “develops sample preparation and biological detection systems. MFS began developing complex microfluidic systems to perform sample processing and purification for the Defense Advanced Projects Agency (DARPA). It then developed a similar system, including a thermal cycler for PCR analysis for the US Army’s Edgewood Chemical and Biological Command (ECBC).”</p>
+<p>VeriTeQ, through its subsidiaries and joint ventures, is gaining in power and influence, and the VeriChip has wormed its way into a variety of implanted devices. In 2009, for instance, the company signed an agreement with Medcomp to add the chip to ‘vascular access catheters’ for patients with kidney disease:</p>
+<blockquote class="tr_bq">
+<p>
+<a href="http://www.labelingnews.com/2012/03/implantable-chip-a-possible-udi-option/">Medcomp will embed the VeriChip</a> microchip in its vascular ports to facilitate identification of the port in a patient and proper medication dispensing. Because the microchips have been approved as safe to the human body, it could potentially be put in any device implanted in the body, making it a convenient method for tracking devices. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>
+After VeriChip is implanted in the device, and the device implanted into a patient, the chip can be scanned to reveal the unique identification number of the device and checked in a database.</p>
+</blockquote>
+<p>Linking the VeriChip to biosensors is an alarming move, because the technology is being developed for an extensive range of applications. Most of these would be classed as either diagnostic or patient management solutions, which would be seen to offer a whole range of benefits, such as cutting down on hospital visits, and ‘preventing’ disease. For instance, graduates from Purdue University have developed a bio-sensor that they claim is able to detect <a href="http://newstrackindia.com/newsdetails/2012/5/16/298-Biosensor-facilitates-early-diagnosis-of-cancer.html">cancer</a> at the earliest possible stages, and could also be used to compile a personalised “inventory of proteins and DNA” which could be used to inform doctors when prescribing treatment.</p>
+<p><a href="http://activistpost.net/infinite-brain.html" style="float: right;margin-bottom: 1em;margin-left: 1em" target="_blank"><img alt="" src="https://lh3.googleusercontent.com/_qLAIskTQXUc/TdSeGk7Y7nI/AAAAAAAAI3c/ASDiKNR5wVU/Todd-200x200_01A.gif"></a>The prevalence of medical implants which can provide feedback on physiological/biological state is indicated by the fact that there is now a large scale monitoring service available. In June (2012), <a href="http://investing.businessweek.com/research/stocks/private/snapshot.asp?privcapId=31271293">Sorin SpA and Orange Business Services launched Smartview</a>&#x2122;, a system which monitors people with serious heart problems via an implant, called Paradym&#x2122;. The system has been established across Europe, and promises to extend its reach globally, as part of an “e-health platform”, by adding data from the RFID implants to the health details filed for that individual. This is a blueprint for global e-health in the system of systems, for which e-identity is a crucial component, with the data forming a highly valuable asset class, as well as exposing the most intimate aspects of our real identities.</p>
+<p>The most alarming development, however, is, by far, that theVeriChip is now in another bid to chip the nation: it would appear it came ahead of its time, but now the chip-readers are widely available, and the e-health architecture has been established, ready to receive the first batch of implantees. Time, as ever, will tell. Oh, and it’s not called the Verichip anymore: it is now described as,</p>
+<p>“<a href="http://www.veriteqcorp.com/faq.html">VeriTeQ’s Unique Device Identifier</a> (UDI) implantable RFID microchip for humans is the world’s first and only FDA-cleared microchip for patient identification”.</p>
+<p><b>Take Your Medicine</b></p>
+<div>
+Other companies are also developing implants for health applications. A company called <a href="http://www.mchips.com/">MicroCHIPS</a>, for instance, began trials this year of an <a href="http://www.usatoday.com/news/health/story/health/story/2012-02-16/Remote-controlled-chip-implant-delivers-bone-drug/53121354/1">implant for osteoporosis sufferers</a> – the device <a href="http://www.biochipnet.com/home">delivers prescribed doses</a> of a drug to the patient’s system when signalled to do so by a radio signal.</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>Remote monitoring of human health can also be achieved by swallowing a microchip – Proteus ‘Mindfulness pills’ are powered by stomach fluid, which acts as the <a href="http://themindfulnessblog.blogspot.co.uk/">electrolyte</a> and were developed by Nancy <a href="http://forum.quantifiedself.com/printthread.php?tid=127">Dougherty</a> at NASA Ames Research Park. She has been working with a Californian company called Proteus to develop a product which will help patients <a href="http://radar.oreilly.com/2012/08/pill-microchip-sensor-empowered-patient.html">comply</a> with their medicine regime; they are to wear a patch on the arm which can tell when one of the microchipped pills has been swallowed, so patients will always know when to take the next one. The Proteus pills are ‘placebos’, i.e. they are not active drugs, just ingestible chips, so the patient will have to take one each time they take their regular medication. However, the company hope that one day all medicines will be chipped in this way.</p>
+<p>Proteus plan to market their product, which they have called‘<a href="http://money.cnn.com/2012/08/03/technology/startups/ingestible-sensor-proteus/">Helius</a>’ , in the UK later this year, in partnership with Lloyds Pharmacy, following approval in 2010 by the European Union. In August, the Helius system was reported to have received FDA approval in the US. The Proteus pill contains a chip <a href="http://mashable.com/2012/08/02/fda-digestible-device/">the size of a grain of sand</a> – which indicates the potential for the chip to be incorporated into other products. We might even end up ingesting them inadvertently!</p>
+<p>A Saudi team is said to have invented an implantable microchip which can be used for tracking via GPS, and is loaded with cyanide, which can then be triggered to release a <a href="http://www.military.com/video/logistics-and-supplies/military-equipment/microchip-can-track-kill-terrorists/1730791928001/">lethal</a> dose at a time chosen by the attacker.  This story first came out in the press in <a href="http://www.thelocal.de/sci-tech/20090515-19313.html">2009</a> when it was reported by Germany’s patent office that it had received the application in 2007, and it was expected the patent would be disallowed. However, another country may well have allowed the patent, or it could be made without a patent!</p>
+<p>The story serves as an important reminder about the potential nefarious use of implants, because the technology exists to make these types of implant, or some equally nefarious alternative, a reality. They are already being used to track patients and to deliver remotely controlled doses of drugs. Ingestible chips are soon to be marketed for personal health monitoring, with the intention of chipping all pills in the future. </p>
+<p>Rumours abound that implanted microchips can be used to track people using GPS. These rumours have been fuelled somewhat by a series of adverts proclaiming “the worlds First Implantable GPS Tracker” by <a href="http://www.lightninggps.com/personal-tracking/gps-implant.php">Lightening GPS</a>,  the primary supplier of covert GPS tracking to military and law enforcement.</p>
+<div class="separator" style="clear: both;text-align: center">
+<a href="http://activistpost.net/stirlinggenerator.html" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img alt="" src="https://lh4.googleusercontent.com/-J4xHp_BRR6k/UCGNstMMDZI/AAAAAAAARPc/H486-97BsBg/s200/ad2200.jpg"></a>
+</div>
+<p>The general consensus on the Internet is that this appears to be a hoax. The same is said of some of Bob <a href="http://pesn.com/2010/12/07/9501740_Bob_Boyce_verichip_removed/">Boyce</a>’s stories about his free energy inventions and his claim to have had 2 VeriChips implanted by an adversary, and later removed  when he developed cancer. I can find no other evidence of existing implantable GPS, yet HID Global’s ability to produce miniature antenna could make this possible perhaps, and VeriTeQ display it as part of the infographic shown below. For now, there are plenty of other ways to track someone’s geolocation!</p>
+</div>
+<p>
+<b>Smart Dust</b></p>
+<div>
+Even without implants, or mobile devices which can be scanned, the future looks set to fill even the air we breathe with smartdust. These miniscule computers are performing round-the-clock surveillance. These could one day become so widely distributed in our environment that they are even borne aloft in the air’; and there are suggestions that they could be “<a href="https://www.e-education.psu.edu/geog583/?q=node/77">ingested or even implanted</a>”.</p>
+<div class="code-block code-block-1" style="margin: 0px">
+<div align="center" class="mrf-external">
+<a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1="><img src="https://www.activistpost.com/wp-content/uploads/2018/02/500.jpg"></a></p>
+<h4 style="text-align: center"><a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1=" target="_blank">Secret $1.8 Million Cryptocurrency Script</a></h4>
+</div>
+<p>Engineers at the University of Florida, working with DARPA, have combined biology and nanotechnology to create <a href="http://robotics.eecs.berkeley.edu/~pister/SmartDust/">smartdust</a> particles which can “move things around”, each particle working independently; natural proteins convert chemical energy into mechanical energy. Nanotech mimics nature.</p>
+<p>It is certainly within the realm of possibility that future prototypes of Smart Dust could be small enough to remain suspended in air, buoyed by air currents, <a href="http://www.seminarpaper.com/2011/12/smart-dust-technology.html">sensing and communicating for hours or days on end</a>.</p>
+<p>There are even proposals to use smart dust to create <a href="http://www.popsci.com/technology/article/2012-07/why-next-gen-rovers-could-be-smaller-grain-sand">nano-robots to explore Mars</a> using <a href="http://en.wikipedia.org/wiki/Swarm_intelligence#Particle_swarm_optimization">swarm intelligence</a>; it is estimated that,</p>
+<blockquote class="tr_bq">
+<p>
+one release of 30,000 robots could cover thousands of square miles. Each robot would contain a nanoprocessor, an antenna for communicating with neighboring motes, a sensor for collecting data and an electrode-controlled shape-shifting polymer shell.</p>
+</blockquote>
+<p>According to IDTechEx research in the new report “<a href="http://www.idtechex.com/research/reports/wireless-sensor-networks-2012-2022-000314.asp">Wireless Sensor Networks 2012-2022</a>“, WSN will grow rapidly from $0.45 billion in 2012 to $2 billion in 2022. These figures refer to WSN defined as wireless mesh networks, which are self-healing and self-organising.</p>
+<p>“I guess, doctor, that your electricity is stronger than my will” – Delgado takes control</p>
+<p><a href="http://wireheading.com/delgado/brainchips.pdf">Delgado</a> pioneered the use of brain implants to control the behaviour of both animals and humans in a life <a href="http://www.youtube.com/watch?v=m-dH6IFQY1Q">devoted</a> to researching the effects he could induce. He also came up with an early version of the cardiac pacemaker, as well as controlling drug-delivery using implants. His most <a href="http://www.youtube.com/watch?v=S051A8doXP0&amp;feature=player_embedded">famous experiment</a> saw Delgado successfully stop a bull in his tracks during a bullfight, by stimulating the electrodes in the bull’s head with radio waves.  He was particularly interested in how he could manipulate emotions, as well as inducing physical movement. His ideas live on in modern day neural implants; function creep inches humanity towards a new cyborg identity. Or at least, those who can afford it could choose to be ‘<a href="http://online.wsj.com/article/SB10001424052702303640104577436601227923924.html">amped</a>’.  The potential for <a href="http://www.wanttoknow.info/mindcontrol">abuse</a> of these <a href="http://nanobrainimplant.wordpress.com/2012/08/">brain chips</a> is huge. </p>
+<p>The links between RF devices, implants, and identity control have been obvious for many years, but the evidence shows that the threat of ubiquitous chipping is coming closer to reality. We are in the first wave of change, where implants for health reasons have become widely accepted. The next wave will stem from the use of biometrics for authentication in identity management systems (see parts 3 and 4). The final nail in the coffin will be the end of cash, in the transition to virtual currencies. Only implants with multiple biometric credentials will be deemed secure.</p>
+</div>
+<div>
+<b><i>Read parts 1 and 2 in this series <a href="https://www.activistpost.com/2012/08/smartworld-identity-ecosystem.html">here</a> and <a href="https://www.activistpost.com/2012/09/smartworld-identity-ecosystem-part-2.html">here</a></i></b>
+</div>
+<p>
+<b>This article first appeared at <a href="http://getmindsmart.com/Smart-identity_proofing.html">Get Mind Smart</a></b></p>
+<p><i>Julie Beal is a UK-based independent researcher who has been studying the globalist agenda for more than 20 years. Please visit her website, <a href="http://www.getmindsmart.com/">Get Mind Smart</a>, for a wide range of information about Agenda 21, Communitarianism, Ethics, Bioscience, and much more.</i></p>
+<p>You can support this information by voting on Reddit <a href="http://www.reddit.com/r/conspiracy/comments/zbbf8/smartworld_identity_profiling_with_radio_frequency/">HERE</a></p>
+<div class="separator" style="clear: both;text-align: center">
+<a href="http://activistpost.net/ultimatesurvivalplan.html"><img alt="" src="https://lh5.googleusercontent.com/-DHyjE72dOcA/T7GhOgOtHLI/AAAAAAAAO2M/N2WEaMDSXoY/s468/468X60.gif"></a>
+</div>
+<div class="linkwithin_div" style="margin-bottom: -2em">
+<p>var linkwithin_site_id = 557381;</p>
+<p>linkwithin_text=’Related Articles:’
+</p>
+</div>
+<div class="swp-content-locator"></div>
+</p></div>
+<nav class="post-nav-wrap">
+<ul class="post-nav clearfix">
+<li class="post-nav-prev">
+<a href="https://www.activistpost.com/2012/09/supranational-asean-is-super-folly-for.html" rel="prev"><i class="fa fa-chevron-left"></i>Previous post</a>
+</li>
+<li class="post-nav-next">
+<a href="https://www.activistpost.com/2012/09/inherit-wind-evil-of-two-lessers.html" rel="next">Next post<i class="fa fa-chevron-right"></i></a>
+</li>
+</ul>
+</nav>
+<p>	<!-- Here we load disqus comments --></p>
+<div class="dcl-disqus-thread" id="comments">
+<div id="disqus_thread">
+		</div>
+</p></div>
+<p>	/*  */</p>
+<p>	/*  */</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/julie-beal/" rel="tag">Julie Beal</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 18, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/smartworld-identity-profiling-with-biometrics/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/smartworld-identity-profiling-with-biometrics/">Previous Story:<br/> <strong>Smartworld: Identity Profiling With Biometrics</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/congress-demands-answers-for-homeland-securitys-unjust-domain-name-seizures/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/congress-demands-answers-for-homeland-securitys-unjust-domain-name-seizures/">Next Story:<br/> <strong>Congress Demands Answers for Homeland Security’s Unjust Domain Name Seizures</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d5456eee9936"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d5456eee9936"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d5456ef25550"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d5456ef25550"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 7.7773771286011 seconds, on 14-08-19 18:46:07 -->

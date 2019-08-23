@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Smartworld: Identity Profiling With Biometrics &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Young Student Answers Organic Debate With Fruit Flies' href='https://www.sinister-sec.com/young-student-answers-organic-debate-with-fruit-flies/' />
+<link rel='next' title='Aluminum in Vaccines Linked to Alzheimer’s Disease' href='https://www.sinister-sec.com/aluminum-in-vaccines-linked-to-alzheimers-disease/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/smartworld-identity-profiling-with-biometrics/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=65372' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fsmartworld-identity-profiling-with-biometrics%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fsmartworld-identity-profiling-with-biometrics%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-65372 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/smartworld-identity-profiling-with-biometrics/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-65372 post type-post status-publish format-standard hentry category-technology tag-julie-beal">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Smartworld: Identity Profiling With Biometrics</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 18, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry-content clearfix">
+<div class="separator" style="clear: both;text-align: center"><a href="http://getmindsmart.com/images/b5c8c758d4d4971c4506f70fb3e73b9e.jpg" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img border="0" height="150" src="https://www.activistpost.com/wp-content/uploads/2012/09/b5c8c758d4d4971c4506f70fb3e73b9e.jpg" width="200"></a></div>
+<p>Julie Beal, <i>Contributor</i><br />
+<b><a href="https://www.activistpost.com/2012/09/smartworld-identity-profiling-with_4.html">Activist Post</a></b></p>
+<p>Biometric solutions are being implemented to provide <a href="http://www.thirdfactor.com/2012/07/16/natural-security-to-bring-biometric-authentication-to-the-home-and-workplace">additional authentication</a> of identity, usually to supplement verification provided by a chip, e.g. in a smart <a href="http://www.beverlyhillstimesmagazine.com/2012/01/17/supera-technology-bsks-ob/">card</a> or phone, <a href="http://www.nec.com/en/global/solutions/security/solutions/civil_id.html">passport</a>,  etc.</p>
+<p>A recent report,  <a href="http://www.marketresearch.com/MarketsandMarkets-v3719/GENERATION-BIOMETRIC-TECHNOLOGIES-GLOBAL-FORECAST-7032889/">Next Generation Biometric Technologies Market Global Forecast &amp; Analysis (2012-2017)</a>, predicts the global market for biometrics to reach $13.89 billion by 2017, reasoning that,</p>
+<blockquote class="tr_bq">
+<p>The existing methods of human identification such as identification documents and PIN are not able to cope up with the growing demand for stringent security, which gives a high growth opportunity for the use of biometric technology. This technology is very popular also because biometric characters like face, fingerprint, hand, etc. cannot be lost, stolen, or easily forged.</p>
+</blockquote>
+<p>From <a href="http://www.aoptix.com/index.php?option=com_content&amp;view=article&amp;id=168&amp;Itemid=170">iris recognition</a>  to <a href="http://www.naturalsecurity.com/authentication/">fingerprint authentication</a>, biometrics is becoming the choice method for secure identity checks.</p>
+<p><a name="more"></a>The Indian government, having already created a biometric ID database for every citizen, will be introducing <a href="http://articles.timesofindia.indiatimes.com/2012-07-02/bangalore/32507397_1_rpos-passports-biometrics">biometric passports</a> in 2013, and South Africa has begun issuing biometric <a href="http://www.thirdfactor.com/2012/07/12/south-africa-issuing-biometric-smart-card-for-social-security">Social Security payment smartcards</a>. The US Federal Government has just placed an order for the <a href="http://www.secureidnews.com/2012/08/07/u-s-government-orders-tactivo-smart-casings">Tactivio</a> ‘smart casing’,  which adds biometric authentication to existing mobile devices and smart cards, for both the military and civilians. There are even <a href="http://www.isrn.com/journals/sp/2012/712032/">proposals</a> to verify ID by checking heart or brain activity. In fact, Intel has just <a href="http://www.planetbiometrics.com/article-details/i/1162/">acquired</a> Israeli biometric company Idesia Biometrics, which uses this approach.</p>
+<p>Accenture is a big player in the identity ecosystem, and was <a href="http://newsroom.accenture.com/article_display.cfm?Article_id=5077">behind</a> the biometric citizen ID system implemented in India. Over ten years ago, in the ‘fight against terrorism’, the company were engaged in profiling airport passengers’ personal details, using data-mining and predictive software, so that they could assign each passenger a ”threat index” – for use by the government.</p>
+<div align="center">
+</div>
+<p>
+There are bound to be a lot of <a href="http://www.huffingtonpost.com/2012/07/12/yahoo-hacked_n_1668446.html?1342115311">issues</a> over the next couple of years which ‘prove’ that we all need to sign up with an Identity Provider; such <a href="http://www.huffingtonpost.com/2012/06/06/linkedin-passwords-stolen_n_1574075.html?ref=technology">news items </a>will strengthen the argument in favour of identity federation, tying in with other cyber security strategies, which, like the Internet itself, are military in origin.</p>
+<p>Once most citizens are signed up with an identity provider, there will probably be all sorts of ‘<a href="http://unifiedps.com/threats/people/">problems</a>’ and incidents, which prove that it’s not safe to have our personal verification on our smart phone/smartcard anymore – the safest place of course is under the skin. Not only that, but to be really secure, you will need to provide your biometric data, so that it can be linked to all the other data about you to make it totally individualised and unique.</p>
+<p>Then of course, there’s the problem of someone stealing your password – which is where further biometric methods of ID proofing come in, such as <a href="http://www.biosig-id.com/products/biosig-id%E2%84%A2/">BioSig-ID</a>&#x2122;. Because <a href="http://www.nytimes.com/2012/07/10/nyregion/70-students-at-stuyvesant-to-retake-exams-after-cheating-case.html?_r=1&amp;pagewanted=all">cheating</a> has become such a problem for school examinations, BioSig-ID&#x2122; has managed to get a school in America to install its software to provide full identification and verification of all pupils during school <a href="http://www.pratttribune.com/news/x655471843/Biometrics-helping-to-block-catch-cheaters">testing</a>. This identity proofing technology provides non-repudiation for the user.</p>
+<p><a href="http://activistpost.net/privacywar.html" style="float: right;margin-left: 1em;margin-bottom: 1em"><img src="https://lh3.googleusercontent.com/-_VDc_KgLmQQ/T7wqeoC8OeI/AAAAAAAAO6c/4ajNJleuzIQ/s270/170_animated.gif" alt=""></a><a href="http://www.eecs.qmul.ac.uk/~txiang/publications/BashirXiangGong_Journal-v4.pdf">Gait profiling</a> can be done without the subject’s knowledge or consent, because it involves analysing the way a person walks and moves around.  It can be achieved with the use of ‘pedo-biometrics’, which employs <a href="http://www.homelandsecuritynewswire.com/dr20120723-new-biometrics-discipline-foot-biometrics-for-security-disease-detection">sensors in bio-soles</a> which can analyse a person’s unique footprint, assessing pressure and gait. Researchers are working on this at Carnegie Mellon University’s Pedo-Biometrics Research and Identity Automation Lab. They are working on a method which employs micro-computers in shoes which, by the third step taken, can compare the patterns of movement to an identity file, and trigger a wireless alarm if there is a mismatch. Other than for identification purposes, the researchers plan to develop the bio-soles to be able to detect the onset of such diseases as diabetes and Parkinson’s. Testing will be broadened to include “a full spectrum of society: big, tall, thin, heavy, athletic, multicultural, on a diet, twins and so on.”</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>The use of biometrics has been largely discredited by many as being unreliable. Technology keeps improving, however, and the push to implement biometrics such as fingerprint checks continues unabated. The NEC’s <a href="http://www.businesswire.com/news/home/20120724005545/en">NeoFace</a> Facial Recognition, for instance, has been judged the best of its kind in the most recent tests performed by the U.S. National Institute of Standards and Technology (NIST).</p>
+<p>The US has a long history of biometric employment. The Department of Defense has its own research and advocacy branch called <a href="http://www.biometrics.dod.mil/">BIMA</a> (Biometrics Identity Management Agency), designed to develop technologies for identification of individuals for both military and business use.</p>
+<p>At last year’s BIMA forum, one of the group’s conclusions was:</p>
+<blockquote class="tr_bq">
+<p>As we transition to non-permissive environments, we must seek to do business overtly with friendly nations, while embracing alternative measures when appropriate, in order to develop focused, rich datasets of Identity Resolution data useful throughout the continuum of operations.</p>
+</blockquote>
+<p>Besides the full list of military personnel, there were a number of <a href="http://www.biometrics.dod.mil/Files/Documents/2011_Collaborations/ForumReport.pdf">corporate attendees</a>, including SAIC, IBM, UNISYS, CardSmart, Booz Allen Hamilton, Mitre, and Northrop Grumman. Interestingly, James Fossa, the “Prospective Chief of Biometrics” for Iraq, also attended.</p>
+<p>Academics serve the biometrics industry through <a href="http://www.citer.wvu.edu/members_area">CITeR</a>.</p>
+<p>Supported by the National Institute of Standards and Technology (NIST) and the National Security Agency (NSA), the Biometrics Consortium Conference is <a href="http://www.biometrics.org/">focused</a> on Biometric Technologies for Defense, Homeland Security, Identity Management, Border Crossing and Electronic Commerce.</p>
+<p>The partner website is <a href="http://www.biometrics.gov/">Biometrics.gov</a></p>
+<p>The 2012 Biometric Consortium Conference and Technology <a href="http://www.biometrics.org/bc2012/program.pdf">Expo</a>, presented by <a href="http://www.afcea.org/">AFCEA</a>, NIST and NSA, will address the important role that biometrics plays in identification and verification of individuals for government and commercial applications <a href="http://www.biometricsevent.com/MediaCenter.aspx">worldwide</a>.</p>
+<p>The <a href="http://events.jspargo.com/biometrics2012/public/MainHall.aspx?ID=35299&amp;sortMenu=101000">Conference</a> will be two and a half days of presentations, seminars and panel discussions with the participation of internationally recognized experts in biometric technologies, system and application developers, IT business strategists, and government and commercial officers. The 2012 Conference and Expo will focus on biometric technologies for homeland security, identity management, border crossing, electronic commerce, and other applications.</p>
+<p>The US military is now to be kitted out with portable biometric ID scanners which can upload details to a central database. On the 8th of August, it was <a href="http://www.upi.com/Business_News/Security-Industry/2011/08/08/US-Army-getting-new-BAT-kits/UPI-76411312803524/?spt=hs&amp;or=si">announced</a> that the Virginia company <a href="http://www.biometrics.dod.mil/">GTSI</a> has won a U.S. Department of Defense contract to provide the U.S. Army with mobile biometric identification systems:</p>
+<blockquote class="tr_bq">
+<p>The BAT-A system includes an enrollment kit consisting of a laptop and attached biometric collection devices capable of enrollment, verification and identity detection, together with mobile handheld devices for collecting, storing and uploading pertinent data to Army biometrics collection centers. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>A system of servers containing the biometric database maintains and synchronizes information, ensuring that data collected at one location is available at others.</p>
+</blockquote>
+<p><a href="http://activistpost.net/privacy-crisis.html" style="clear: right;float: right;margin-bottom: 0em;margin-left: 1em"><img alt="" src="https://lh5.googleusercontent.com/_qLAIskTQXUc/TW6zd_MzhbI/AAAAAAAAHPE/DBvoPT_wz5M/pc150x225.gif"></a>At the end of July, a Lithuanian company called Neurotechnology reported FBI approval for two of the fingerprint compression algorithms it has developed. These ‘<a href="http://www.homelandsecuritynewswire.com/fbi-approves-neurotechnologys-latest-biometric-algorithms">Verifinger</a>’ algorithms have been granted the new Wavelet Scalar Quantization (WSQ) Certification, meaning they meet the FBI’s accuracy requirements. The WSQ Certification will also facilitate interoperability on an international scale. Verifinger can also work with MegaMatcher, a multi-biometric system which incorporates the company’s facial, iris, voice, and palm-print technologies.</p>
+<p>At this year’s World Cyber Security Technology Research <a href="http://www.csit.qub.ac.uk/InnovationatCSIT/Reports/Filetoupload,295595,en.pdf">Summit</a> , it was agreed that it is now necessary to introduce digital passports, which must be made secure with biometrics for verification:</p>
+<blockquote class="tr_bq">
+<p>The current solutions, such as cards or PINs, are not secure enough. Biometrics are more secure, but the use of these needs introduction to the community.</p>
+</blockquote>
+<p>Organised by the Institute of Defense and Government Advancement (<a href="http://www.idga.org/">IDGA</a>), the Biometrics &amp; Identity Management <a href="http://www.biometricsevent.com/default.aspx">Summit</a> is to be held at the end of August (2012). <a href="http://www.biometricsevent.com/media/6031/6031_Brochure.pdf">Speakers</a> will include leaders from <a href="http://www.dhs.gov/files/programs/usv.shtm">US-VISIT (DHS)</a>, DARPA, and the FBI, who are <a href="http://www.biometricsevent.com/default.aspx">advancing</a> the use of biometric technologies for application in the field of military and law enforcement.</p>
+<p>David Oren, Homeland Security Consultant, (Former CIO, Israel Airport Authority), Israel, is due to give a <a href="http://www.biometricsevent.com/media/6031/6031_Brochure.pdf">keynote speech</a>, which will look at the use of biometric identification technologies in airports, international biometric and identity sharing, and the future of identity management technology.</p>
+<blockquote class="tr_bq">
+<p>As technology improves and devices decrease in size, less evasive methods of identity management are created and utilized; and, ultimately become more <a href="http://www.biometricsevent.com/media/6031/6031_Brochure.pdf">accepted</a> by the public.</p>
+</blockquote>
+<p>Microsoft has <a href="http://www.planetbiometrics.com/article-details/i/1178/">proposed</a> a formidable <a href="http://www.faqs.org/patents/app/20120154117">system</a> of tracking and identifying individuals using devices which scan an area for biometric attributes, such as facial features, body shape, the way you walk (gait), fingerprints and even ‘voiceprints’ (these are described as the acoustic properties of the voice, e.g., pitch, timbre, and rate of speech).</p>
+<p>At the same time, the computer is scanning for signals from mobile devices such as phones, cars, and implants. The biometric attributes, and the individual devices, each have a UID (Unique Identifier), which is then compared to the information on individual identities stored in the database, together with verified attributes from other sources.</p>
+<p>If they do not match, a new identity will automatically be registered on the system based on the new information received from the scanners, thus linking the device with the biometric attributes. These attributes ‘authenticate’ the individual based on scans of various features of the face, gait, fingerprint, or voice.</p>
+<div class="code-block code-block-1" style="margin: 0px">
+<div align="center" class="mrf-external">
+<a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1="><img src="https://www.activistpost.com/wp-content/uploads/2018/02/500.jpg"></a></p>
+<h4 style="text-align: center"><a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1=" target="_blank">Secret $1.8 Million Cryptocurrency Script</a></h4>
+</div>
+<p>Most of the time, of course, these devices will already be registered with the individual’s identity profile, and linked to any relevant information stored on the system. The scanners will, therefore, pick up both illicit use of a device, as well as use of a device which is registered to another person; since any device which is detected (along with the biometrics detected) will be linked to an identity if there is a pattern of use. Thus, associated use of a device is part of the detection process, which is able to scan for biometrics and devices 24/7, and will also pick up on devices which are frequently or repeatedly “in close proximity with the individual”.</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>Several scenarios for possible use of this system are proposed, including covert operations where the biometrics- and device-detectors are hidden from view. It is further suggested that, “Those of ordinary skill in the art may devise many scenarios wherein the techniques presented herein may be utilized.”</p>
+<p><a href="http://activistpost.net/familysurvival.html" style="float: right;margin-left: 1em;margin-bottom: 1em"><img src="https://lh3.googleusercontent.com/-l-x8YmPjCms/UCFiDY6YweI/AAAAAAAAROM/G87HmWjJ5ZY/s220/20.gif"></a>This system, designed by Microsoft, is described at length in their <a href="http://www.faqs.org/patents/app/20120154117">patent application</a>, published in June (2012). It involves NFC (Near Field Communication) between wireless devices, one of which is a transmitter, and the other is a receiver. The portable/wireless devices people might be carrying, which can be individually identified by the scanners, include mobile phones, pagers, mobile computers (e.g. palmtop, laptop,  tablet), gaming devices, cameras, audio/ video player, and implanted medical devices (e.g., a pacemaker). All of them transmit signals which can be picked up by the scanners.</p>
+<p>Let’s hope this patent proposal is never implemented, because it builds a database of identities, using personal information, so if you’re not already stored on the system you soon will be, because if it picks up new biometric data (‘indicators’) it stores it, and if there’s a device ‘associated’ with that data, then that data gets linked and stored too. You won’t even know. It can check for people who are blacklisted, and deny access to a device to those without privilege.</p>
+<p>The system is advocated by Microsoft based on the problems associated with biometric scanning which make it time-consuming and resource-intensive. Biometric scanning is expected to become much more widespread, which will create more difficulties with identification – the more people on the database, the more chance of a mistake or mismatch, especially when there is an anomaly – biometric identifiers</p>
+<blockquote class="tr_bq">
+<p>may produce different results in different circumstances (e.g., different biometrics may be generated from the face of an individual if the visual lighting of the scene changes; if the angle of the captured image of the face changes; if the individual makes a different facial expression during capturing; or if the face of the individual changes, such as the use of different make-up, a different hair color or style, or an acquired physical deformity).</p>
+</blockquote>
+<p>By linking biometrics with identified devices, which can be picked up by scanners instantly, identity tracking becomes more efficient. The additional data also makes identification more resilient.</p>
+<p>Microsoft has come up with <a href="http://www.faqs.org/patents/app/20120126944">another patent</a> for identification authentication and access control, this time based on the electrical signals which emanate from our bodies, caused by factors such as neural activity, changes in human body resistance caused by the flow of blood and lymphatic fluid, and the electric signals that are “generated by changes of interaction with an external electric field or electromagnetic field flows in the human body.” </p>
+<p><a href="http://activistpost.net/stirlinggenerator.html" style="float: right;margin-left: 1em;margin-bottom: 1em"><img src="https://lh4.googleusercontent.com/-J4xHp_BRR6k/UCGNstMMDZI/AAAAAAAARPc/H486-97BsBg/s200/ad2200.jpg" alt=""></a>The physiological activity in your body sends out electric signals, in the range of 1 kHz to 1 MHz, which change when you’re moving, and these can be used to identify you.  A detection unit can be installed which amplifies these signals and checks them against identities stored on the database, e.g. to verify right of access. The patent description goes on to say that this system, involving identification devices carried by an individual, can be “simplified and minituarized” as a chip. It is claimed that this system will augment other biometric ID systems, and counter impersonation attempts. </p>
+<p>The same technique is being <a href="http://www.thirdfactor.com/2012/08/09/biometric-device-communicates-with-medical-devices-to-id-wearer">developed</a> by Cory Cornelius, a scientist at Dartmouth University, as a device worn like a wrist watch, which “measures the wearer’s unique response to a weak electrical signal, and when used in conjunction with medical devices like blood pressure cuffs could send patient information directly to his or her electronic medical records.”</p>
+<p>The problem, of course, with the gathering of biometric data, is the staggering amount of surveillance that it entails. Being watched and doubted creates an air of distrust, and a heightened sense, to the unenlightened, of the need for even more security. These issues will be examined in upcoming articles.</p>
+<p><b>Read previous articles in this series at Julie Beal’s archive page <a href="https://www.activistpost.com/search/label/Julie%20Beal">HERE</a></b></p>
+<p><b>This article first appeared at <a href="http://getmindsmart.com/Smart-identity_proofing.html">Get Mind Smart</a></b></p>
+<p><i>Julie Beal is a UK-based independent researcher who has been studying the globalist agenda for more than 20 years. Please visit her website, <a href="http://www.getmindsmart.com/">Get Mind Smart</a>, for a wide range of information about Agenda 21, Communitarianism, Ethics, Bioscience, and much more.</i></p>
+<div class="separator" style="clear: both;text-align: center"><a href="http://activistpost.net/ultimatesurvivalplan.html"><img alt="" src="https://lh5.googleusercontent.com/-DHyjE72dOcA/T7GhOgOtHLI/AAAAAAAAO2M/N2WEaMDSXoY/s468/468X60.gif"></a></div>
+<div class="linkwithin_div" style="margin-bottom: -2em">
+var linkwithin_site_id = 557381;</p>
+<p>linkwithin_text=’Related Articles:’
+</p>
+</div>
+<div class="swp-content-locator"></div>
+</p></div>
+<nav class="post-nav-wrap">
+<ul class="post-nav clearfix">
+<li class="post-nav-prev">
+<a href="https://www.activistpost.com/2012/09/national-reconnaissance-office-plans.html" rel="prev"><i class="fa fa-chevron-left"></i>Previous post</a>
+</li>
+<li class="post-nav-next">
+<a href="https://www.activistpost.com/2012/09/ben-swann-takes-on-obama-over-kill-list.html" rel="next">Next post<i class="fa fa-chevron-right"></i></a>
+</li>
+</ul>
+</nav>
+<p>	<!-- Here we load disqus comments --></p>
+<div class="dcl-disqus-thread" id="comments">
+<div id="disqus_thread">
+		</div>
+</p></div>
+<p>	/*  */</p>
+<p>	/*  */</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/julie-beal/" rel="tag">Julie Beal</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 18, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/uberveillance-internet-of-things-energy-harvesting-and-guardian-angels/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/uberveillance-internet-of-things-energy-harvesting-and-guardian-angels/">Previous Story:<br/> <strong>Uberveillance: Internet of Things, Energy Harvesting, and Guardian Angels</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/smartworld-identity-profiling-with-radio-frequency/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/smartworld-identity-profiling-with-radio-frequency/">Next Story:<br/> <strong>Smartworld: Identity Profiling With Radio Frequency</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d5456f7dca76"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d5456f7dca76"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d5456f815c48"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d5456f815c48"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 7.8696389198303 seconds, on 14-08-19 18:46:16 -->

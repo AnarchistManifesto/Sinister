@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Anonabox’ Devices Keep Identity Anonymous Using Tor and VPN &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='U.S government requested information on 5,200 accounts from Apple' href='https://www.sinister-sec.com/u-s-government-requested-information-on-5200-accounts-from-apple/' />
+<link rel='next' title='The Pirate Bay Goes Offline Worldwide Due To Technical Issues' href='https://www.sinister-sec.com/the-pirate-bay-goes-offline-worldwide-due-to-technical-issues/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/anonabox-devices-keep-identity-anonymous-using-tor-and-vpn/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=70418' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fanonabox-devices-keep-identity-anonymous-using-tor-and-vpn%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fanonabox-devices-keep-identity-anonymous-using-tor-and-vpn%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-70418 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/anonabox-devices-keep-identity-anonymous-using-tor-and-vpn/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-70418 post type-post status-publish format-standard hentry category-technology tag-privacy">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Anonabox’ Devices Keep Identity Anonymous Using Tor and VPN</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 19, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<p><img class="_top-post-image" src="https://www.hackread.com/wp-content/uploads/2016/04/these-small-anonabox-devices-keep-your-identity-anonymous-using-tor.png?x62286" alt="Anonabox’ Devices Keep Identity Anonymous Using Tor and VPN"></p>
+</p>
+<div class="theiaPostSlider_preloadedSlide">
+<h5 style="text-align: center"><em><span style="color: #000000"><strong>Anonabox devices blend Tor and VPN together to provide users with utmost anonymity on the Internet</strong></span></em></h5>
+<p><span style="color: #000000">Anonabox, a hardware company focused on providing internet security and privacy for users has announced the launch of an array of innovative, small-sized new devices, which have been designed primarily to help internet users remain anonymous while surfing the net. These devices have been produced by <a href="https://www.linkedin.com/company/sochule" target="_blank"><strong>Sochule</strong></a>, which recently acquired <a href="https://www.anonabox.com/index.html" target="_blank"><strong>Anonabox</strong></a>.</span></p>
+<p><span style="color: #000000">These tiny devices can easily fit into the palm of your hand. We can call them miniature routers too because these devices route the traffic of the devices that are connected with it via <a href="https://www.hackread.com/7-online-activities-that-can-get-you-arrested/" target="_blank"><strong>Tor anonymizing network</strong></a> or through a <a href="https://www.hackread.com/tag/VPN/" target="_blank"><strong>VPN</strong></a> to a VPN provider.</span></p>
+<p><img class="aligncenter size-full wp-image-40567" src="https://www.hackread.com/wp-content/uploads/2016/04/tor-gif.gif?x62286" alt="tor-gif" width="220" height="220"></p>
+<p><span style="color: #000000">These Anonabox devices may be tiny but these are highly effective. When the user connects to a website using them, his or her identity will remain hidden and anyone would find it difficult to determine the user’s identity or location even.</span></p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p><span style="color: #000000">The launch of Anonabox devices was plagued with controversy and security concerns. However, Sochule fixed these concerns in the premiere offering and also improved the suite with three distinct variants offering varying degrees of security and functionality.</span></p>
+<p> <q class="right"> The firm supports Tor and believes in users’ privacy</q></p>
+<p><span style="color: #000000">Initial testing revealed that this is basically a plug-and-play Wi-Fi access point that is combined with <a href="https://www.hackread.com/tag/Tor/" target="_blank"><strong>Tor router</strong></a> and needs to be wired Ethernet or WiFi to function. So, when a device is connected to the access point of Anonabox through Wi-Fi, its traffic is redirected to the internet route via Tor. This makes identifying the user or his/her location on the internet difficult.</span></p>
+<p><span style="color: #000000">The Anonabox pro is also available and is much speedy and compatible with a variety of devices than the preliminary version. Anonabox pro can be connected to the internet through wireless network whereas the previous version relies upon wired Ethernet. Pro version accepts VPN capabilities along with Tor and also supports setting up a Tor-based file sharing and server.</span></p>
+<p><span style="color: #000000">Although you can conveniently configure Anonabox device but remember that you need to shut off the Wi-Fi connection of the device to the internet prior to powering it off. If you don’t do so, chances are that you will be unable to connect to Wi-Fi when the next time you turn it on. In that case, you will have to rely upon wired Ethernet.</span></p>
+<p><span style="color: #000000">A key benefit of Anonabox’s pro version, apart from retaining anonymity, is that it protects its users from getting identified on a public WiFi network as well as let people to connect various devices to a public wifi network but continue to appear as single on the network.</span></p>
+<p><span style="color: #000000">The drawback is that routing every packet via Tor makes the process time consuming and this somewhat affects the internet connection’s speed and performance. When the device was tested for accessing YouTube, it turned out that smaller sized video could be accessed without any speed issues. Speed tests revealed that it offers ranges from 1megabit per second for download/upload to 5.7-download and 4.7-upload.</span></p>
+<p><span style="color: #000000">One of the devices in the Anonabox series has a model that is named after the infamous Guy Fawkes mask, which is the symbol of hacktivists collective Anonymous. The model is called Fawkes and offers all the features of the original Anonabox device with some new add-ons like administrative interface. The last model is called Tunneler. It is only VPN dedicated and isn’t compatible with Tor.</span></p>
+<p><span style="color: #000000">It must be noted that using Anonabox doesn’t make you completely untraceable because when someone uses Tor while allowing websites to install and check cookies, this makes a person easily traceable. Thus, using Anonabox’s series of devices doesn’t necessarily make you anonymous unless you try to be cautious about it. User behavior does affect its functioning.</span></p>
+<p><span style="color: #000000">That being said, we cannot overlook the benefits of Anonabox over software-based implementations. The most important advantage being that users can offload Tor-based processing from the devices they are using to communicate such as smartphones, which have limited storage and processing power. Also, one Anonabox device can handle multiple Tor processes simultaneously for various computers, tablets, and smartphones.</span></p>
+<p><span style="color: #000000">The price range of these devices is between $79.99 and $119.99.</span></p>
+<div class="col-sm-10 _col-center">
+<div class="embed-responsive embed-responsive-16by9">[youtube https://www.youtube.com/watch?v=0IxlInne5TE?rel=0&amp;controls=0&amp;showinfo=0]</div>
+</div>
+<div class="col-sm-12 _fullsquaread">
+  <ins class="adsbygoogle"></ins>
+</div>
+<p><span style="color: #000000">HackRead had a pleasure of asking some important users’ privacy-related questions from the CEO of Sochule Mr. Marc Preston. Here they are: </span></p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p><strong><span style="color: #000000">Q: Can the Hackers, FBI or other such agencies breach the security of your product?</span></strong></p>
+<p><span style="color: #000000"><strong>A:</strong> Our products come embedded with the Tor network and VPN capabilities in order to provide the customer a robust layer of anonymity, privacy and with the VPN option encryption online. How the customer uses the tool properly or improperly for their privacy needs is up to them. Let me give you an example about how a user could expose themselves to hackers, the FBI or other agencies. FYI, this example is not just limited to our product and is also applicable to users who download the Tor browser or use VPNs in general.</span></p>
+<figure id="attachment_40571" style="width: 325px" class="wp-caption alignright"><img class="wp-image-40571" src="https://www.hackread.com/wp-content/uploads/2016/04/marc-preston-anonabox.png?x62286" alt="marc preston anonabox" width="325" height="382"><figcaption class="wp-caption-text"><em>Marc Preston CEO at Sochule Inc &amp; Anonabox</em></figcaption></figure>
+<p><span style="color: #000000">Let’s imagine that a journalist purchases an Anonabox (or downloads the Tor browser, etc.) with the intent of sending a “private email” to reveal a top news story that they want to report privately and not have anyone know who leaked the information. In order to send the private email with the most privacy and anonymity, the journalist could do the following things to help protect themselves.</span></p>
+<div class="">
+<p><span style="color: #000000"><span><strong>A.</strong> Use a computer they have never been on before.</span></span></p>
+</div>
+<div class="">
+<p><span style="color: #000000"><strong>B.</strong> Use a public WiFi network they have never used before.</span></p>
+</div>
+<div class="">
+<p><span style="color: #000000"><strong>C.</strong> Create a “bootable” USB drive with Kali Linux, which is an OS that deletes all traces of itself after closing the program including all settings, saved documents, etc. Basically, it’s like formatting your hard drive every time you restart your computer.</span></p>
+<p><span style="color: #000000"><strong>D.</strong> Utilize a browser with ALL cookies / history cleared, all plugins turned off (or better yet deleted), Adobe Flash uninstalled, Java uninstalled, log out of ALL personal accounts, etc.</span></p>
+</div>
+<div class="">
+<p><span style="color: #000000"><span><strong>E.</strong> Create a Mail2Tor.com email account for privacy while connected to the Tor network and then send the email from there.</span></span></p>
+<p><strong><span style="color: #000000">Q. Does the product by any chance let you access users’ logs? if yes do you save those logs and share with the government or security agencies?</span></strong></p>
+<p><span style="color: #000000"><strong>A.</strong> Anonabox has no access to users’ logs since there are no logs being recorded other than the customer’s shipping address and details required to ship them the product. I should note that customers can also pay in Bitcoin for further privacy when purchasing.</span></p>
+<p><strong><span style="color: #000000">Q. Do you guarantee 100% anonymity?</span></strong></p>
+<p><span style="color: #000000"><strong>A.</strong> Nope, NO WAY. There is no such product out there that should, could or can ever make those claims. Anonabox adds a robust layer of privacy and anonymity to your online browsing. It is a great device that can add TONS of privacy to your browsing needs online, but it cannot be 100% guaranteed since the user can expose themselves through fingerprinting.</span></p>
+<div class=""></div>
+</div>
+</div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/privacy/" rel="tag">privacy</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 19, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/u-s-government-requested-information-on-5200-accounts-from-apple/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/u-s-government-requested-information-on-5200-accounts-from-apple/">Previous Story:<br/> <strong>U.S government requested information on 5,200 accounts from Apple</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/the-pirate-bay-goes-offline-worldwide-due-to-technical-issues/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/the-pirate-bay-goes-offline-worldwide-due-to-technical-issues/">Next Story:<br/> <strong>The Pirate Bay Goes Offline Worldwide Due To Technical Issues</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d52b50948e93"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d52b50948e93"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d52b509720b4"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d52b509720b4"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 3.9753510951996 seconds, on 13-08-19 13:03:05 -->

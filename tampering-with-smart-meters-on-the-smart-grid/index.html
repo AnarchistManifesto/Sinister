@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Tampering with Smart Meters on the Smart Grid &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Food Chain Catastrophe: Emergency Shut Down Of West Coast Fisheries' href='https://www.sinister-sec.com/food-chain-catastrophe-emergency-shut-down-of-west-coast-fisheries/' />
+<link rel='next' title='Signs That The Elite Are Feverishly Preparing For Something BIG' href='https://www.sinister-sec.com/signs-that-the-elite-are-feverishly-preparing-for-something-big/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/tampering-with-smart-meters-on-the-smart-grid/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=36236' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Ftampering-with-smart-meters-on-the-smart-grid%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Ftampering-with-smart-meters-on-the-smart-grid%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-36236 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/tampering-with-smart-meters-on-the-smart-grid/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-36236 post type-post status-publish format-standard has-post-thumbnail hentry category-world tag-catherine-frompovich">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Tampering with Smart Meters on the Smart Grid</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/world/" rel="category tag">World</a>    </p>
+    	
+    </div>
+    
+        
+        <div class="entryhead" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            
+            <a href="https://www.sinister-sec.com/tampering-with-smart-meters-on-the-smart-grid/">
+            
+            	<img width="220" height="220" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/smartmeterfraud-1.jpg" class="standard grayscale grayscale-fade wp-post-image" alt="" srcset="https://www.sinister-sec.com/wp-content/uploads/2018/05/smartmeterfraud-1.jpg 220w, https://www.sinister-sec.com/wp-content/uploads/2018/05/smartmeterfraud-1-150x150.jpg 150w" sizes="(max-width: 220px) 100vw, 220px" />            
+            </a>
+        
+        </div><!-- end .entryhead -->
+ 
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 10, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry-content clearfix">
+<div class="GARD gard_advanced_mode" id="google-ads-0a2G">
+<p>adUnit = document.getElementById(&#8220;google-ads-0a2G&#8221;);<br />
+google_ad_client = &#8220;ca-pub-1897954795849722&#8221;;<br />
+adUnit = document.getElementById(&#8220;google-ads-0a2G&#8221;);<br />
+adWidth = adUnit.offsetWidth;<br />
+if ( adWidth &gt;= 999999 ) {<br />
+/* GETTING THE FIRST IF OUT OF THE WAY */<br />
+} else {<br />
+google_ad_slot = &#8220;0&#8221;;<br />
+adUnit.style.display = &#8220;none&#8221;;<br />
+}
+</p></div>
+<p><a href="https://www.activistpost.com/wp-content/uploads/2015/04/smartmeterfraud.jpg" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img border="0" src="https://www.activistpost.com/wp-content/uploads/2015/04/smartmeterfraud.jpg" height="200" width="200"></a>Catherine J. Frompovich<br />
+<a href="https://www.activistpost.com/2015/04/tampering-with-smart-meters-on-smart.html"><b>Activist Post</b></a></p>
+<p>There have been a lot of theories about what could happen when Smart Meters (SMs) are tampered with and customers receive “false-reading, tampered-with” utility bills—<a href="https://www.google.com/search?q=water+smart+meters&amp;biw=1012&amp;bih=531&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ei=Yt4uVfXsHovQsAX9yIG4CA&amp;sqi=2&amp;ved=0CDIQsAQ">water</a>, <a href="https://www.google.com/search?q=gas+smart+meters&amp;biw=1012&amp;bih=531&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ei=Hd4uVavvC421sQSS8IDoDQ&amp;ved=0CDIQsAQ">gas</a>, or <a href="https://www.google.com/search?q=electric+smart+meters&amp;biw=1012&amp;bih=531&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ei=kt4uVfT-FobjsAXy1IHgDA&amp;ved=0CEIQsAQ">electric</a>—when hackers access the porous microwave networks that transmit in-the-house information that electric SMs constantly collect, then radio-transmit via microwaves back to utilities home offices.    </p>
+<p>That’s not some “pie-in-the-sky” theory; it’s of great concern to security experts! </p>
+<p>According to Sally Ward-Foxton of <a href="http://electronicdesign.com/blog/crosstalk-11/embedded/tamperproofing-smart-grid-74591">Crosstalk</a> (Oct. 2012)  </p>
+<blockquote class="tr_bq">
+<p>
+But this increasing ‘digitalisation’ also adds a lot more opportunities for tampering with the     meters in some way, resulting in security vulnerabilities. These vulnerabilities obviously need   to be considered before introduction of the smart meters to make sure everyone is paying         their way when it comes to electricity. </p>
+</blockquote>
+<p><b>Have tamper-proof-security-measures been instituted by utility companies? </b></p>
+<p><a name="more"></a>Ward-Foxton discusses various scenarios regarding what can happen with computer programs, etc. to skew SM technology, plus safety and security issues for homeowners with SMs on their homes.  However, that issue really needs to be taken seriously by everyone, especially utility companies who lobbied state legislatures to get SMs enacted in to law.  Getting that legislation passed may be akin to “the dog that caught the bus”—don’t know how to handle the problem(s), or too big to handle.  Fires, explosions, power surges are just part of the problems.  Wait until hackers get into the system.  We can only imagine the “fun” that will be, since we know what hackers can do via the Internet.  However, SM microwave transmission is so ridiculously porous, that it just may be that everyone can try to see what he/she can accomplish, and any SM is fair game.  Ward-Foxton states, </p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<blockquote class="tr_bq">
+<p>
+<b>The data is also at risk when it leaves the meter – it’s usually transmitted wirelessly and            there is a possibility that it could be intercepted. Obviously, it should never be   transmitted        unencrypted.</b> </p>
+<div align="left">
+<br />
+<ins class="adsbygoogle" style="height: 60px;margin-bottom: 0.5em;width: 468px"></ins></p>
+<p>    (adsbygoogle = window.adsbygoogle || ).push({});
+</p></div>
+</blockquote>
+<p>The question consumers/customers ought to be asking of state regulators and legislators is this:  Have you provided in law and via “Smart Meter Procurement and Installation Implementation Orders” generated by state Public Utility Commissions that every utility, which installs SMs, must use encrypted software to ensure transmitting accurate and tamper-proof SM meter reading information?  If not, why not? </p>
+<p>Chris Neil, Senior VP for Industrial and Medical Solutions Group at Maxim Integrated, summarized the problem on the slide below.</p>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto;margin-right: auto;text-align: center">
+<tbody>
+<tr>
+<td style="text-align: center"><a href="https://www.activistpost.com/wp-content/uploads/2015/04/image12.jpg" style="margin-left: auto;margin-right: auto"><img border="0" src="https://www.activistpost.com/wp-content/uploads/2015/04/image12.jpg" height="250" width="400"></a></td>
+</tr>
+<tr>
+<td class="tr-caption" style="text-align: center"><a href="http://electronicdesign.com/blog/crosstalk-11/embedded/tamperproofing-smart-grid-74591">Source</a></td>
+</tr>
+</tbody>
+</table>
+<p>Back in 2010 there were these concerns: </p>
+<blockquote class="tr_bq">
+<p>
+<b>Recent trials focused on gauging the effectiveness of smart appliances and devices      integrated with smart meters and dynamic pricing schemes have shown promising results,        achieving significant decreases in peak demand and by extension reduced cost of energy. </b></p>
+</blockquote>
+<p><i>[Was that start-up, advertising talk—dynamic pricing schemes with promising results—reminiscent of utilities that wanted to introduce and pushed for nuclear power?  The spin back then was that nuclear power would make electricity so cheap there would be no need for metering it [3].  Have customers forgotten that?  Have you looked at your recent electric bills?]</i> </p>
+<blockquote class="tr_bq">
+<p>
+<b>However, most of <u>this preliminary work has been based on simple decision-making algorithms</u>              to effectively control the on/off states of appliances <u>as a function of pricing signals           received</u>. </b>[Something that will drive customers to drink, I predict.]<b> It also has been based on    more granular schemes such as sub-metering at the device level, where customers are            empowered to make more dynamic and well-informed                decisions about their energy usage.           The work is still in the early stages of development, largely due to a lack of cost-effective              measurement devices for consumer appliances.</b> [1] </p>
+</blockquote>
+<p><a href="http://activistpost.net/teslasecret/" rel="nofollow" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img alt="" class="noshadow" src="https://lh4.googleusercontent.com/_qLAIskTQXUc/TaqAcrCPlhI/AAAAAAAAISQ/5uq527jnmDM/book-shape.jpg" style="background: none repeat scroll 0% 0% transparent;border: medium none"></a><i>[Will Smart Meters be in the same category as some computer software programs that constantly need updating because they have so many backdoors in them that were not found when sold to customers?  Will Microsoft or Google be involved with your Smart Meters and computers too?  Suppose you don’t like the way either does business?  What are consumers to do?] </i></p>
+<p>Furthermore, Ward-Foxton points out something SM meter customers are experiencing: </p>
+<blockquote class="tr_bq">
+<p>
+<b>In California, a group of Stanford students saw their electric bill increase enormously after a smart meter was installed–even for a period when nobody was home and the breakers were turned off. The electric company said there was nothing wrong. After installing their own measuring device, the students found that the meter was overcharging them 2.5 times.</b> </p>
+</blockquote>
+<p>SM customers around the country are complaining about horrendous increases in their electric bills since SMs were retrofitted on to their homes.  Here are some examples: </p>
+<blockquote class="tr_bq">
+<p>
+<b>Smart Meter Consumers Anger Grows Over Higher Utility Bills </b><br />
+<a href="https://sites.google.com/site/nocelltowerinourneighborhood/home/wireless-smart-meter-concerns/smart-meter-consumers-anger-grows-over-higher-utility-bills">https://sites.google.com/site/nocelltowerinourneighborhood/home/wireless-smart-meter-concerns/smart-meter-consumers-anger-grows-over-higher-utility-bills</a> </p>
+<p><b>FAQ: Billing Questions </b><br />
+<a href="http://stopsmartmeters.org/frequently-asked-questions/faq-billing-issues/">http://stopsmartmeters.org/frequently-asked-questions/faq-billing-issues/</a> </p>
+<p><b>Smart Meter Complaints </b><br />
+<a href="http://emfsafetynetwork.org/smart-meters/complaints/">http://emfsafetynetwork.org/smart-meters/complaints/</a> </p>
+</blockquote>
+<p>If you have an SM, be forewarned! </p>
+<p>However, in the PECO utility service area of metropolitan Philadelphia, PA and suburbs, customers will be getting higher bills effective January 1, 2016, as PECO has filed for a $190Million rate increase on March 27, 2015. </p>
+<blockquote class="tr_bq">
+<p>
+If approved by the Pennsylvania Public Utility Commission, the increase would boost the             total monthly bill for a residential customer using 700 kilowatt hours of electricity about             $6.55 a month, or about 6 percent. The increase would go into effect Jan. 1. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>
+Bills for all customers would go up about 4.4 percent. A typical small-business customer                would   pay about $27.72 more per month, and a typical large customer would pay $847.57 a month,               Peco said. [4] </p>
+</blockquote>
+<p>With the ‘automatic’ SM increases and the new rate increase filing to take effect January 1, 2016, I wonder if PECO could be accused of price-gouging. </p>
+<p>The other daunting concern that utility customers constantly are warned about is the <a href="http://activistpost.net/teslasecret/">power grid going down</a> and what could happen.  Will Smart Meters make the grid even more vulnerable than sun spots and the solar wind’s electromagnetic energy [2]?  Any hacker—foreign or domestic—probably will be able to take down a utility, plus the grid itself, very easily once there’s a complete tie in to the U.S. Smart Grid, something those who don’t like America probably have on their drawing boards right now. </p>
+<p><a href="http://www.easyonlineprivacy.com/" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img alt="" src="https://www.activistpost.com/wp-content/uploads/2015/04/cover21.gif"></a>Frankly, all those ‘smart’ technologies seem rather dumb and make us more vulnerable, unless there’s a more sinister plot afoot like surveillance and control. </p>
+<p>However, security breaches are addressed in the April 2015 report <a href="http://cdn2.hubspot.net/hub/277648/file-2726147033-pdf/Insights/BitSight_Insights_Beware_the_Botnets.pdf?t=1429127111372&amp;utm_campaign=resource+center&amp;utm_source=hs_automation&amp;utm_medium=email&amp;utm_content=16924332&amp;_hsenc=p2ANqtz-8spFvOKjoG-v_TqAP_FCwBAxE5yaAzYAhgX_hB7r4TFmeNbsOyuyE8Dq85yTzoqRPku8RCXwFZgLilZN_-2bqSpH6etRHXmHsMKUbbvjWYGstD4uc&amp;_hsmi=16924332">“Beware the Botnets”</a> produced by BitSight Insights, which I downloaded. </p>
+<p>The introductory paragraph states that </p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<blockquote class="tr_bq">
+<p>
+<b>Major data breaches affecting some of world’s largest organizations have elevated cyber          security to a top concern of executives and board directors. Beyond grabbing headlines, these          data loss events can result in serious repercussions for businesses, including financial and    reputational damage. </b></p>
+</blockquote>
+<p>They identify one import risk factor as botnets, i.e., <i><b>“networks of computers that have been compromised or infected with malicious software and controlled as a group by an adversary without the owners’ knowledge. A botnet infection means that an attacker has obtained partial or com­plete administrative control of a system.”</b></i> </p>
+<div class="code-block code-block-1" style="margin: 0px">
+<div align="center" class="mrf-external">
+<a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1="><img src="https://www.activistpost.com/wp-content/uploads/2018/02/500.jpg"></a></p>
+<h4 style="text-align: center"><a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1=" target="_blank">Secret $1.8 Million Cryptocurrency Script</a></h4>
+</div>
+<p>In that report “BitSight examined the ratings of 6,273 companies with 1,000 or more employees, of which 199 (3.3%) had experienced at least one recent publicly disclosed breach” for the period March 2014 to March 2015.  Finance, retail, healthcare, <b><i>utilities</i></b>, and education were the industries surveyed.   According to BitSight, utilities were the second worst performer in their study!  One botnet, Carufax, is a Trojan that is designed to steal personal data and information.</p>
+<p>All this ‘smart’ technology does is create more problems to deal with; makes consumers spend more money either to own the ‘smart’ gadgets or comply with mandates/regulations like Smart Meter laws; and, ultimately, jeopardizes personal safety, and enables identity theft and other criminal activities via electronic devices.</p>
+<p><i><b>About BitSight Technologies</b></i> </p>
+<blockquote class="tr_bq">
+<p>
+BitSight Technologies [Cambridge, MA] is transforming how companies manage information security risk with objective, evidence-based security ratings. The company’s Security Rating Platform continuously analyzes vast amounts of external data on security behaviors in order to help organizations make timely risk management decisions.  </p>
+</blockquote>
+<p>Do readers think that public utilities are safeguarding your personal information with Smart Meters? </p>
+<p><b>References: </b></p>
+<p>[1] <a href="http://electronicdesign.com/energy/you-can-t-have-smart-grid-without-smart-meters">http://electronicdesign.com/energy/you-can-t-have-smart-grid-without-smart-meters</a> <br />
+[2] <a href="http://www.haystack.mit.edu/edu/pcr/Solar/files/PowerPoint%20Presentation%20-%20Introduction%20to%20the%20Sun%20and%20Space%20Weather.pdf">http://www.haystack.mit.edu/edu/pcr/Solar/files/PowerPoint%20Presentation%20-%20Introduction%20to%20the%20Sun%20and%20Space%20Weather.pdf</a> <br />
+[3] <a href="http://media.cns-snc.ca/media/toocheap/toocheap.html">http://media.cns-snc.ca/media/toocheap/toocheap.html</a> <br />
+[4] <a href="http://articles.philly.com/2015-03-29/business/60582352_1_typical-small-business-customer-peco-distribution-charge">http://articles.philly.com/2015-03-29/business/60582352_1_typical-small-business-customer-peco-distribution-charge</a> </p>
+<p><i>Catherine J Frompovich (<a href="http://www.catherinejfrompovich.com/" target="_blank">website</a>)    is a retired natural nutritionist who earned advanced degrees in    Nutrition and Holistic Health Sciences, Certification in Orthomolecular    Theory and Practice plus Paralegal Studies. Her work has been  published   in national and airline magazines since the early 1980s.  Catherine   authored numerous books on health issues along with  co-authoring papers   and monographs with physicians, nurses, and  holistic healthcare   professionals. She has been a consumer healthcare  researcher 35 years   and counting.</i></p>
+<p>Catherine’s latest book, published October 4, 2013, is <a href="http://www.amazon.com/Vaccination-Voodoo-What-About-Vaccines/dp/1484923820/ref=as_li_tf_sw?&amp;linkCode=wsw&amp;tag=permacultucom-20" target="_blank">Vaccination Voodoo, What YOU Don’t Know About Vaccines</a>, available on Amazon.com.</p>
+<p>Her 2012 book <a href="http://www.amazon.com/Cancer-Answer-Management-Effective-Treatments/dp/1477490175/ref=as_li_tf_sw?&amp;linkCode=wsw&amp;tag=permacultucom-20" target="_blank">A Cancer Answer, Holistic BREAST Cancer Management, A Guide to Effective &amp; Non-Toxic Treatments</a>, is available on Amazon.com and as a Kindle eBook.</p>
+<p>Two of Catherine’s more recent books on Amazon.com are <a href="http://www.amazon.com/Our-Chemical-Lives-And-Hijacking/dp/1439255369/ref=as_li_tf_sw?&amp;linkCode=wsw&amp;tag=permacultucom-20" target="_blank">Our Chemical Lives And The Hijacking Of Our DNA, A Probe Into What’s Probably Making Us Sick</a> (2009) and <a href="http://www.amazon.com/Lord-Make-Through-Grieving-Loss/dp/1434363880/ref=as_li_tf_sw?&amp;linkCode=wsw&amp;tag=permacultucom-20" target="_blank">Lord, How Can I Make It Through Grieving My Loss, An Inspirational Guide Through the Grieving Process</a> (2008)</p>
+</p></div>
+</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/catherine-frompovich/" rel="tag">Catherine Frompovich</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 10, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/food-chain-catastrophe-emergency-shut-down-of-west-coast-fisheries/"><img width="150" height="150" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/ocean-die-off-150x150.jpg" class="grayscale grayscale-fade wp-post-image" alt="" /><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/food-chain-catastrophe-emergency-shut-down-of-west-coast-fisheries/">Previous Story:<br/> <strong>Food Chain Catastrophe: Emergency Shut Down Of West Coast Fisheries</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/signs-that-the-elite-are-feverishly-preparing-for-something-big/"><img width="150" height="150" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/Police-State-Riot-Control-Exercise-Public-Domain-300x300-150x150.jpg" class="grayscale grayscale-fade wp-post-image" alt="" srcset="https://www.sinister-sec.com/wp-content/uploads/2018/05/Police-State-Riot-Control-Exercise-Public-Domain-300x300-150x150.jpg 150w, https://www.sinister-sec.com/wp-content/uploads/2018/05/Police-State-Riot-Control-Exercise-Public-Domain-300x300.jpg 300w" sizes="(max-width: 150px) 100vw, 150px" /><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/signs-that-the-elite-are-feverishly-preparing-for-something-big/">Next Story:<br/> <strong>Signs That The Elite Are Feverishly Preparing For Something BIG</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d556f5973812"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d556f5973812"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d556f59757bc"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d556f59757bc"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 0.29885792732239 seconds, on 15-08-19 14:42:33 -->

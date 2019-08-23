@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Automaton Factory &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='New Project Tackles Inherent Risks to Your Privacy From Electronic Medical Records' href='https://www.sinister-sec.com/new-project-tackles-inherent-risks-to-your-privacy-from-electronic-medical-records/' />
+<link rel='next' title='School districts increasingly hiring foreign teachers to fill shortages' href='https://www.sinister-sec.com/school-districts-increasingly-hiring-foreign-teachers-to-fill-shortages/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/automaton-factory/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=53341' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fautomaton-factory%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fautomaton-factory%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-53341 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/automaton-factory/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-53341 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-consciousness">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Automaton Factory</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+        
+        <div class="entryhead" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            
+            <a href="https://www.sinister-sec.com/automaton-factory/">
+            
+            	<img width="854" height="514" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/zombies_2-854x514.png" class="standard grayscale grayscale-fade wp-post-image" alt="" />            
+            </a>
+        
+        </div><!-- end .entryhead -->
+ 
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 15, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry-content clearfix">
+<p><a href="https://www.activistpost.com/wp-content/uploads/2016/01/zombies_2.png" rel="attachment wp-att-117895"></a>Op-Ed by <a href="http://truthstreammedia.com/2016/01/23/automaton-factory/">Melissa Dykes</a></p>
+<p>I found it incredibly hard to write about anything this week. For the first time in a long time, I found I really didn’t have that much to say.<span id="more-13800"></span></p>
+<p>Society is going the way of all those dystopic films. <em>Willingly. </em>Not the ones about the police state or the panopticon; the omnipresent surveillance state is already here, has been for a while now. The death of <a href="https://www.youtube.com/watch?v=M6SyPWdHlPc" target="_blank">privacy</a>. The tyranny of total transparency for everyone else, national security for the State. A place where information is constantly being extorted from us. A place where police look up <a href="https://www.youtube.com/watch?v=hIYkwr5nGYM" target="_blank">your color-coded threat score</a> based on your social media posts before they ever lay eyes on you during a traffic stop or 911 call. A place where they know it is you based on four credit card purchases. A place where computers can decode your thoughts and translate them into sentences without you saying a single word. A place where we spy on ourselves and spy on each other while the system spies on everyone, every minute, every hour, every day, day after day after day.</p>
+<div align="left">
+<a href="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js</a><!-- AP WP Responsive --><ins class="adsbygoogle"></ins><br />
+// &lt;![CDATA[<br />
+(adsbygoogle = window.adsbygoogle || ).push({});<br />
+// ]]&gt;
+</div>
+<p>No, you may have seen some of the films I mean. Not the zombie apocalypse programming. Not the 2012 apocalypse programming. I’m talking about the ones where people have been stripped of their emotions and individuality to bring order out of the chaos of nonconformity, to do away with the danger of outliers. The ones where people have been sold a mockery of “peace” built on uniformity. Where sameness saves and individuality is certain doom.</p>
+<p><a href="http://activistpost.net/patriotprivacy.html"><img class="alignright" src="https://lh3.googleusercontent.com/-87TN97qvUkI/Vglq4samFUI/AAAAAAAACBo/3KM84rzs47g/s250-Ic42/Eyeball-ad-300x2501-300x250.png" alt=""></a>Have you seen The <em><a href="http://www.amazon.com/gp/product/B00MQOQFPW/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00MQOQFPW&amp;linkCode=as2&amp;tag=truthmedia-20&amp;linkId=T2AHWEPQ3WZBVGWM" rel="nofollow">The Giver</a></em><img src="http://ir-na.amazon-adsystem.com/e/ir?t=truthmedia-20&amp;l=as2&amp;o=1&amp;a=B00MQOQFPW" alt="" width="1" height="1" border="0">? <em><a href="http://www.amazon.com/gp/product/B00GQQ75QO/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00GQQ75QO&amp;linkCode=as2&amp;tag=truthmedia-20&amp;linkId=4ZF24UIHOEDM5TVF" rel="nofollow">Divergent</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=truthmedia-20&amp;l=as2&amp;o=1&amp;a=B00GQQ75QO" alt="" width="1" height="1" border="0">?</em> Or <em><a href="http://www.amazon.com/gp/product/B004QI14TS/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B004QI14TS&amp;linkCode=as2&amp;tag=truthmedia-20&amp;linkId=RWGMOFSBCFBUVDUD" rel="nofollow">Visioneers</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=truthmedia-20&amp;l=as2&amp;o=1&amp;a=B004QI14TS" alt="" width="1" height="1" border="0"></em> maybe?</p>
+<p>It all goes back to <em><a class="easyazon-link" href="https://www.activistpost.com/product/0060850523/US/permacultucom-20/?cart=y" rel="nofollow" target="_blank">Brave New World</a></em>, albeit with electronic soma, and people learning to love their servitude.</p>
+<p>The pathway to this place has been lined with low expectations. Setting the bar so low, it’s almost on the ground.</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>Have you thought about what you want out of life? What your goals are? Do you have a goal? Most people don’t have the time anymore or inclination to think about what they really want out of life or what their life <em>means.</em> Most people have been socially engineered to believe that the only worthy goal in this world is material wealth anyway. Consumerism. The American Dream, as hijacked and sold to us since World War II <a href="http://truthstreammedia.com/2015/09/06/edward-bernays-and-the-american-dream/" target="_blank">by Edward Bernays</a>.</p>
+<p>But in a society where the 62 richest people have amassed more wealth than half the planet (and they aren’t even counting the Rothschilds), a lot of human beings have been forced down to the bottom of Maslow’s hierarchy of needs.</p>
+<p><a href="https://www.activistpost.com/wp-content/uploads/2016/01/maslows-hierarchy-of-needs.gif" rel="attachment wp-att-117893"></a>The physiological rung of the ladder. Treading water to make sure the most basic needs for survival are met. “I just want to be able to pay the bills” or “I just want a car that doesn’t break down every other five minutes so I can get back and forth to the job I don’t really like but am forced to go to every day so I can pay the bills.”</p>
+<p>If you have that covered, the next level is safety. Security. Health. <em>Stability. </em>Children aren’t even raised to know what stability is anymore. Considering we live in a society based entirely on fear, mostly fear of death, this one is hard for the majority to get past. Without fear, the perpetual terror programmed into us, the constant state of emergency that justifies more and more centralized power over a society programmed to be paranoid so it will passively hand off its rights, well… they couldn’t justify more and more and more control mechanisms without that constant fear.</p>
+<p>And those bottom two levels of the pyramid are where more and more people are living out their entire lives in our modern, techno-driven world.</p>
+<p>If you call it living. I’m not sure what it is sometimes, to be honest. Sleepwalking might be more appropriate. Instagram. Tweet. Vines. Bite-sized chunks of our day passed off in a sentence or two on a social media platform. If someone hits “like,” guess that means you exist. Jack Handey had deeper thoughts.</p>
+<p>The other day a woman on her cell phone almost walked right into us in a store. She was completely oblivious to the world happening around her. The store could’ve been bombed, she could’ve been mugged, a dragon could’ve swooped down from the skies and snatched her up and she might not have even noticed any of it. Aaron turned and apologized, as if he had been in the wrong, then realized she wasn’t paying attention anyway. He remarked, “Never mind, you aren’t even paying attention are you?” The woman just continued to drift away from us, dreamily, like a ghost. It took her at least 20 to 30 steps before she turned back and shoot a stern look in our direction, like the comment finally caught up with her brain, long enough after the fact that we weren’t even sure if she fully knew why she looked back at us to begin with.</p>
+<p>And people have walked into walls this way. Light poles on sidewalks. Or they’ve drifted off those sidewalks and into oncoming traffic while talking on those phones. They get on the phone behind the wheel of a car, turning it into a death machine on wheels. They’ve checked out. They’re neither here, nor there.</p>
+<p><a href="http://activistpost.net/unexplainable.html" rel="nofollow"><img class="alignright" src="https://lh5.googleusercontent.com/_qLAIskTQXUc/TdShMb4n6MI/AAAAAAAAI3o/d72a9NrD4wE/unexmys.gif" alt=""></a>Where has everybody gone?</p>
+<p>It’s happening earlier and earlier. The social engineering that it’s normal to have a smart phone/palm-sized supercomputer on your person at all times anywhere you go. Seventy seven percent of two year olds now use mobile devices on a daily basis, according to a recent <a href="http://www.thedailysheeple.com/77-of-two-year-olds-now-use-mobile-devices-on-a-daily-basis_112015" target="_blank">study</a>. Can you believe it? On top of that, parents use these devices as stand-ins and babysitters: 70 percent give their kids mobile devices to keep the children busy while they do household chores, 65 percent do it to keep their kids calm in public, 58 percent to run errands, and 28 percent to put their children to sleep at night. Wow. To say nothing of the effects of children absorbing microwave radiation in higher amounts than adults, if a cell phone could cook dinner, put bandaids on boo boos and give hugs and kisses, would kids even need parents? (Oh wait, that’s what the robots will be for…)</p>
+<p>And I feel old for remembering a time when people went to the grocery store and made it through the produce section without calling someone. Fancy that.</p>
+<p>Worse, however… recent studies have <a href="http://time.com/4168688/cell-phone-distracted-parenting-can-have-long-term-consequences-study/" target="_blank">also shown</a> that babies raised by cell phone/technology distracted parents may actually be missing vital social cues in a biological window that — without that undivided attention given at the proper time — it is detrimental to the development of the child’s nervous system. If missed, it may literally effect the child’s ability to process pleasure properly for the rest of his or her life.</p>
+<p>We’re right back to that dystopic society of emotionless drones…</p>
+<p>And there it is. The cybernetic new world order out of chaos… the churning out of automatons, living things turned into and programmed like and by machines, assimilated into a network, a system where the “smart” devices are the millions of micro-mechanisms of control over the masses.</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<div class="code-block code-block-1" style="margin: 0px">
+<div align="center" class="mrf-external">
+<a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1="><img src="https://www.activistpost.com/wp-content/uploads/2018/02/500.jpg"></a></p>
+<h4 style="text-align: center"><a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1=" target="_blank">Secret $1.8 Million Cryptocurrency Script</a></h4>
+</div>
+<p>What reality are we crafting? What is this place gonna look like in ten years? Five?</p>
+<p>Will we become less like ourselves, even as we become more obsessed with ourselves? Know thyself? Or know thy Facebook profile version of thyself?</p>
+<p><a href="http://activistpost.net/brain101.html" target="_blank"><img class="alignleft" src="https://lh6.googleusercontent.com/-b2KBJy3pxwc/VF71B58k12I/AAAAAAAAAKQ/nJtcZhqJ1jw/s220/220_006.png" alt=""></a>This place feels more like the Matrix by the day. Oh, and now DARPA is working on a microchip implant (aka wetware, to make it sound cool) that will use the electrochemical signals in our brains to control computers. DARPA who designed the Internet I’m typing this on right now. A brain implant. Can you see people lining up for this hip, trendy new tech? Stories on this new and exciting development described it with <a href="http://www.nbcnews.com/tech/innovation/darpa-wants-develop-brain-translating-device-n499866" target="_blank">lines like</a>, “The federal government wants to read your mind…” Yep. In real time.</p>
+<p>I wonder, if the brain can control the computer, can they make a computer that can control the brain? Do I even have to ask at this point?</p>
+<p>Does anyone even realize or care how far down the rabbit hole we’ve fallen?</p>
+<p>Hello? Hello??</p>
+<p>Is there anybody… out there?</p>
+<p><em><strong>Melissa Dykes (formerly Melton)</strong> is a co-founder of <a href="http://TruthstreamMedia.com">TruthstreamMedia.com</a>. She is an experienced researcher, graphic artist and investigative journalist with a passion for liberty and a dedication to truth. Her aim is to expose the New World Order for what it is — a prison for the human soul from which we must break free.</em></p>
+</p></div>
+<nav class="post-nav-wrap">
+<ul class="post-nav clearfix">
+<li class="post-nav-prev">
+<a href="https://www.activistpost.com/2016/01/flint-residents-told-that-their-children-could-be-taken-away-if-they-dont-pay-for-citys-poison-water.html" rel="prev"><i class="fa fa-chevron-left"></i>Previous post</a>
+</li>
+<li class="post-nav-next">
+<a href="https://www.activistpost.com/2016/01/mitch-mcconnell-wants-to-give-obama-unlimited-war-powers.html" rel="next">Next post<i class="fa fa-chevron-right"></i></a>
+</li>
+</ul>
+</nav>
+<p>	<!-- Here we load disqus comments --></p>
+<div class="dcl-disqus-thread" id="comments">
+<div id="disqus_thread"></div>
+</p></div>
+<p>	/*  */</p>
+<p>	/*  */</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/consciousness/" rel="tag">Consciousness</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 15, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/verify-your-email-account-the-latest-phishing-scam-to-emerge-online/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/verify-your-email-account-the-latest-phishing-scam-to-emerge-online/">Previous Story:<br/> <strong>‘Verify Your Email Account’, The Latest Phishing Scam to Emerge Online</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/facebook-users-hit-with-your-account-will-be-disabled-message-phishing-scam/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/facebook-users-hit-with-your-account-will-be-disabled-message-phishing-scam/">Next Story:<br/> <strong>Facebook Users Hit with ‘Your Account Will Be Disabled’ Message Phishing Scam</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d557be246aad"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d557be246aad"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d557be27103f"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d557be27103f"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 7.4512159824371 seconds, on 15-08-19 15:36:02 -->

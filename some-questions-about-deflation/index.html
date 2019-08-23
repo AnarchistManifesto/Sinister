@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Some Questions about Deflation &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='All Wars Are Bankers’ Wars' href='https://www.sinister-sec.com/all-wars-are-bankers-wars-2/' />
+<link rel='next' title='‘A Place At The Table’ – Will it Match the Magnitude of ‘Food, Inc.’?' href='https://www.sinister-sec.com/a-place-at-the-table-will-it-match-the-magnitude-of-food-inc/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/some-questions-about-deflation/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=39584' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fsome-questions-about-deflation%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fsome-questions-about-deflation%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-39584 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/some-questions-about-deflation/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-39584 post type-post status-publish format-standard has-post-thumbnail hentry category-world">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Some Questions about Deflation</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/world/" rel="category tag">World</a>    </p>
+    	
+    </div>
+    
+        
+        <div class="entryhead" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            
+            <a href="https://www.sinister-sec.com/some-questions-about-deflation/">
+            
+            	<img width="200" height="132" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/fallingprices2.jpg" class="standard grayscale grayscale-fade wp-post-image" alt="" />            
+            </a>
+        
+        </div><!-- end .entryhead -->
+ 
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 10, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry-content clearfix">
+<div class="GARD gard_advanced_mode" id="google-ads-mzq0">
+<p>adUnit = document.getElementById(&#8220;google-ads-mzq0&#8221;);<br />
+google_ad_client = &#8220;ca-pub-1897954795849722&#8221;;<br />
+adUnit = document.getElementById(&#8220;google-ads-mzq0&#8221;);<br />
+adWidth = adUnit.offsetWidth;<br />
+if ( adWidth &gt;= 999999 ) {<br />
+/* GETTING THE FIRST IF OUT OF THE WAY */<br />
+} else {<br />
+google_ad_slot = &#8220;0&#8221;;<br />
+adUnit.style.display = &#8220;none&#8221;;<br />
+}
+</p></div>
+<div class="separator" style="clear: both;text-align: center"><a href="https://www.activistpost.com/wp-content/uploads/2013/02/fallingprices21.jpg" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img border="0" height="132" src="https://www.activistpost.com/wp-content/uploads/2013/02/fallingprices2.jpg" width="200"></a></div>
+<p>Robert Blumen, <i>Contributor</i><br />
+<a href="https://www.activistpost.com/2013/02/some-questions-about-deflation.html"><b>Activist Post</b></a></p>
+<p>What is deflation? </p>
+<p>According to dictionary.com, it is “a fall in the general price level or a contraction of credit and available money”. </p>
+<p>Falling prices. That sounds good, especially if you have set some cash set aside and are thinking about a major purchase. </p>
+<p>But as some additional research demonstrates, that would be a naïve and simple-minded conclusion. It quickly becomes evident that deflation is a serious economic disease.</p>
+<p>According to the St Louis Fed,</p>
+<blockquote class="tr_bq">
+<p>While the idea of lower prices may sound attractive, deflation is a real concern for several reasons. Deflation discourages spending and investment because consumers, expecting prices to fall further, delay purchases, preferring instead to save and wait for even lower prices. Decreased spending, in turn, lowers company sales and profits, which eventually increases unemployment.”</p>
+</blockquote>
+<p>The problem with deflation is that it feeds on itself, destroying an economy along the way. It is the macro equivalent of a roach motel: perilously easy to enter but impossible to leave. The problem, you see, is that deflation reduces consumption, which reduces production, eventually shutting down all economic activity. </p>
+<p><a name="more"></a>Wikipedia explains it this way: </p>
+<blockquote class="tr_bq">
+<p>Because the price of goods is falling, consumers have an incentive to delay purchases and consumption until prices fall further, which in turn reduces overall economic activity. Since this idles the productive capacity, investment also falls, leading to further reductions in aggregate demand. This is the deflationary spiral.</p>
+</blockquote>
+<p>Deflation is far worse than its doppelgänger, inflation, because the Fed can fight inflation by raising interest rates. Deflation is nearly impossible to stop once it has started because interest rates can only be cut to zero, no lower. For this reason, Ben Bernanke believes that monetary policy should be biased toward preventing deflation more than preventing inflation. </p>
+<div align="center">
+<p>    <ins class="adsbygoogle" style="height: 90px;width: 728px"></ins></p>
+<p>    (adsbygoogle = window.adsbygoogle || ).push({});</p>
+</div>
+<p>
+In case you’re not already scared straight, the deflationary doomsday has already happened in America <a href="http://topics.nytimes.com/top/reference/timestopics/subjects/d/deflation_economics/index.html">when (according to the New York Times) it caused the Great Depression</a>. </p>
+<p>Japan, according to Bloomberg “has been battling deflation for more than a decade, with the average annual 0.3 percent decline in prices since 2000 damaging economic growth”. The New York Times reports that Japan’s new prime minister Abe “has galvanized markets by encouraging bold monetary measures to beat deflation”. </p>
+<p>I hope that everyone is clear on this. </p>
+<p>Now that you understand the basics, I have some questions for the people who came up with this stuff. </p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p><b>Why do falling prices make people expect falling prices? </b></p>
+<p>The observation that prices are falling, means that in the recent past, prices have fallen. </p>
+<p>One person noticing that the price of a good that appears somewhere on their value scale has fallen for some time might interpret that information and conclude that in the future, the price of that good will be lower. But a second individual might see the same thing and expect the price to level off and stay where it is, and a third might interpret falling prices as an indicator that in the future prices will be higher. </p>
+<p>Why should a price having fallen indicate that it will continue to fall? That is only one of three possible future trends. Why should past trends continue indefinitely? </p>
+<p>Why will the public mainly choose the first of these three outlooks, more than the other two? </p>
+<p><a href="http://www.bloggersecret.com" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em" target="_blank"><img src="https://lh5.googleusercontent.com/-W_QDsMeuL2M/T8kFjUwCVXI/AAAAAAAAPEk/RT2DHTDyOsI/s300/300x250_v002.gif" width="200"></a>According to economist Jeffrey Herbener, the assumption that falling prices create expectations of more of the same is a feature of certain popular macroeconomic theories in which price expectations are modeled as part of the theory. In his testimony to Congress, Herbener observes that “the downward spiral of prices is merely the logical implication of assumptions about expectations within formal economic models. If you assume that the agents operating in an economic model suffer from expectations that are self-reinforcing, then the model will produce a downward spiral.” </p>
+<p>Are expectations self-reinforcing? It would make just as much sense to say that expectations are self-reversing – after people have seen prices go down for a while, they will expect prices to go up. </p>
+<p>Are these formal models a good description of human action? Contrary to what these models say, there is no fixed response to an event. In my own experience, I can think of many times I or someone that I know jumped on a low price because we do not expect the opportunity to last. </p>
+<p><b>But what about wages? </b></p>
+<p>The postponement theory depends on the assumption that a fall in the prices will benefit buyers who wait. This is true if we are talking about people who have lots of cash and can sit on it indefinitely. But most of us have ongoing monthly expenses and we depend on our wages to replenish our cash reserves. Our purchasing power at the time when we want to make a delayed purchase, comes from our cash savings and our wages. A fall in wages, if substantial, would wipe out any gains in purchasing power realized from lower prices. </p>
+<p>If consumers do not buy today because they expect lower prices tomorrow, then what are their expectations about their wages? Do they anticipate that their wages be the same, higher, or lower? If lower, then by how much? As much as prices have fallen? </p>
+<p>If consumers forecast lower prices and stable wages, then why are consumer prices included the models but wages are not? Does deflation only affect consumer goods prices, leaving all other prices untouched? </p>
+<p>According to the deflationary death spiral theory, decisions not to buy drag the economy into a death spiral. Does anyone expect that could happen without affecting wages? </p>
+<p><b>And what about asset prices? </b></p>
+<p>In addition to cash savings and wages, individuals decide how much to spend and save taking into account the amount that they have already saved. Someone who is trying to save to meet their family’s future needs will feel less comfortable about spending. </p>
+<p>Most people hold some of their savings in cash. That portion of their savings increases in purchasing power when prices fall. But people also save by purchasing financial assets, such as stocks and bonds, or real assets such as property, and rental housing. All of these assets have a price, which could rise or fall. Depending on the mix of cash and other assets that an individual holds, a fall in asset prices could wipe out any gains in purchasing power from the cash portion of their savings. </p>
+<p><a href="http://activistpost.net/johnsonmotor.html" style="clear: right;float: right;margin-bottom: 0em;margin-left: 1em"><img alt="" src="https://lh3.googleusercontent.com/-adB-3x0Rwfs/TwILM3UdEEI/AAAAAAAANvg/RBOOn-NO51Q/s265/160x1.gif"></a>Do people take value of their past savings into account when deciding whether to buy or wait? Or do people form expectations about consumer prices only and ignore what might happens to their savings in a deflation? </p>
+<p>If falling consumer prices generate expectations of more of the same, what impact do falling prices have on expectations about asset prices? Do buyers who delay purchases expect the prices of their saved assets to be lower as well? If not, then do they expect that consumer prices will be lower and asset prices will be higher? </p>
+<p>If deflation causes the economy to disintegrate, will asset prices be spared? </p>
+<p><b>Is it only buying behavior that is affected? </b></p>
+<p>The deflation death star begins to destroy the earth when buying is postponed. </p>
+<p>But is it only buying that is affected by expectations about the future? If buying is affected but not selling, then why not? </p>
+<p>If consumers expect lower prices of most things, including things that they already own, it is equally logical that they would sell their possessions and their assets in order to buy them back later at a lower price. Selling your home and renting a similar one would be the place to start. Selling your car and leasing would be the next step. Finally sell your saved assets for cash would be equally profitable. Expectations of lower prices should lead to a spiral of selling, driving prices down even faster, leading to more deflationary expectations and more selling until everyone has no possessions and no assets other than cash. </p>
+<p>If this happened, then who would buy? </p>
+<p><b>Do prices ever get low enough? </b></p>
+<p>If buyers expect lower prices, then how much lower? Any number in particular? If a buyer expects a specific lower price, and the price reaches that level, will he buy? Or does he always prices to go even lower than they are today, no matter how far they have fallen already? </p>
+<p>If expectations of lower prices turn out to be correct, and prices drop to even lower levels, then is there any point where a minority of contrarian buyers defect from the consensus and begin to see a bottom, or even an uptrend? Or do these expectations go on forever adapting to lower prices causing prices to drop indefinitely? </p>
+<p>The point of delaying a purchase is so that you can make the purchase in the future and have some additional cash left over to make another purchase or to save. What is the point of delaying a purchase that you never make? </p>
+<p>We have all had the experience of buying a new computer or some other device the day before the next version was released that costs less and does more. If you knew would you have waited? Maybe, but maybe not. If you need a computer for work, then you will buy it sooner rather than later. </p>
+<p>Many people delayed their purchase of the iPhone 4 in order to buy the iPhone 5, then they bought the iPhone 5. My iPhone4 was worn out by that time and I needed a new phone. </p>
+<div class="separator" style="clear: both;text-align: center"><a href="https://www.activistpost.com/wp-content/uploads/2013/02/law_of_demand31.gif" style="margin-left: 1em;margin-right: 1em"><img border="0" height="225" src="https://www.activistpost.com/wp-content/uploads/2013/02/law_of_demand3.gif" width="400"></a></div>
+<p>
+<b>What about the Law of Demand? </b></p>
+<p>According to the law of demand, a greater quantity of a good is demanded at a lower price than at a higher price. If that were true, then people would buy more, rather than postponing purchases. </p>
+<p>What happens to the law of demand in a deflation? It turns out at that the law of demand has a loophole: it requires that all other things remain equal. In a deflation death spiral, all things are not equal. Consumer preferences change in response to prices. Stationary supply and demand curves do not exist in such a world. For prices to fall and yet still fail to induce buyers to buy, the quantity demanded must always fall by more than enough to compensate for the lower asking price. The demand curve is always shifting downwards faster than the price falls, to prevent an equilibrium price from ever forming. Economist W. H. Hutt <a href="http://www.amazon.com/Keynesian-Episode-Reassessment-W-Hutt/dp/0913966614">calls this</a> “an infinitely elastic demand for money”. </p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>Does this describe the world that we live in, or any world that we could imagine? Do people really react in such a mechanical way to price changes? How do we explain, for example, <a href="http://en.wikipedia.org/wiki/Black_Friday_%28shopping%29">shoppers competing to buy at low prices</a>? </p>
+<p><b>Why do sellers not lower prices? </b></p>
+<p>Why is it only buyers whose expectations of lower prices are based on falling prices? Are the expectations of sellers included in the model? </p>
+<p>If not, is that because the models assume that sellers not have expectations? Or do the expectations of sellers not match the expectations of buyers? </p>
+<p>If sellers have the expectations of lower prices, why do they not lower their prices immediately in order to sell inventory ahead of their competitors? </p>
+<p>If buyers and sellers both expect future prices to be lower, why do market prices not converge upon this new, lower level immediately? </p>
+<p>If customers are postponing purchases expecting lower prices in the future, but sellers do not cooperate, then inventories will accumulate. If this began to happen, then why would sellers not lower their prices immediately in order to clear out inventories? </p>
+<p><a href="http://activistpost.net/backyardliberty.html" style="float: right;margin-left: 1em;margin-bottom: 1em" target="_blank"><img src="https://lh3.googleusercontent.com/-k0NQ-rOJPq0/UPDSF5crnFI/AAAAAAAATcw/i7Q6pBk-hoQ/s200/BL_013-200.gif" alt=""></a>All of us are both buyers and sellers, of different things at different times. To say that only the expectations of buyers are affected by falling prices is to say that the same person at one time has expectations about his own future purchases but later the same day, does not have expectations about his own current and future sales. Does the model assume that we have all been lobotomized so the two sides of our brain do not communicate with each other? </p>
+<p><b>Do producers have any control over their costs? </b></p>
+<p>In the previous question, I asked whether sellers expect lower prices as well as buyers. If the producers expected lower prices, why did they go ahead and produce, or order the products with such high costs that they could not make a profit? </p>
+<p>If a single business firm is experiencing fewer sales, they may not be able to reduce their costs because a single firm is close to being a price taker in the markets for labor and capital. There are usually alternative uses for their factors that value them more highly, at or close to current prices. But if prices, and sales are falling everywhere, or if everyone expects this to be the case, then why will suppliers not lower their prices if they expect their costs to be lower? </p>
+<div class="code-block code-block-1" style="margin: 0px">
+<div align="center" class="mrf-external">
+<a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1="><img src="https://www.activistpost.com/wp-content/uploads/2018/02/500.jpg"></a></p>
+<h4 style="text-align: center"><a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1=" target="_blank">Secret $1.8 Million Cryptocurrency Script</a></h4>
+</div>
+<p><b>What are people doing with the money that they did not spend? </b></p>
+<p>Suppose that people postpone spending. What do they do with the money not spent? Are they increasing their cash holdings? Or are they spending on investment goods? <a href="http://www.capitalism.net/Jamesmil.pdf">Saving and investing is a form of spending</a>, only the expenditure is for capital goods rather than consumer goods. In this case, there would be no general decline in total spending, nor employment. Workers would have to change jobs from consumption industries to capital goods industries as Hayek explains in his essay “The Paradox of Savings”, but production would continue. </p>
+<p><b>How much lower prices are necessary to induce people to postpone purchases? </b></p>
+<p>There is a return on the purchase of a consumption good, namely the services provided by the good. This must be balanced against the return on cash by holding until prices are lower. As noted by, <a href="http://www.cepr.net/index.php/blogs/beat-the-press/correcting-robert-samuelson-on-japan-and-deflation">Center for Economic Policy Research (CEPR)</a> a small price change is not much of a motivation to wait, if you need a new product: </p>
+<blockquote class="tr_bq">
+<p>Samuelson gets some of the other aspects of this issue wrong. For example, he says that Japan’s deflation is a problem in part because falling prices cause people to delay purchases since items will be cheaper in the future. This would be true for rapid rates of deflation, but Japan’s deflation has almost always been less than 1.0 percent a year. In 2011 its inflation rate was -0.2 percent. This means that if someone was considering buying a $20,000 car, they could save $40 by waiting a year. It is unlikely that this rate of deflation affected the timing of many purchases to any significant extent.</p>
+</blockquote>
+<p><a href="http://activistpost.net/ultimatesurvivalplan.html" style="float: right;margin-left: 1em;margin-bottom: 1em" target="_blank"><img src="https://lh4.googleusercontent.com/-CTsdDqKcvhI/T7GjToaksaI/AAAAAAAAO2s/8vEb9HmqOhk/s316/160x316.gif" alt=""></a><b>Why do quantities adjust but not costs? </b></p>
+<p>If there is a generalized increase in money demand, then prices need to adjust downwards. Why is it that all the quantity of goods bought and the quantity of labor employed can adjust, but prices cannot? </p>
+<p>According to <a href="http://www.atimes.com/atimes/Japan/LD07Dh01.html">The Asia Times</a>, when deflation strikes, factories lay workers off in order to cut costs. Why cannot producers lower their bid prices to their labor force and their suppliers in order to preserve production? If they could lower their costs, then they could produce profitably at a lower price level. </p>
+<p>The general price level does not matter to business firms, so long as their costs are below their sale prices. Why does a deflationary melt-down assume that business can not operate profitably at any nominal price level? Why can business not lower costs? </p>
+<p><b>Is this really what caused the Great Depression? </b></p>
+<p>What about the <a href="http://mises.org/rothbard/agd/contents.asp">credit bubble of the 1920s</a>? </p>
+<p>What about bank failures? The great contraction of the money supply? </p>
+<p>The <a href="http://www.independent.org/publications/tir/article.asp?a=857">Smoot-Hawley tarrif</a>? </p>
+<p>What about <a href="http://www.independent.org/publications/tir/article.asp?a=430">regime uncertainty</a>? </p>
+<p>How about <a href="http://hlcole.bol.ucla.edu/NewDealucla.pdf">new deal wage and price policies that prevented prices from falling</a>, which would have allowed employment to recover? </p>
+<p><b>Conclusion</b></p>
+<p>The deflation death spiral is a theoretical description of a situation but it does not describe the reality of human action, for any number of reasons: </p>
+<ol>
+<li>There is in reality always a diversity of expectations among the public. While some people will expect prices to continue in the same direction, others will form the opposite view. Everyone’s expectations will change not only in response to changes in the data, but taking into account their entire life experience, their own ideas, and their situation. </li>
+<li>Expectations are not entirely driven by prices. A broad range of things influences our expectations about price. </li>
+<li>Lower prices are not always sufficient motivation to delay purchases because everyone prefers to have what they want now, rather than later. </li>
+<li>Expectations of buyers tend to be met by sellers, if not at first, then fairly soon. In some cases, buyers can hold onto their cash for a bit longer, but most businesses have no choice but to sell their inventories at what the buyer will pay. In other cases, buyers may not be able to delay purchases, or may not wish to, and will pay what they must in order to buy. </li>
+<li>Everyone – buyers and sellers (and every one of us acts in both of these roles at different times) has expectations not only about consumer prices, but about wages, employment prospects, even asset prices, the economy in general, the progress of our own life, and the future of our family. A coherent plan of saving and spending takes all of these things into account. </li>
+<li>Expectations can be met. Buyers have a buying price. Even if not known in advance, they know it when they see it posted. Even if they do not know what they plan to buy in the future, a bargain price will be met by buyers. </li>
+<li>People only need so much cash. Beyond that, they start to look around for either consumption goods, or investments.</li>
+</ol>
+<p>The other conclusion you can draw from this is to be very wary of accepting the goverment spin on economics. You should also be wary of taking advice from “experts” who base their expectations of outcomes on the way the government says the economic world works. For good advice based on the way that economics actually work, click <a href="http://dollarvigilante.com/tdvpremium">here</a>.</p>
+<p><i>Robert Blumen is a software engineer who lives in San Francisco.  Robert writes and blogs frequently about Austrian economics, gold, and  financial markets. Send him <a href="mailto:robert@robertblumen.com">mail</a>.</i></p>
+<div class="separator" style="clear: both;text-align: center"><a href="http://activistpost.net/gold2013.html"><img src="https://lh5.googleusercontent.com/-wZO-dMMyg4Q/URRNKTujDsI/AAAAAAAAUE0/HqFdmNFBcwk/s468/2013goldguide_468x60.gif" alt=""></a></div>
+<div class="linkwithin_div" style="margin-bottom: -2em">
+var linkwithin_site_id = 557381;</p>
+<p>linkwithin_text=’Related Articles:’
+</p>
+</div></div>
+</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 10, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/all-wars-are-bankers-wars-2/"><img width="150" height="146" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/02250-260x146-150x146.jpg" class="grayscale grayscale-fade wp-post-image" alt="" /><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/all-wars-are-bankers-wars-2/">Previous Story:<br/> <strong>All Wars Are Bankers’ Wars</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/a-place-at-the-table-will-it-match-the-magnitude-of-food-inc/"><img width="120" height="146" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/ad15-120x146.jpg" class="grayscale grayscale-fade wp-post-image" alt="" /><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/a-place-at-the-table-will-it-match-the-magnitude-of-food-inc/">Next Story:<br/> <strong>‘A Place At The Table’ – Will it Match the Magnitude of ‘Food, Inc.’?</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d57d2f632b76"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d57d2f632b76"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d57d2f634a12"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d57d2f634a12"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 0.48142099380493 seconds, on 17-08-19 10:12:06 -->

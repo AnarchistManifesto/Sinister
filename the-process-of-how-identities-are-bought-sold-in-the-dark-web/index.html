@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>The Process of How Identities Are Bought &amp; Sold in the Dark Web &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Steroid Supply Bought from the Dark Web Kills North Dakota Man' href='https://www.sinister-sec.com/steroid-supply-bought-from-the-dark-web-kills-north-dakota-man/' />
+<link rel='next' title='Airbnb China will share hosts information with the government' href='https://www.sinister-sec.com/airbnb-china-will-share-hosts-information-with-the-government/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/the-process-of-how-identities-are-bought-sold-in-the-dark-web/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=61897' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fthe-process-of-how-identities-are-bought-sold-in-the-dark-web%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fthe-process-of-how-identities-are-bought-sold-in-the-dark-web%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-61897 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/the-process-of-how-identities-are-bought-sold-in-the-dark-web/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-61897 post type-post status-publish format-standard hentry category-technology tag-dark-web-dark-net">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">The Process of How Identities Are Bought &amp; Sold in the Dark Web</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 17, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="td-post-content">
+<figure id="attachment_21107" style="width: 281px" class="wp-caption alignright"><a href="https://darkwebnews.com/wp-content/uploads/2018/05/Identitie-Concepts.jpg"><img src="image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" class="wp-image-21107 size-medium" alt="Man in barcode picture." width="281" height="300"><img class="wp-image-21107 size-medium" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/Identitie-Concepts-281x300.jpg" alt="Man in barcode picture." width="281" height="300"></a><figcaption class="wp-caption-text">Identities like names, social security numbers, driving license details, credit card information and other personal data have been compromised with the owners oblivious.</figcaption></figure>
+<p>The dark web has been a passage for most stolen data that’s sold for illegal activities and anonymity purposes.</p>
+<p>It came into the limelight back when Silk Road was discovered and operated mainly in the hidden networks, around five years ago.</p>
+<p>Hackers from all over the world have identified a loophole where they dupe large companies after they compromise their stored database to extort substantial money from them.</p>
+<p>Oftentimes, the stolen identities end up in the corners of dark web markets like <a href="https://darkwebnews.com/darkwebmarkets/dream-market/" rel="">Dream Market</a>, <a href="https://darkwebnews.com/darkwebmarkets/wall-street-market/" rel="">Wall Street Market</a> and others.</p>
+<p>Identities like names, social security numbers, driving license details, credit card information and other personal data have been compromised with the owners oblivious.</p>
+<p>People from all over the world <a href="https://darkwebnews.com/help-advice/access-dark-web/" rel="">can access the dark web</a> with a click of a button if accessed with the right software.</p>
+<p>This makes the sale of identities a chain of a sophisticated and somewhat encrypted path that requires a better form of law enforcement command to counter the illegal activity.</p>
+<p>A lot of cases revolve around money laundering, which is the leading crime overlapping the trade of stolen information in the dark web.</p>
+<p>Carding, which is vast in general, <a href="https://darkwebnews.com/scams/carding/" rel="">has significantly contributed</a> to the current rise in credit card theft. Hackers use them in cashing out and probably theft as seen with PayPal, which <a href="https://darkwebnews.com/dark-web/paypal-transfers-on-the-darknet/" rel="">has been the most affected</a> amongst all modes of cash transfer.</p>
+<h2 id="the-purchasing-process"><strong>The Purchasing Process</strong></h2>
+<p>Vendors are working around the clock to sell their commodities through dark web-based markets. According to studies measuring <a href="https://darkwebnews.com/dark-web/value-of-stolen-data-dark-web/" rel="">the value of data in darknet markets</a>, a vendor with an extensive database of credit card details can sell one card for about $20 to $40.</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>Putting in mind the process of identity purchasing in the dark web, it varies with the purpose of the purchase.</p>
+<p>For one to get a clear picture of the business, let’s go through the process which is common in most markets, including forums.</p>
+<p>The whole process begins with a need for a stolen identity by a person who wants to use it for illegal purposes. Once a need is identified, maybe regarding a credit card or any other, the next process is to search for the best platform to get a vendor with the best deal.</p>
+<p>Registration is usually required in most markets where pseudonyms are preferred for security purposes.</p>
+<p>Since almost all the vendors transact using cryptocurrencies like <a href="https://darkwebnews.com/category/bitcoin/" rel="">Bitcoin</a> and <a href="https://darkwebnews.com/bitcoin/how-to-use-monero/" rel="">Monero</a>, it is therefore required one to buy them—usually from a site like <a href="https://localbitcoins.com/" target="_blank" rel="noopener">LocalBitcoins.com</a> or any other trusted exchange market.</p>
+<figure id="attachment_21108" style="width: 300px" class="wp-caption alignleft"><a href="https://darkwebnews.com/wp-content/uploads/2018/05/Dark-web-concep.jpg"><img src="image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" class="wp-image-21108 size-medium" alt="Dark web in binary code." width="300" height="196"><img class="wp-image-21108 size-medium" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/Dark-web-concep-300x196.jpg" alt="Dark web in binary code." width="300" height="196"></a><figcaption class="wp-caption-text">When buying such commodities from darknet markets, a customer loads the cryptocurrency balance that’s enough to buy the required item.</figcaption></figure>
+<p>Most dark web marketplaces, like Wall Street Market, have some features to protect both the buyer and the seller from being scammed and losing their money.</p>
+<p>Some of the features include a <a href="https://en.bitcoin.it/wiki/Multisignature" target="_blank" rel="noopener">multi-signature</a> escrow; it’s up to the customer to decide whether to <a href="https://darkwebnews.com/scams/why-you-should-never-finalize-early-fe/" rel="">finalize early</a> or not.</p>
+<p>According to my research, Dream Market—being one of the largest markets—offers a wide range of personal identities from fake national identity cards, passports and much more.</p>
+<p>What the vendors require for one to acquire a fake passport are the personal details that the client wants to be included.</p>
+<p>This could be the name, photo and other identifying information that will be included in the final copy.</p>
+<p>Arrangements are made to ship the finished product to the specification that is convenient for the customer.</p>
+<p>After everything is done the right way, the customer is obligated to counter check if the delivered product is in the correct order before finalizing and releasing the funds from escrow.</p>
+<p>On the other hand, while purchasing digital goods like credit cards details, including CVV, <a href="https://www.investopedia.com/terms/f/fullz.asp-0" target="_blank" rel="noopener">Fullz</a> and accounts logins, a different process is undertaken all through.</p>
+<p>When buying such commodities from darknet markets, a customer loads the cryptocurrency balance that’s enough to buy the required item. Since no physical shipping is needed but rather an encrypted text containing the details, the process takes less time to complete.</p>
+<p>Once everything is delivered as requested, the fate of the compromised owner’s details lies with the new holder. Most of the time, they are used to commit cybercrime by concealing the real identity of the criminal.</p>
+<p>There are a lot of dark web platforms where criminals discuss how to take their illegal acts to the next level. Most of these are hidden in the corners of the dark web, where they are <a href="https://darkwebnews.com/tor-guide/" rel="">Tor</a>-protected.</p>
+<h2 id="the-fate-and-consequences"><strong>The Fate and Consequences</strong></h2>
+<p>Cybercriminals have identified a loophole where they are using stolen identities in their illegal activities. In the last decade, criminals have migrated from street runs to one behind a computer where mostly fraud and money laundering has been the order of the day.</p>
+<p>According to a <a href="https://www.cifas.org.uk/insight/reports-trends/fraudscape-report-2018" target="_blank" rel="noopener">report by Cifas</a>, 2017 recorded the highest number of identity fraud in their database of about 174,523 cases in United Kingdom.</p>
+<p>This being just a small representation of their study shows the extent to which criminals are pushing the game to the limit.</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>The United States has also been dramatically affected by the identity theft where there were <a href="https://247wallst.com/special-report/2018/05/01/states-with-the-most-identity-theft/https:/247wallst.com/special-report/2018/05/01/states-with-the-most-identity-theft/" target="_blank" rel="noopener">about 371,000 reported cases</a> in 2017, although a drop from the previous year of around 399,200 reported cases.</p>
+<p>As seen with most card holders and real owners of identities, a large percentage do not get to know in the initial stages whether their details are being fraudulently used. This has given criminals a better ground to propagate and buy time to finish up their illegal activities without a glitch.</p>
+<p>A lot of online banking systems require phone code verification, which is part of two-factor authentication. This is the sole reason that many criminals are looking for a way to tap into the system and probably cash out the money from the accounts silently.</p>
+<p>The purchasing of identities similar to those of the account holders has been on the rise as seen with PayPal theft, which has dominated fraud activities in the last decade.</p>
+<p>In countries with high online fraud rates, PayPal has experienced so many problems that it had to close most of its services in fear of continuous fraud cases in those areas.</p>
+<p>Other criminals have devised methods to utilize stolen identities, where cases of criminals applying for loans in the U.S. with other people’s identity is on the rise.</p>
+<p>According to <a href="https://www.iii.org/fact-statistic/facts-statistics-identity-theft-and-cybercrime" target="_blank" rel="noopener">a 2017 report by Javelin</a>, online fraud has been on the rise with the criminals able to steal about $16 billion last year. Their report also shows that there have been 16 million victims of identity fraud in 2017.</p>
+<h2 id="recommendations"><strong>Recommendations</strong></h2>
+<figure id="attachment_21109" style="width: 300px" class="wp-caption alignleft"><a href="https://darkwebnews.com/wp-content/uploads/2018/05/Hacker-attack.jpg"><img src="image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" class="wp-image-21109 size-medium" alt="Man in hoody standing in the dark." width="300" height="180"><img class="wp-image-21109 size-medium" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/Hacker-attack-300x180.jpg" alt="Man in hoody standing in the dark." width="300" height="180"></a><figcaption class="wp-caption-text">In the last decade, criminals have migrated from street runs to one behind a computer where mostly fraud and money laundering has been the order of the day.</figcaption></figure>
+<p>Based on the research made by Javelin, they came up with some security measures to combat identity theft which is a real menace to the current society.</p>
+<p>The dark web, which has been the primary place where stolen identities are sold, is significantly being fought in all angles by law enforcement.</p>
+<p>The first thing that all consumers should consider is to turn on the two-factor authentication capability wherever possible.</p>
+<p>This is a security measure that will ensure in any instance fraudsters try to access their accounts, they get blocked by the system.</p>
+<p>Another important recommendation to the consumers by the security experts is to secure their devices.</p>
+<p>Since criminals have understood that a lot of transactions and security details are stored in electronic devices like mobile phones, they are going for them.</p>
+<p>Securing them using screen locks, encrypting stored data and avoiding using public Wi-Fi, plus other measures, will be of great help to consumers.</p>
+<p>The other important feature that consumers need to put into consideration is to place a security freeze on their accounts the minute they notice any suspicious activity.</p>
+<p>To protect consumers from online theft, financial advisors are advocating for every credit card holder to limit their online transactions. In addition to that, they should systems like <a href="https://usa.visa.com/pay-with-visa/featured-technologies/verified-by-visa.html" target="_blank" rel="noopener">Verified by Visa</a> or <a href="https://www.mastercard.us/en-us/consumers/payment-technologies/securecode.html" target="_blank" rel="noopener">MasterCard’s Secure Code</a>.</p>
+<p>These best-practices <a href="https://darkwebnews.com/security-guide/14-tips-online-safety-security/" rel="">and many others</a> will significantly reduce identity theft and fraud cases, but unless everyone remains vigilant, hackers and fraudsters will continue with their illegal acts.</p>
+<p>As the law enforcement agencies continue to fight dark web criminals, more cases of identity theft will continue under the hidden networks.</p>
+<p><span id="tve_leads_end_content" style="border: 1px solid transparent"></span></p>
+<p><br style="clear: both;float: none">
+</div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/dark-web-dark-net/" rel="tag">Dark Web / Dark Net</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 17, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/steroid-supply-bought-from-the-dark-web-kills-north-dakota-man/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/steroid-supply-bought-from-the-dark-web-kills-north-dakota-man/">Previous Story:<br/> <strong>Steroid Supply Bought from the Dark Web Kills North Dakota Man</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/airbnb-china-will-share-hosts-information-with-the-government/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/airbnb-china-will-share-hosts-information-with-the-government/">Next Story:<br/> <strong>Airbnb China will share hosts information with the government</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d52cca46ecc6"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d52cca46ecc6"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d52cca497b81"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d52cca497b81"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 7.3379812240601 seconds, on 13-08-19 14:43:48 -->

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Identity Profiling: Covert Biometrics &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Researchers Discover That The Tulsi Plant Can Be Used To Remove Fluoride From Drinking Water' href='https://www.sinister-sec.com/researchers-discover-that-the-tulsi-plant-can-be-used-to-remove-fluoride-from-drinking-water/' />
+<link rel='next' title='Lethality of Roundup ‘Weedkiller’ Extends Beyond Plants To Humans, Study Suggests' href='https://www.sinister-sec.com/lethality-of-roundup-weedkiller-extends-beyond-plants-to-humans-study-suggests/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/identity-profiling-covert-biometrics/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=65368' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fidentity-profiling-covert-biometrics%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fidentity-profiling-covert-biometrics%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-65368 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/identity-profiling-covert-biometrics/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-65368 post type-post status-publish format-standard hentry category-technology tag-anonymous">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Identity Profiling: Covert Biometrics</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 18, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry-content clearfix">
+<p>Julie Beal, <i>Contributor</i><br />
+<b><a href="https://www.activistpost.com/2012/09/identity-profiling-covert-biometrics.html">Activist Post</a></b></p>
+<p><a href="http://www.youtube.com/watch?v=gsPHCgyxaWc">Anonymous</a> recently put out a video below advising people how to avoid being scanned by facial recognition technology; the advice boils down to ‘tilt your head at an angle’ or ‘wear a specially made cap’. They did not go so far as to tell people how to actually make such a cap, nor did they point out that the technology has been developed to capture faces even when they are at an angle.</p>
+<div>
+[youtube https://www.youtube.com/watch?v=X-n0iUTVsPo?feature=player_detailpage]</p>
+<p>The powers that be are highly aware that not all subjects are compliant, or even aware, that their facial features are being ‘captured’, so they have developed the capacity to identify people even when their faces are not in the ‘perfect’ position.</p>
+<p><a name="more"></a>A recent report notes that there have been rapid advances in the accuracy of face trackers, such that they have become highly tolerant to different angles and poses, to the time that has elapsed between photos (e.g. ageing differences), and to lower resolution photos. In other words, the technology has vastly <a href="http://www.planetbiometrics.com/creo_files/upload/article-files/Advances_in_Face_Recognition_Technology_and_its_Application_in_Airports.pdf">improved</a>, and it just keeps getting better because there are far fewer false alarms. People can even be identified from a 4 x 4 <a href="http://www.inderscience.com/storage/f111259110362874.pdf">pixel</a> array of their face, although the analysis of just one iris in the eye has been shown to be even more effective than face recognition.</p>
+<div align="center">
+</div>
+<p>
+<a href="http://www.authorstream.com/Presentation/damanjot-1425515-secure-atm-by-image-processing/">Apparently</a>, the iris has more unique information than any other single organ in the body, providing robust identification potential, second only to DNA.  Iris recognition technology can be used to determine ethnicity, is considered to be ideal for situations involving <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&amp;arnumber=6092484&amp;url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel5%2F10206%2F6166811%2F06092484.pdf%3Farnumber=6092484">uncooperative</a> individuals, and has been successfully <a href="http://www.infosecurity-magazine.com/view/21459/london-gatwick-airport-introduces-iris-biometrics-at-a-distance/">deployed</a> at London’s Gatwick Airport.   </p>
+<p>BIMA (Biometrics Identity Management Agency) is funding research at Carnegie-Mellon University to develop a method of capturing iris biometrics from uncooperative subjects; they can now identify people up to <a href="http://csis.pace.edu/~ctappert/dps/IJCB2011/papers/353.pdf">12 metres away</a>. No special equipment is needed either; the researchers used commercial, off-the-shelf, photographic equipment to capture iris biometrics, which was successful with both stationary and moving subjects. Cameras can then be mounted on roving vehicles, scanning and recording irises for what the military call ‘<a href="http://www.army-technology.com/features/featurebiometrics-redefining-the-phrase-dont-shoot-until-you-see-the-whites-of-their-eyes/">tactical non-cooperative biometrics</a>‘.  </p>
+<p>In addition to this huge increase in capabilities, those in the Identity Management (IdM) industry are advising the implementation of <a href="http://iaesjournal.com/online/index.php/IJECE/article/view/292">multi-modal biometrics</a>; in other words, to make up for the fact that no method is always 100% accurate, the plan is to capture several types of biometric data for citizen IdM. The type required will depend on the nature of the transaction, and the context in which it is taking place – <a href="http://www.ncbi.nlm.nih.gov/pubmed/21380485">virtual authentication</a> may require stronger credentials than when a person is physically present, for instance.</p>
+<p><a href="http://activistpost.net/privacy-crisis.html" style="float: right;margin-left: 1em;margin-bottom: 1em"><img src="https://lh5.googleusercontent.com/_qLAIskTQXUc/TW6zd_MzhbI/AAAAAAAAHPE/DBvoPT_wz5M/pc150x225.gif" alt=""></a>Yet while identity management calls for the use of biometrics to protect against identity theft, the trouble is that many biometrical applications can be ‘<a href="http://biometrics.nist.gov/cs_links/ibpc2012/presentations/Day2/229_Schuckers.pdf">spoofed</a>’, meaning that ID theft becomes a whole new problem, left unsolved by the current range of biometrical applications. So fingerprints and voice prints, etc. can all be ‘stolen’ and used by an impersonator.  Just think how you leave your fingerprints all over the place, and the photos of yourself on the Internet. Research shows how easy it is for almost anyone to be identified from a photo, using simple Internet data mining techniques, and easily available <a href="http://www.slate.com/blogs/future_tense/2012/06/19/facebook_buys_face_com_will_mobile_facial_recognition_kill_privacy_.html">facial</a> recognition software;</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<blockquote class="tr_bq">
+<p>In other words, <a href="http://nhne-pulse.org/facial-recognition-software-can-now-reveal-almost-everything-about-us/">our faces have become our identities</a>, and there little hope of remaining anonymous in a world where billions of photographs are taken and posted online every month.</p>
+</blockquote>
+<p>Proving you’re not a dog is fast becoming simply not enough. You’re going to have to prove you’re alive and present at the time of authentication. So you have to prove you’re a human being, and that you are who you say you are, and that you are indeed alive and well. There are a number of <a href="http://www.biometrics.elsevier.com/session_biometrics_test.asp">applications</a> which are able to do this, and embody the most recent, and still developing, field of cognitive biometrics. This refers to testing and measuring your affective state; i.e. emotions and behaviour, psychological profile, and ‘vital signs’. The way you respond to certain stimuli says a lot about who you are. It can be read as a unique biological signature, which is measurable and universal in application, unlike other biometrics which do not account for human differences: not everyone can walk, not everyone has fingers, etc. The most advances in the field of cognitive biometrics have been made in the pursuit of <a href="http://www.eecs.qmul.ac.uk/~txiang/publications/BashirXiangGong_Journal-v4.pdf">covert</a> biometrics, which are being developed to identify ‘uncooperative’ individuals.  The same information was acquired by DARPA in the Future Attribute Screening Technology (<a href="http://epic.org/privacy/fastproject/">FAST</a>)  program which was said to be looking for cues of ‘mal-intent’, pre-crime detection styley.</p>
+<p>These techniques are more insidious when they can be done at a distance, without the need for contact with the individual, so the biometric data can be taken without the subject’s knowledge. This also makes them all the more terrifying for the largely compliant and innocent, would-be private, global population.</p>
+<p>It also turns out we are scattering our biological signatures all over the place, from finger prints and palm prints, voice recordings, and digital photos, videos showing our ears, irises, tattoos, mannerisms and the way we walk and move about.</p>
+<p>Even the way we smell can be used to identify us. And of course, there’s our DNA.</p>
+<p>I don’t want someone to have a record of me. (I know they cannot steal my soul but they are trying to steal my sovereignty!) So the ones that bother me most, the ones that Anonymous strangely fail to mention, are the ones that can be done at a distance. Whilst identification from DNA involves contact, and takes around <a href="http://www.army-technology.com/features/featurebiometrics-redefining-the-phrase-dont-shoot-until-you-see-the-whites-of-their-eyes/featurebiometrics-redefining-the-phrase-dont-shoot-until-you-see-the-whites-of-their-eyes-5.html">90 minutes</a> to get results, the following features can be tracked from a distance, covertly:</p>
+<ul>
+<li>Face</li>
+<p><a href="http://activistpost.net/privacywar.html" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img alt="" src="https://lh3.googleusercontent.com/-_VDc_KgLmQQ/T7wqeoC8OeI/AAAAAAAAO6c/4ajNJleuzIQ/s270/170_animated.gif"></a></p>
+<li>
+<a href="http://www.nextgov.com/emerging-tech/2012/06/eye-crime-fbi-building-database-iris-scans/56481/?oref=ng-channeltopstory">Iris</a> and retina</li>
+<li><a href="http://www.ri.cmu.edu/pub_files/2011/11/PID2047447.pdf">Eye movements</a></li>
+<li>Veins</li>
+<li><a href="http://www.planetbiometrics.com/article-details//i/302/">Ears</a></li>
+<li>Outline of hand patterns</li>
+<li><a href="http://www.springerreference.com/docs/featured/archive/66.html">Body odour</a></li>
+<li><a href="http://www.popsci.com/technology/article/2012-06/fingerprint-scanner-captures-prints-20-feet-away">Finger prints</a></li>
+<li>Finger image</li>
+<li>Keystroke</li>
+<li>Voice</li>
+<li>Sweat pores</li>
+<li>Vital signs: <a href="http://utopia.csis.pace.edu/cs615/btas2010/BTAS/BTAS%2009/Papers/Paper%2042.pdf">heart signature</a>, brain wave patterns – these are unique to each individual because of our DNA (the heart and brain are composed of protein tissues)</li>
+<li>Behavioural/cognitive biometrics e.g. gait, breathing, emotional responses to targeted stimuli, galvanic skin response.</li>
+<li>Gait</li>
+</ul>
+<p>A European Union Working Party on data protection recently released an official Opinion  on developments in biometric technologies, in which it was <a href="http://ec.europa.eu/justice/data-protection/article-29/documentation/opinion-recommendation/files/2012/wp193_en.pdf">stated</a>,</p>
+<blockquote class="tr_bq">
+<p>Biometric technologies that once needed significant financial or computational resources have become dramatically cheaper and faster. The use of fingerprint readers is now commonplace. For example, some laptops include a fingerprint reader for biometric access control. Advances in DNA analysis mean that results are now available within a few minutes. Some of the newly developed technologies such as vein pattern recognition or facial recognition are already developed to maturity. Their use in various places of our everyday life is just around the corner…. <i>Every individual</i> is likely to be enrolled in one or <i>several</i> biometric systems. (my italics)</p>
+</blockquote>
+<p>It turns out that people are even supplying personal information on the way they move via the <a href="http://en.wikipedia.org/wiki/Accelerometer">accelerometer </a>which is now a common feature of many smartphones and games consoles; a profile of your gait can then be used to identify you in video sequences. A recent <a href="http://users.ece.cmu.edu/~juefeix/btas_2012_felix.pdf">study</a> monitored subjects with an Android smartphone in their pocket, and found,</p>
+<blockquote class="tr_bq">
+<p>With a reasonably sized dataset (36 subjects), we show preliminary results indicating that not only can smartphones be used to identify a person based on their normal gait but also that there is potential to match gait patterns across different speeds.</p>
+</blockquote>
+<p>Freaky huh? Well, that’s not all … your smartphone and games equipment and stuff you put on the Internet can all be used to build profiles which log the metrics for your unique physiological and emotional characteristics, which can be used to build your identity profile, and serve as ‘scientifically acceptable’ means of biometric authentication. Just like Pavlov’s dogs, we are to be assessed according to the behaviourist’s favourite ‘stimulus-response paradigm’, and virtual reality is the vehicle. Data that was once collected with wired devices in psychologists’ offices can now be supplied with games equipment which employ <a href="http://en.wikipedia.org/wiki/Haptic_technology">‘haptic’</a> technology; this adds to the sense of reality in the game, as it allows the user to experience the sense of touch, with <a href="http://news.yahoo.com/concept-video-game-controller-takes-haptic-feedback-next-113210197.html">feedback</a> in the game, such as ‘feeling’ the recoil of a gun as it is fired.</p>
+<p>Biometrics experts are looking for ways to make this data a valid form of identity authentication. A recent <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&amp;arnumber=4479992&amp;url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber=4479992">study</a> claims,</p>
+<blockquote class="tr_bq">
+<p>Haptics can be seen as a mechanism to extract behavioral features that characterize a biometric profile for an identity authentication process. Generally, the haptic data captured during an individual interaction are very large (measured every few milliseconds) and with a high number of attributes (position, velocity, force, angular orientation of the end-effector and torque data, among others). Therefore, the behavioral haptic data that describe users are defined in terms of a large number of features, which adds complexity to the analysis.</p>
+</blockquote>
+<p>‘<a href="http://futrs.com/haptics-news">Affective</a>’ haptic technology can also be used to feedback information regarding the player’s <a href="http://iopscience.iop.org/1742-6596/352/1/012045">emotional reactions</a>. This enriches the identity profile considerably, as well as providing statistical data on the user’s unique characteristics which can also be used for authentication in IdM. As more and more games incorporate ‘readings’ from the player, the more private data (about our physical and mental health) we give away, thus contributing to a future where IdM could become a whole new ballgame:<br />
+<a href="http://activistpost.net/teslasecret/" style="float: right;margin-left: 1em;margin-top: 1.5em"><img class="noshadow" src="https://lh4.googleusercontent.com/_qLAIskTQXUc/TaqAcrCPlhI/AAAAAAAAISQ/5uq527jnmDM/book-shape.jpg" style="background:none" alt=""></a></p>
+<blockquote class="tr_bq">
+<p>… <a href="http://www.inderscience.com/jhome.php?jcode=ijcb">the</a> wealth of stimuli suitable for cognitive biometrics provides a wealth of authentication  schemes – game playing, listening to music, short video clips, as well as more traditional behavioural biometric approaches provide virtually an infinite amount of input stimuli for use as an authentication scheme. This holds for both static and continuous authentication modes – though the later provides many more opportunities to validate the user under a wide variety of stimulus challenges. This is one of the major advantages of the cognitive approach compared to anatomical biometrics such as finger prints and retinal scans. Further, this approach may suit more closely future person–computer interaction schema that may attempt to minimise traditional input devices such as keyboards and mice. As Julia Thorpe and colleagues proposed in 2005 – authenticating with our minds might be a reality in the near future – and certainly emotion based interactive gaming is already here (Thorpe et al., 2005).</p>
+</blockquote>
+<p>In light of these capabilities, the readings which could be acquired from Guardian Angels take on a whole new meaning. In fact, they would embody the ideal version of what is being dubbed ‘continuous and unobtrusive authentication’  –  by remotely monitoring brain and heart signatures from electroencephalogram (EEG) and electrocardiogram (ECG) readings, taken, for instance, from sensors in a cap, and a shirt. The European Council have helped fund research in this area, with the result that a company called <a href="http://www.scribd.com/doc/65523085/A-Wireless-Wearable-EEG-ECG-Biometric-System-Based-on-the-ENOBIO-Sensor-2008">Starlab</a> has developed a product called <a href="http://starlab.es/papers/electrophysiological-biometrics-opportunities-and-risks">ENOBIO</a> which takes recordings ofEEG and ECG from an individual wearing one sensor on the wrist, and one on the earlobe. This means the individual is constantly sending out a signal of who they are, something said to be important in high security areas, which are “safety critical”, such as transportation, laboratories, airports, etc.</p>
+<p>DARPA has begun a four year research program called ‘<a href="http://www.darpa.mil/Our_Work/I2O/Programs/Active_Authentication.aspx">Active Authentication</a>’, which will focus on methods to validate identity online using cognitive biometrics, such as computers which ‘recognise’ the operator by assessing their habitual movements, and comparing it to their stored profile to validate identity in <a href="http://spie.org/x86969.xml?pf=true&amp;WT.mc_id=KNRFBW">real time</a>.</p>
+<p>Late last year, DARPA announced another research project called ‘Human Identification at a Distance’, which includes developing techniques which can covertly collect reliable heart biometrics to verify identify without any contact with the person being tracked. Wired.com <a href="http://www.wired.com/dangerroom/2011/11/follow-your-heart-darpas-quest-to-find-you-by-your-heartbeat/">announced</a>, </p>
+<p>“In 2006, Darpa developed <a href="http://www.defense.gov/news/newsarticle.aspx?id=14711">Radar Scope</a>,which used radar waves to sense through walls and detect the movements associated with respiration. A year later, the Army invested in <a href="http://www.marketwire.com/press-release/kai-sensors-secures-us-army-funding-for-radar-on-a-chip-780976.htm">LifeReader</a>, a system using Doppler radar to find heartbeats. More recently, the military’s been using devices like the AN/PPS-26 STTW (“<a href="http://www.wired.com/dangerroom/2010/10/handheld-radar-senses-life-behind-the-wall/">Sense Through the Wall</a>“) and <a href="http://www.wired.com/dangerroom/2010/02/troops-in-astan-will-see-through-walls-in-2010/">TiaLinx’s Eagle scanner</a>, which can sense the presence of humans and animals through walls.</p>
+<p>Handy though these gadgets may be, Darpa wants to one-up them with some new and better capabilities.</p>
+<p>First off, Darpa wants its biometric device to be able to work from farther away. Right now, it says the accuracy of most systems taps out at around eight meters. And while some see-through devices can see through up to <a href="http://www.wired.com/dangerroom/2010/02/troops-in-astan-will-see-through-walls-in-2010/">eight inches of concrete</a>, they don’t do as well in locations with more or thicker walls. So Darpa’s looking for the next system to push that range past 10 meters, particularly in cluttered urban areas.”</p>
+<p>However, whilst the technology exists to detect the heartbeat, the ability to take reliable biometric readings without contact is still being worked on. Although readings taken from sensors placed on the body are successful at proving identity, no research has fully overcome the <a href="http://www.isrn.com/journals/sp/2012/712032/">problems</a>   brought about by distance. What’s really getting in the way is environmental ‘noise’ creating interference with the signal being received, meaning that detection of heartbeat biometrics is highly context-dependent.</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<div class="code-block code-block-1" style="margin: 0px">
+<div align="center" class="mrf-external">
+<a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1="><img src="https://www.activistpost.com/wp-content/uploads/2018/02/500.jpg"></a></p>
+<h4 style="text-align: center"><a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1=" target="_blank">Secret $1.8 Million Cryptocurrency Script</a></h4>
+</div>
+<p>The best results are achieved by using sensors in contact with the body, with willing subjects. These include ECG, <a href="http://www.sattbiosec.com/orange.html">pulseoximetry</a>, and blood pressure. The pursuit of non-contact biometric acquisition <a href="http://www.ri.cmu.edu/research_lab_group_detail.html?lab_id=56&amp;menu_id=263">continues</a>, however, since it represents the ultimate aim of criminal detection. Heart sounds can be acquired acoustically with <a href="http://www.inderscience.com/info/ingeneral/sample.php?jcode=ijcb">success</a>, but methods utilising <a href="http://students.cec.wustl.edu/~adk2/Kaplan09_SPIE.pdf">radar and laser dopler vibrometry</a> are less efficient if the subject is moving. Motion imagery, looking at skin colour fluctuations, is an experimental technology. A recent study revealed just how <a href="http://www.inderscience.com/info/ingeneral/sample.php?jcode=ijcb">long-range</a> the technology is for reading vital signs:</p>
+<blockquote class="tr_bq">
+<p>Researchers at Georgia Technology Research Institute (GTRI) used an active radar to note the changes (in)heart volume over time (Greneker, 1997; Geisheimer and Greneker III, 1999). The physical deformation provides extensive information about the individual and the relative health of the heart itself along with respiration and other body movements and muscle flexor noises. This work for human identification is impressive because the potential standoff ranges are in excess of 1 km. The GTRI work formed the basis for Mazlouman et al. (2009) to characterise cardiac performance using microwave Doppler radar. Instead of attempting to provide surrogate ECG information, these researchers looked in the infrasonic range, i.e. &lt; 20 Hz through ultra-wide band radar &gt; 2 MHz. The researchers continually were able to collect reliable data between 2 and 10 metres …… Another measure of standoff cardiac measure was provided by (Parra and Da Costa, 2001). Interferometric data were collected from the pulsing of the carotid artery over time. The measurements were collected with an eye-safe laser…</p>
+</blockquote>
+<p><a href="http://activistpost.net/familysurvival.html" style="float: right;margin-left: 1em;margin-bottom: 0em"><img src="https://lh3.googleusercontent.com/-ASIFGy_z7zU/UCFiDQK8GBI/AAAAAAAAROU/7AHejVY_hUE/s202/3.gif"></a>With AISight’s ability to monitor your gait and habitual movements, all of which can be used to identify you, combined with an abundance of other data collected without your consent, <a href="http://boingboing.net/2012/04/30/new-aesthetic-eruption.html">the gaze of big brother</a>, imbued with ‘intelligence’, seems inescapable. The very idea that this could be happening is often enough to cause changes in people’s behaviour; when they know they’re being watched, people adapt to fit in and have an easy life. This is known as ‘<a href="http://www.oldthinkernews.com/2007/12/anticipatory-conformity-will-the-growing-surveillance-panopticon-cause-us-to-self-censor/">anticipatory conformity</a>’, and is effectively self-surveillance leading to self-censorship .  It means <a href="http://www.cssc.eu/public/D3.3a-Ethical-Brief-Biometrics-&amp;-embedded-Technology.pdf">learning to think before you speak</a>, trying to control the look on your face, being careful to always do ‘the right thing’.</p>
+<blockquote class="tr_bq">
+<p>The <a href="http://www.theorwellreader.com/excerpt.shtml">telescreen</a> received and transmitted simultaneously. Any sound that Winston made, above the level of a very low whisper, would be picked up by it; moreover, so long as he remained within the field of vision which the metal plate commanded, he could be seen as well as heard. There was of course no way of knowing whether you were being watched at any given moment. How often, or on what system, the Thought Police plugged in on any individual wire was guesswork. It was even conceivable that they watched everybody all the time. but at any rate they could plug in your wire whenever they wanted to. You have to live – did live, from habit that became instinct – in the assumption that every sound you made was overheard, and, except in darkness, every movement scrutinized.</p>
+</blockquote>
+<p>Guardian Angels hover over us ominously – threatening to tangle us tightly in the hugely complex global web. A sea of contextual data in a world full of sensors, each of us mirrored in the virtual world as the controllers feast on their wireless feedback, the increasingly intimate personal data they are stealing from us. Every piece of data they have from us becomes a valuable asset. Even without an implant, we can be identified and tracked from RFID tags in the things we buy, together with the biometric scanners and device detectors.</p>
+<p>A <a href="http://www.sott.net/articles/show/249090-World-s-First-Real-Sized-Five-Fingered-Robotic-Hand-Able-to-Grasp-and-Manipulate-Objects">robotic</a> <a href="http://www.forumforthefuture.org/greenfutures/articles/worlds-first-city-robots">future</a> looks set to challenge our notions of identity even further, as <a href="http://www.theage.com.au/entertainment/theatre/who-made-who-20120818-24fq8.html">life-size avatars </a> begin to take their place in society, and <a href="http://www.qrcodepress.com/film-examines-a-future-of-augmented-reality-implants/8511079/">augmented reality</a> destroys anonymity altogether.</p>
+<p>The confluence of IdM, surveillance, and complexity modelling are what Big Brother is made of. You will only be understood and acknowledged by the system based on your recorded metrics.</p>
+<p>The technology has been developed to achieve all of these things, but as yet they are patchwork projects just getting the feel of things. What we must fear is ‘global interoperability’ – all systems interacting together: Watson with AISight and smart dust omniscience, able to learn and remember, analyse, predict and decide, the Grand Master of Complexity.</p>
+<p>So, yes, watch out for Anonymous, indeed. Just as their iconic facemasks symbolise anonymity, the very thing business and governments are seeking to end, in this era of accountability, so too are their numerous claims to successful hacks of top-level domains. Anonymous are helping to bring in the new era of identity control; their appearance heralds the end of privacy and anonymity. Nowhere left to hide; the last of the days of the drifter.</p>
+<p><b>Read other articles by Julie Beal <a href="https://www.activistpost.com/search/label/Julie%20Beal">HERE</a></b></p>
+</div>
+<p>
+<b>This article first appeared at <a href="http://getmindsmart.com/Smart-Hats_arenot_enough.html">Get Mind Smart</a></b></p>
+<p><i>Julie Beal is a UK-based independent researcher who has been studying the globalist agenda for more than 20 years. Please visit her website, <a href="http://www.getmindsmart.com/">Get Mind Smart</a>, for a wide range of information about Agenda 21, Communitarianism, Ethics, Bioscience, and much more.</i></p>
+<div class="separator" style="clear: both;text-align: center"><a href="http://activistpost.net/quantumkey.html" style="margin-left: 1em;margin-right: 1em"><img alt="" src="https://lh5.googleusercontent.com/-Z6640RDp0BM/Ty3gtYKWPYI/AAAAAAAAOZI/FsFtZ2yBRxY/s468/468x60.jpg"></a></div>
+<div class="linkwithin_div" style="margin-bottom: -2em">
+var linkwithin_site_id = 557381;</p>
+<p>linkwithin_text=’Related Articles:’
+</p>
+</div>
+<div class="swp-content-locator"></div>
+</p></div>
+<nav class="post-nav-wrap">
+<ul class="post-nav clearfix">
+<li class="post-nav-prev">
+<a href="https://www.activistpost.com/2012/09/doomed-planet-for-failed-species.html" rel="prev"><i class="fa fa-chevron-left"></i>Previous post</a>
+</li>
+<li class="post-nav-next">
+<a href="https://www.activistpost.com/2012/09/drone-webseries-ep-24-who-gives-orders.html" rel="next">Next post<i class="fa fa-chevron-right"></i></a>
+</li>
+</ul>
+</nav>
+<p>	<!-- Here we load disqus comments --></p>
+<div class="dcl-disqus-thread" id="comments">
+<div id="disqus_thread">
+		</div>
+</p></div>
+<p>	/*  */</p>
+<p>	/*  */</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/anonymous/" rel="tag">Anonymous</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 18, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/drone-webseries-ep-2-4-who-gives-the-orders/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/drone-webseries-ep-2-4-who-gives-the-orders/">Previous Story:<br/> <strong>DRONE Webseries, Ep. 2/4: Who Gives the Orders?</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/uberveillance-internet-of-things-energy-harvesting-and-guardian-angels/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/uberveillance-internet-of-things-energy-harvesting-and-guardian-angels/">Next Story:<br/> <strong>Uberveillance: Internet of Things, Energy Harvesting, and Guardian Angels</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d554ea84d7d0"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d554ea84d7d0"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d554ea877f89"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d554ea877f89"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 7.8299479484558 seconds, on 15-08-19 12:23:04 -->

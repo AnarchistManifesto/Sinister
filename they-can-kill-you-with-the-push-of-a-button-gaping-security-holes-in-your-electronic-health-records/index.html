@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>They Can Kill You With the Push Of a Button: Gaping Security Holes In Your Electronic Health Records &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Facebook Privacy Blunder Highlights Online Security Gaps' href='https://www.sinister-sec.com/facebook-privacy-blunder-highlights-online-security-gaps/' />
+<link rel='next' title='Revealed: British intelligence agency secretly accesses the world’s phone calls, Internet traffic' href='https://www.sinister-sec.com/revealed-british-intelligence-agency-secretly-accesses-the-worlds-phone-calls-internet-traffic/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/they-can-kill-you-with-the-push-of-a-button-gaping-security-holes-in-your-electronic-health-records/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=63761' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fthey-can-kill-you-with-the-push-of-a-button-gaping-security-holes-in-your-electronic-health-records%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fthey-can-kill-you-with-the-push-of-a-button-gaping-security-holes-in-your-electronic-health-records%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-63761 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/they-can-kill-you-with-the-push-of-a-button-gaping-security-holes-in-your-electronic-health-records/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-63761 post type-post status-publish format-standard hentry category-world tag-mac-slavo">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">They Can Kill You With the Push Of a Button: Gaping Security Holes In Your Electronic Health Records</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/world/" rel="category tag">World</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 18, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry-content clearfix">
+<p><a href="https://www.activistpost.com/wp-content/uploads/2013/07/needle-300x2251.jpg" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img border="0" height="150" src="https://www.activistpost.com/wp-content/uploads/2013/07/needle-300x225.jpg" width="200"></a>Mac Slavo<br />
+<b><a href="https://www.activistpost.com/2013/07/they-can-kill-you-with-push-of-button.html">Activist Post</a></b></p>
+<p>It should be obvious by now that modern technology comes with widespread security issues. Some are intentional, such as the NSA spying scandal which has proven that every digital interaction in the United States can be accessed in one way or another. Others are unintentional, where computer device and software operators simply make mistakes, as in the example of the latest revelation that every version of Google’s Android operating system <a href="http://www.bbc.co.uk/news/technology-23179522">has been exposed to cyber thieves</a> since 2009 (a vulnerability that has yet to be plugged).</p>
+<p>While computer and network security issues are rampant across every manner of digital device, a breach on your android phone or the government monitoring your real-time Internet chats through backdoors doesn’t pose an immediate threat to your health and safety.</p>
+<p>But with the continued centralization of our personal records, especially our electronic health records (EHR) under new universal health care mandates, there’s a new risk to every single American, and one that leaves us physically exposed to the real threat of being killed with the push of a button.</p>
+<blockquote class="tr_bq">
+<p><a name="more"></a>When Scot Silverstein’s 84-year-old mother, Betty, starting mixing up her words, he worried she was having a stroke. So he rushed her to Abington Memorial Hospital in Pennsylvania. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>After she was admitted, Silverstein, who is a doctor, looked at his mother’s electronic health records, which are designed to make medical care safer by providing more information on patients than paper files do.He saw that Sotalol, which controls rapid heartbeats, was correctly listed as one of her medications. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>Days later, when her heart condition flared up, he re-examined her records and was stunned to see that the drug was no longer listed, he said. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<div align="center">
+<p>    <ins class="adsbygoogle" style="height: 90px;width: 728px"></ins><br />
+    <a href="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js</a><br />
+    (adsbygoogle = window.adsbygoogle || ).push({});</p>
+</div>
+<p>
+His mom later suffered clotting, hemorrhaged and required emergency brain surgery. She died in 2011. Silverstein blames her death on problems with the hospital’s electronic medical records. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>“I had the indignity of watching them put her in a body bag and put her in a hearse in my driveway,” said Silverstein, who has filed a wrongful-death lawsuit. “If paper records had been in place, unless someone had been using disappearing ink, this would not have happened.” </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>Source: <a href="http://www.bloomberg.com/news/2013-06-25/digital-health-records-risks-emerge-as-deaths-blamed-on-systems.html">Bloomberg</a> via <a href="http://market-ticker.org/akcs-www?post=222280">Market Ticker</a></p>
+</blockquote>
+<p>Some might assume the medical records systems being used by physicians and hospitals all over the country are secure. Why wouldn’t they be, as they literally hold life saving (or life killing) information?</p>
+<p>But according to an <a href="http://www.hrsa.gov/healthit/toolbox/HealthITAdoptiontoolbox/PrivacyandSecurity/securityrisks.html">assessment from the U.S. Department of Health and Human Services</a> this essential medical information is far from invulnerable, which means that a simple mistake by a medical clerk or a premeditated cyber hack could leave you or your loved ones at the mercy of a faceless computer, and a medical staff that assumes it is 100% accurate:</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<blockquote class="tr_bq">
+<p>Three risks common to both paper and electronic records include include: 1) the risk of inappropriate access, 2) the risk of record tempering, and 3) the risk of record loss due to natural catastrophes. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>… </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>With electronic records, inappropriate access manifests itself in one of two ways: 1) an unauthorized user gains access to the EHR data; or 2) an authorized user violates the appropriate use conditions. For example, if office staff access the records of a friend or colleague that visited the practice.   Electronic records can be subject to ‘serendipitous’ access in situations such as when a user account is left open or a passerby is able to view data on the screen or manipulate the EHR features.  Electronic records can also be subject to breaches of network security that may allow a hacker to gain access to user credentials and thereby to bypass the access control protections. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>… </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>The ability to make changes to an electronic record depends upon the rights assigned to a user.  Users with data modification privileges can generally add, delete, or modify data or entire records.  Data can also be tampered with by directly accessing the files stored on the EHR servers using a server account rather than an EHR user account. </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>… </p>
+</blockquote>
+<blockquote class="tr_bq">
+<p>Fires, floods or other environmental disasters attack physical locations and can result in the complete loss of both paper and electronic medical records.</p>
+</blockquote>
+<p><a href="http://activistpost.net/privacywar.html" rel="nofollow" style="clear: right;float: right;margin-bottom: 1em;margin-left: 1em"><img alt="" src="https://lh5.googleusercontent.com/--b-DtpFdXiI/T7wqemvSqVI/AAAAAAAAO6g/ysKIhvhbhPE/s270/banner_170.jpg"></a>Accidents like natural disasters are going to happen, and a complete loss of medical record information is something that can be mitigated through off-site back-up systems.</p>
+<p>The real problem lies in the security vulnerabilities outlined by the HHS.</p>
+<p>Our medical records are being centralized into one massive database, and by putting all the data in one place we are <a href="http://www.infowars.com/another-problem-with-mass-spying-centralized-data-creates-an-easy-mark-for-hackers/">creating an easy mark for hackers</a>.</p>
+<p>We know how simple it is to hack a social network account, or email, or even a web site. Millions of credit card numbers are stolen through online hacking on a daily basis across the world. We’ve had hackers gain access to essential grid utilities like an Illinois water utility plant and <a href="http://www.shtfplan.com/headline-news/infrastructure-cyber-attack-we-don%E2%80%99t-know-how-many-other-utilities-are-compromised_11192011">take control of its treatment facilities</a>. We’re also well aware of the fact that our major oil refineries and power grid <a href="http://www.shtfplan.com/headline-news/gaping-holes-in-power-water-oil-and-gas-grids-40-of-utility-companies-expect-attack-in-the-next-12-months_04222011">have staggering security holes</a>.</p>
+<p>The threat of malicious attacks is more real now than ever before as more systems come online and connect directly to the Internet.</p>
+<p>Our medical records are no different. In fact, with so many people across the country having user accounts to the front- and back-end systems, these system may be more vulnerable than even our personal email accounts.</p>
+<p>The critical difference here is that access to your medical records poses an immediate and catastrophic threat to your health and well being.</p>
+<div class="code-block code-block-1" style="margin: 0px">
+<div align="center" class="mrf-external">
+<a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1="><img src="https://www.activistpost.com/wp-content/uploads/2018/02/500.jpg"></a></p>
+<h4 style="text-align: center"><a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1=" target="_blank">Secret $1.8 Million Cryptocurrency Script</a></h4>
+</div>
+<p>Whether by accident or on purpose, your personal files can be easily accessed and modified. According to Karl Denninger, the scary thing is that <a href="http://market-ticker.org/akcs-www?post=222280">it can be done</a> with “no notification of the change in the system, no audit trail that was immediately visible on the change and no means for the attending physician to immediately, at a glance, know that the record had been changed.”</p>
+<p>What’s worse is that the <a href="http://blogs.webmd.com/all-ears/2012/02/who-owns-your-medical-records.html">medical establishment believes that it actually owns your medical records</a>. Heck, <a href="http://www.naturalnews.com/040998_dna_samples_warrantless_searches_fourth_amendment.html">we don’t even own our DNA</a> any more according to the Supreme Court, so it would only make sense that your medical history, diagnoses over the years, treatments and assessments belong not to you, but to the government and medical industry. This, of course, further complicates the issue, as you have no idea what may have been modified because gaining access to your records may require you to jump through hoops for weeks or months to obtain a copy of your personal medical history.</p>
+<p>Thousands of Americans are killed every year because of medical malpractice. And in coming years, as we become more dependent on Electronic Health Records, there is a real possibility that nefarious individuals with the intent to harm you directly, or even engage in a mass attack on our health care system, will modify medical records with the intention of killing people remotely.</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>It sure seems like a convenient mechanism for engaging in stealth assassinations should someone choose to do so.</p>
+<p>When a mass-shooter kills scores of people with a gun in a movie theater or school there is an outcry to disarm the American people.</p>
+<p>What about the threat of mass-killings by way of hacking the medical records of millions of Americans? Will the government move to ban all electronic medical records as well?</p>
+<p>Doubtful … there’s just way to much money and control at stake.</p>
+<div><b><i>Mac Slavo’s many articles can be read on his site <a href="http://shtfplan.com/">SHTFplan.com</a>, where this article <a href="http://www.shtfplan.com/headline-news/they-can-kill-you-with-the-push-of-a-button-gaping-holes-in-your-digital-health-records_07082013">first appeared</a>.</i></b></div>
+</p>
+<div class="separator" style="clear: both;text-align: center"><a href="http://activistpost.net/privacy-crisis.html" rel="nofollow"><img src="https://www.activistpost.com/wp-content/uploads/2013/07/PrivacyCrisis4685.jpg"></a></div>
+<div class="linkwithin_div" style="margin-bottom: -2em">
+var linkwithin_site_id = 557381;</p>
+<p>linkwithin_text=’Related Articles:’
+</p>
+</div>
+<div class="swp-content-locator"></div>
+</p></div>
+<nav class="post-nav-wrap">
+<ul class="post-nav clearfix">
+<li class="post-nav-prev">
+<a href="https://www.activistpost.com/2013/07/nypd-conducting-multiple-gas-attack.html" rel="prev"><i class="fa fa-chevron-left"></i>Previous post</a>
+</li>
+<li class="post-nav-next">
+<a href="https://www.activistpost.com/2013/07/united-stasi-of-america-projected-onto.html" rel="next">Next post<i class="fa fa-chevron-right"></i></a>
+</li>
+</ul>
+</nav>
+<p>	<!-- Here we load disqus comments --></p>
+<div class="dcl-disqus-thread" id="comments">
+<div id="disqus_thread">
+		</div>
+</p></div>
+<p>	/*  */</p>
+<p>	/*  */</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/mac-slavo/" rel="tag">Mac Slavo</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 18, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/evaluating-vaccine-risks/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/evaluating-vaccine-risks/">Previous Story:<br/> <strong>Evaluating Vaccine Risks</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/family-sues-after-dangerous-flu-vaccine-causes-child-to-become-severely-brain-damaged/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/family-sues-after-dangerous-flu-vaccine-causes-child-to-become-severely-brain-damaged/">Next Story:<br/> <strong>Family Sues After Dangerous Flu Vaccine Causes Child to Become Severely Brain Damaged</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d53586c605b3"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d53586c605b3"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d53586c6269c"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d53586c6269c"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 0.33840179443359 seconds, on 14-08-19 0:40:12 -->

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>[SI-LAB] #OpJerusalem 2019 – JCry ransomware is now infecting Windows users &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Google Forgot To Tell Users About Its Hidden Spy Microphone' href='https://www.sinister-sec.com/google-forgot-to-tell-users-about-its-hidden-spy-microphone/' />
+<link rel='next' title='AeroCube 10, jam-packed with experiments, deploys from Cygnus' href='https://www.sinister-sec.com/aerocube-10-jam-packed-with-experiments-deploys-from-cygnus/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/si-lab-opjerusalem-2019-jcry-ransomware-is-now-infecting-windows-users/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=75633' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fsi-lab-opjerusalem-2019-jcry-ransomware-is-now-infecting-windows-users%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fsi-lab-opjerusalem-2019-jcry-ransomware-is-now-infecting-windows-users%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-75633 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/si-lab-opjerusalem-2019-jcry-ransomware-is-now-infecting-windows-users/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-75633 post type-post status-publish format-standard hentry category-technology">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">[SI-LAB] #OpJerusalem 2019 – JCry ransomware is now infecting Windows users</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        August 10, 2019    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="post_wrapper_inner">
+<div class="post_inner_wrapper">
+<h2>Over the last few days, a new ransomware campaign infected several users around the world as part of the #OpJerusalem campaign.</h2>
+<p><strong>SI-LAB analyzed this malware and noticed that it does not use sophisticated techniques. Criminals used UPX packer to protect malware code written in Go and a RSA public certificate is hardcoded inside malware to encrypt all user’s target files. This finding results in a simple “key” to encrypt all the infected victims. This means that a unique RSA private key can be used to decrypt all the files as well.</strong></p>
+<p>Jcry is a recent ransomware written in Go which increases its analysis. Criminals have been concerned about protecting their code, however the UPX packer can be easily overcome by allowing a more efficient threat analysis.</p>
+<p>It’s also important to note that every time malware runs, a new unique key is generated. However, the RSA public key used to encrypt the target files is static and hardcoded inside ransomware.</p>
+<p>By getting this private key, files of each infected users can be recovered – since the key to decrypt the files is also unique.</p>
+<p>The new ransomware dubbed JCry (extension used to rename encrypted files<strong> .jcry</strong>) is part of the OpIsrael 2019 — <em>an annual coordinated cyber attack against the Israeli government and private websites created with the stated goal of “erasing Israel from the Internet” in protest against the Israeli government’s conduct in the Israel-Palestine conflict.</em></p>
+<p>Criminals have used common attack vectors in the past, such as website defacements and denial-of-service distributed attacks (DDoS). On April 7th, 2013, for instance, the most successful attack executed by Anonymous group using data leakage and DoS conditions against a huge number of Israeli websites was noted.</p>
+<p>According to media (see this <a href="https://blog.sensecy.com/2017/04/03/updates-about-the-upcoming-opisrael-campaign/">link</a>), since the attack in 2013, the number of participants and supporters is decreasing.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/1.png?ssl=1" alt="1" class="wp-image-5744" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 1: #OpIsrael Participants statistics.</p>
+<p>This time, a new attack is ongoing and is targeting private websites. The attacks happen one month before the common data of the campaign.</p>
+<p>Last weekend, hundreds of popular Israeli websites were targeted by a cyber attack called #OpJerusalem. This attack has the goal of infecting Windows users with the JCry ransomware. In this case, the attack vector used to distribute the ransomware are defaced websites.</p>
+<p>To carried out this attack, crooks modified the DNS record of a popular web accessibility plugin from nagich[.]com. When users access a website using that plugin, a malicious script is loaded instead of the legitimate plugin.</p>
+<p><a rel="noreferrer noopener" href="https://twitter.com/IdoNaor1" target="_blank">Ido Naor</a>, Principal Security Researcher at Kaspersky Lab, was who share this threat on Saturday, March 2nd, at VirusBay.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/2.png?ssl=1" alt="2" class="wp-image-5746" data-recalc-dims="1"><figcaption></figcaption></figure>
+</div>
+<figure class="wp-block-embed-twitter wp-block-embed is-type-rich is-provider-twitter">
+<div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">An Israeli website nagish[.]co[.]il was compromised and one of its subdomains (embedded in dozens of websites (including gov and media) became temporary water holes for Israeli residents. We are still investigating, but its important to share the sample and protect your users.</p>
+<p>— Ido Naor (@IdoNaor1) <a href="https://twitter.com/IdoNaor1/status/1101936940297924608?ref_src=twsrc%5Etfw">March 2, 2019</a></p></blockquote>
+</div>
+</figure>
+<p><em>“After they replaced the IP of the domain, they simply redirected the traffic to a page called update.html where a script was looking for the victim’s USER-AGENT. Once found, it was comparing parts of it with the string “Windows”. If it wasn’t Windows, the script would only show a defacement page. Else, a fake Adobe update </em>was suppose<em> to be served to the victim. Due to </em>a fail<em> in the code (the comparison if condition), the code was never able to reach the download link, so </em>actually<em> the attack was shooting </em>blank<em>.” – researcher says.</em></p>
+<h1>How ransomware is distributed</h1>
+<p>After the website is compromised, a script was placed to perform the next task:</p>
+<ul>
+<li>If a javascript variable was equal to a specific string “Windows”, a malicious Adobe update message is triggered delivering the JCry ransomware.</li>
+<li>Otherwise, a defacement page is displayed.</li>
+</ul>
+<p>The Israeli website nagish[.]co[.]il was compromised and used in these attacks. Criminals left the following message: <em><strong>#OpJerusalem, Jerusalem is the capital of Palestine</strong></em>.</p>
+<p>The source code of the webpage was published on <a href="https://www.cyberark.com/threat-research-blog/opjerusalem-flashinstaller-ransomware/#_edn3">GitHub</a> and we can easily see a funny bug: the malware will never download because the printed message condition is wrong and always true.</p>
+<p>(See code <a href="https://gist.github.com/yuvadm/d97af23a5128ecac1c4318fd5b42d676">here</a>).</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/3.png?ssl=1" alt="3" class="wp-image-5747" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 2: Malicious code used in this campaign.</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>To lure the victims, the following image is presented with the message: “<strong>Your version of Adobe Flash Player is outdated – Update</strong>“. When the user clicks on <strong><em>Update</em></strong>, the malicious file is download.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i0.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/fake-adobe-flash-prompt.jpg?ssl=1" alt="fake-adobe-flash-prompt" class="wp-image-5750" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 3: When the user clicks on Update, the malicious file is download.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/4.png?ssl=1" alt="4" class="wp-image-5748" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 4: Malicious file “<em>flashplayer_install.exe</em>” is downloaded from hxxp://185.163.47.134.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i0.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/defaced-page.jpg?ssl=1" alt="defaced-page" class="wp-image-5749" data-recalc-dims="1"></figure>
+</div>
+<p>If the browser user-agent used to access the page does not contain “Windows”, then the defacement message is presented and nothing else happens.</p>
+<p>Figure 5: Defacement message when browser <em>user-agent</em> is not a Windows device.</p>
+<h1><strong>After the download – Technical Analysis</strong></h1>
+<p>SI-LAB analyzed this new ransomware in order to understand its behavior and techniques used by criminals.</p>
+<p>If users download the exe file called <em>flashplayer_install.exe</em>, the infection process starts. As shown, the malware icon is the same used by common Adobe Flash Player executables, a trick used by crooks to lure victims.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/5.png?ssl=1" alt="5" class="wp-image-5751" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 6: Ransomware icon.</p>
+<p><strong>This first .exe is a dropper</strong> Winrar SFX (self-extracting archives). There are three archives inside it, namely:</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i0.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/6.png?ssl=1" alt="6" class="wp-image-5752" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 7: Archives inside <em>flashplayer_install.exe</em> — the dropper.</p>
+<p><strong><em>Enc.exe</em></strong> is the first stage this ransomware. It is responsible to <strong>encrypted all the target files</strong> from user’s devices.</p>
+<p><em><strong>Dec.exe</strong> </em>is the executable responsible to decrypt all files after the ransom payment. The last one, <em><strong>msg.vbs</strong></em>, has a simple message coded. <strong>Both two files (*.exe) are copied to the user’s Startup folder.</strong></p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/9.png?ssl=1" alt="" class="wp-image-5755" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 8: Files dropped.</p>
+<p>As presented below, the ransomware was protected/packed by crooks. To do that, they used the UPX packer, which is easily unpacked.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/8.png?ssl=1" alt="" class="wp-image-5753" data-recalc-dims="1"></figure>
+</div>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/7.png?ssl=1" alt="" class="wp-image-5754" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 9: UPX packer detected.</p>
+<p>At a first glance, after unpacking the two files, all is unpacked and we can continue with malware analysis.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/10.png?ssl=1" alt="10" class="wp-image-5756" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 10:  Enc.exe — Nothing is packed now.</p>
+<h1>Deep dive in IDA</h1>
+<p>As shown, we can see that this malware was coded in <a href="https://golang.org/"><strong>Goland.</strong></a></p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/11.png?ssl=1" alt="" class="wp-image-5757" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 11: <a href="https://golang.org/">Goland</a> was used to build the ransomware.</p>
+<p>It’s important to note that Golang (Go) is a relatively new programming language, and it is not common to find malware written in it.</p>
+<p>However, new variants written in Go are emerging, presenting a new big challenge to malware analysts. Applications written in Go are bulky and look much different under a debugger from those that are compiled in other languages, such as C/C++.</p>
+<p>After some tricks, rename some functions to understand the malware was possible.</p>
+<p>We can see that some cryptographic functions are declared — this is an important indicator that allows categorizing this threat as ransomware.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/12.png?ssl=1" alt="" class="wp-image-5758" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 12: Cryptographic functions observed.</p>
+<p>The malware has a built-in RSA public key used to encrypt all the target files.  JCry is designed to encrypt data and append filenames with “.jcry” extension (e.g., “file.jpg” is renamed to “file.jpg.jcry” and so on). Once data is encrypted, JCry opens a pop-up window and generates an html file (“<em>JCRY_Note.html</em>“) and drops a copy in every existing folder. We will observe this later.</p>
+<p>The RSA public key used by ransomware every time to encrypt files is the following:</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/13.png?ssl=1" alt="" class="wp-image-5760" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 13: RSA public key used by ransomware to encrypt target files.</p>
+<p>Since the key is hardcoded, we suspect that the private key may also be unique – since the public key is not variable. In this way, by obtaining a private key all the different files from each infected user’s can also be recovered.</p>
+<p>In detail, the malware uses the <a href="https://golang.org/src/crypto/aes/aes_gcm.go"><em><strong>crypto_cipher_NewGCM</strong></em></a> function to encrypt the target files. Next, the <em><strong>os__ptr_File_Write</strong></em> function is used to write the changes on disk (the file encrypted).</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i0.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/14.png?ssl=1" alt="" class="wp-image-5761" data-recalc-dims="1"></figure>
+</div>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i0.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/15.png?ssl=1" alt="" class="wp-image-5762" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 14: Functions used to encrypt target files.</p>
+<p>The same function is used in the <em>Dec.exe</em> file to decrypt the files.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/30.png?ssl=1" alt="" class="wp-image-5793" data-recalc-dims="1"></figure>
+</div>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/17.png?ssl=1" alt="" class="wp-image-5764" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 15: Functions used to decrypt target files.</p>
+<p>Interesting that when analyzing the files, we were able to identify some indicators about the potential author(s) this ransomware (<em><strong>sh4dow</strong></em>).</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/18.png?ssl=1" alt="" class="wp-image-5765" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 16: Info about the malware author(s).</p>
+<h1>Executing the ransomware</h1>
+<p>At runtime four new threads are created responsible for encrypting all files on the infected user’s devices.</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/19.png?ssl=1" alt="" class="wp-image-5766" data-recalc-dims="1"></figure>
+</div>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/20.png?ssl=1" alt="" class="wp-image-5767" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 17: Threads created by ransomware to encrypt all target files and CPU performance.</p>
+<p>After that, the files are encrypted and a new file extension is appended (.<em><strong>jcry</strong></em>).</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/21.png?ssl=1" alt="" class="wp-image-5768" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 18: .jcry extension is appended to the encrypted files.</p>
+<p>After the encryption process has finished, <strong>a PowerShell is executed</strong>, and the executable <strong><em>Dec.exe</em> is opened</strong>.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/22.png?ssl=1" alt="" class="wp-image-5769" data-recalc-dims="1"></figure>
+</div>
+<p>Figure: 19 Encryption process is terminated and the decryption file (<em>Dec.exe</em>) is opened.</p>
+<p>The ransomware will also create a ransom note named <em><strong>JCRY_Note.html</strong></em>, which contains a victim’s unique key, a bitcoin address to send the $500 ransom payment, and a TOR site with the address <em><strong>http://kpx5wgcda7ezqjty.onion</strong></em>, which used to tell the attackers a payment has been made.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/23.png?ssl=1" alt="" class="wp-image-5770" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 20: Ransomware note, bitcoin address, and victim unique key.</p>
+<p>As can be seen below, when <em>Dec.exe</em> is executed via a Powershell process, the <em>Enc.exe</em> file is deleted.  Also, the file “<em><strong>PersonalKey.txt</strong></em>” is added, with the key to make the ransom payment.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/24.png?ssl=1" alt="" class="wp-image-5771" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 21: Unique Personal Key generated by ransomware.</p>
+<p>This activity can be observed on IDA as well.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i2.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/25.png?ssl=1" alt="" class="wp-image-5772" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 22: <em>Enc.exe</em> file is deleted when<em> Dec.exe</em> file is executed.</p>
+<h1><strong>Second round: Re-run the malware and validate if a new unique key is really generated</strong></h1>
+<p>Re-run the malware, we see that another unique key is, in fact, generated. <strong>YES, different uniques keys are generated at each run (they are, in fact, unique).</strong></p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i0.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/27.png?ssl=1" alt="" class="wp-image-5774" data-recalc-dims="1"></figure>
+</div>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/26.png?ssl=1" alt="" class="wp-image-5775" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 23: Unique key generated during the second round.</p>
+<p>Interesting, this time the malware was not able to eliminate the first stage (<em>Enc.exe</em>). More, the ransomware doesn’t start if <em><strong>PersonalKey.txt</strong></em> file is in the same folder. We need to delete it to launch the second round.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/28.png?ssl=1" alt="" class="wp-image-5773" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 24: Access denied when malware tries to remove <em>Enc.exe</em> file (look at the left corner).</p>
+<p>By accessing the TOR website, we observe that it contains a field that receives the address of the wallet and the unique key generated.</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i1.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/tor-site.jpg?ssl=1" alt="" class="wp-image-5777" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 25: TOR website used by crooks to receive ransom payment.</p>
+<p>As the <em><strong>1FKWhzAeNhsZ2JQuWjWsEeryR6TqLkKFUt</strong></em> bitcoin address used for payment is the same for every victim, it would have been hard for the attackers to know who actually made the payment. It is not known whether the attackers would have provided a key after paying the ransom.</p>
+<p>In addition, it’s possible to note that no payments were received for that bitcoin account at this time (March 5th, 2019)</p>
+<div class="wp-block-image">
+<figure class="aligncenter"><img src="https://i0.wp.com/seguranca-informatica.pt/wp-content/uploads/2019/03/29.png?ssl=1" alt="" class="wp-image-5779" data-recalc-dims="1"></figure>
+</div>
+<p>Figure 26: Bitcoin wallet used by crooks.</p>
+<h1><strong>Final Thoughts</strong></h1>
+<p>Jcry is a recent ransomware written in Go which increases its analysis. Criminals have been concerned about protecting their code, however the UPX packer can be easily overcome by allowing a more efficient threat analysis.</p>
+<p>It’s also important to note that every time malware runs, a new unique key is generated. However, the RSA public key used to encrypt the target files is static and hardcoded inside ransomware.</p>
+<p>By getting this private key, files of each infected users can be recovered – since the key to decrypt the files is also unique.</p>
+<p>Further details, including Indicators of Compromise are reported in the analysis published by Pedro Tavares:</p>
+<p><a href="https://seguranca-informatica.pt/si-lab-the-story-of-the-jcry-ransomware-spread-in-opjerusalem2019-and-infecting-windows-users/#.XH9_5ehKg2w">https://seguranca-informatica.pt/si-lab-the-story-of-the-jcry-ransomware-spread-in-opjerusalem2019-and-infecting-windows-users/#.XH9_5ehKg2w</a></p>
+</p>
+<p><strong>About the author </strong><a rel="noreferrer noopener" target="_blank" href="https://www.linkedin.com/in/sirpedrotavares/"><strong>Pedro Tavares</strong></a></p>
+<p>Pedro Tavares is a professional in the field of information security working as an Ethical Hacker, Malware Analyst and also a Security Evangelist. He is also a founding member and Pentester at CSIRT.UBI and founder of the security computer blog <a href="https://seguranca-informatica.pt/">seguranca–informatica.pt</a>.</p>
+<table class="wp-block-table">
+<tbody>
+<tr>
+<td>   <strong></strong>    </td>
+<td>
+  <strong><!-- Error, Ad is not available at this time due to schedule/geolocation restrictions! --></strong>
+  </td>
+</tr>
+</tbody>
+</table>
+<p><strong><a href="http://www.linkedin.com/pub/pierluigi-paganini/b/742/559">Pierluigi Paganini</a></strong></p>
+<p><strong>(<a href="http://securityaffairs.co/wordpress/">SecurityAffairs</a> –</strong> <strong>OpJerusalem, hacking)</strong></p>
+<p><!-- Error, Ad is not available at this time due to schedule/geolocation restrictions! --></p>
+<p><!-- Error, Ad is not available at this time due to schedule/geolocation restrictions! --><br />
+<!-- Simple Share Buttons Adder (7.6.19) simplesharebuttons.com -->										</p>
+<div style="height:15px"></div>
+<p>										<br class="clear"></p>
+<hr>
+<div id="social_share_wrapper">
+<ul>
+<li>
+</li>
+<li>
+</li>
+<li>
+			<a class="pinterest_share" target="_blank" href="http://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F82030%2Fhacking%2Fopjerusalem-2019-jcry-ransomware.html&amp;media=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2Fwp-includes%2Fimages%2Fmedia%2Fdefault.png" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="google_share" target="_blank" href="https://plus.google.com/share?url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F82030%2Fhacking%2Fopjerusalem-2019-jcry-ransomware.html" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="linkedin_share" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F82030%2Fhacking%2Fopjerusalem-2019-jcry-ransomware.html" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="tumblr_share" target="_blank" href="http://www.tumblr.com/share/link?url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F82030%2Fhacking%2Fopjerusalem-2019-jcry-ransomware.html" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="email_share" target="_blank" href="mailto:?subject=%5BSI-LAB%5D%20#OpJerusalem%202019%20%E2%80%93%20JCry%20ransomware%20is%20now%20infecting%20Windows%20users&amp;body=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F82030%2Fhacking%2Fopjerusalem-2019-jcry-ransomware.html" rel="noopener noreferrer"></a>
+		</li>
+</ul>
+</div>
+<p><br class="clear"></p></div>
+</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+        <p class="modified small cntr" itemprop="dateModified" >Last modified: August 10, 2019</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/google-forgot-to-tell-users-about-its-hidden-spy-microphone/"><img width="150" height="84" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/google-678x381.jpg" class="grayscale grayscale-fade wp-post-image" alt="" /><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/google-forgot-to-tell-users-about-its-hidden-spy-microphone/">Previous Story:<br/> <strong>Google Forgot To Tell Users About Its Hidden Spy Microphone</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/sex-robots-could-be-the-fing-end-of-humanity-cybersecurity-expert-warns/"><img width="150" height="84" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/realdoll-henry-sex-robots-sex-dolls-678x381.png" class="grayscale grayscale-fade wp-post-image" alt="" /><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/sex-robots-could-be-the-fing-end-of-humanity-cybersecurity-expert-warns/">Next Story:<br/> <strong>Sex Robots Could be the F***ing End of Humanity, Cybersecurity Expert Warns</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d51e4c225a79"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d51e4c225a79"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d51e4c248f84"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d51e4c248f84"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 4.5504879951477 seconds, on 12-08-19 22:14:26 -->

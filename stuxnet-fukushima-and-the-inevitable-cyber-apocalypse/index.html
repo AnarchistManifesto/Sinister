@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+
+<title>Stuxnet, Fukushima And The Inevitable Cyber Apocalypse &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Vaccines cause brain damage: the mothers know' href='https://www.sinister-sec.com/vaccines-cause-brain-damage-the-mothers-know/' />
+<link rel='next' title='Couple in China ‘Sell’ Their Baby Daughter to Buy iPhone' href='https://www.sinister-sec.com/couple-in-china-sell-their-baby-daughter-to-buy-iphone/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="https://www.sinister-sec.com/stuxnet-fukushima-and-the-inevitable-cyber-apocalypse/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=50897' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fstuxnet-fukushima-and-the-inevitable-cyber-apocalypse%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fstuxnet-fukushima-and-the-inevitable-cyber-apocalypse%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-50897 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/stuxnet-fukushima-and-the-inevitable-cyber-apocalypse/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-50897 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-dylan-charles">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Stuxnet, Fukushima And The Inevitable Cyber Apocalypse</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/technology/" rel="category tag">Technology</a>    </p>
+    	
+    </div>
+    
+        
+        <div class="entryhead" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            
+            <a href="https://www.sinister-sec.com/stuxnet-fukushima-and-the-inevitable-cyber-apocalypse/">
+            
+            	<img width="854" height="540" src="https://www.sinister-sec.com/wp-content/uploads/2018/05/cyber-attack-pixabay-2-854x540.jpg" class="standard grayscale grayscale-fade wp-post-image" alt="" />            
+            </a>
+        
+        </div><!-- end .entryhead -->
+ 
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        May 14, 2018    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry-content clearfix">
+<p><a href="https://www.activistpost.com/wp-content/uploads/2017/01/cyber-attack-pixabay.jpg" rel="attachment wp-att-146058"></a>By <a href="http://www.wakingtimes.com/category/contributors/dc" target="_blank">Dylan Charles</a></p>
+<p>In the classic apocalyptic film <a href="https://www.amazon.com/gp/product/B00B5AETMO/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;tag=wakitime09-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00B5AETMO&amp;linkId=63755d1cd7c3dddce04867faaea29409" target="_blank"><em>Terminator</em></a>, future planet earth is under siege by sentient man-made robots of war seeking to terminate the human race. <strong>Autonomous machines created by human beings to destroy human beings.</strong> Maximum dystopian, and scary enough as fiction; however, the <a href="http://www.wakingtimes.com/2013/09/12/maj-gen-smedley-butler-military-industrial-complex-original-whistleblower/" target="_blank">military industrial complex</a> and the deep state are bringing us ever closer each year to this dark future.</p>
+<p>Case in point, the Stuxnet computer worm, developed as a joint <a href="http://www.zerodaysfilm.com/" target="_blank">U.S-Israeli-British cyber weapon</a>, is a set of malicious computer code which infects an ubiquitous model of programmable logic controllers (PLCs), commonly used around the world in power plants and factories to mechanically control industrial hardware. PLCs can tell a fan when to turn on and off, how much of a chemical to add to a product, or for how long to operate an industrial mixer or cooling system. <strong>They are the direct link between the cybernetic and the physical world.</strong></p>
+<p>Stuxnet was originally designed to seek out and to attack such hardware in <a href="http://www.businessinsider.com/stuxnet-was-far-more-dangerous-than-previous-thought-2013-11" target="_blank">Iran’s Natanz nuclear fuel enrichment facility</a> in order to disable centrifuges, thereby disrupting Iran’s capacity to produce nuclear weapons, which it did so <a href="https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/" target="_blank">successfully in 2010</a>.</p>
+<blockquote>
+<p>This worm was an unprecedentedly masterful and malicious piece of code that attacked in three phases. First, it targeted Microsoft Windows machines and networks, repeatedly replicating itself. Then it sought out Siemens Step7 software, which is also Windows-based and used to program industrial control systems that operate equipment, such as centrifuges. Finally, it compromised the programmable logic controllers. [<a href="http://spectrum.ieee.org/telecom/security/the-real-story-of-stuxnet" target="_blank">Source</a>]</p>
+</blockquote>
+<div class="alignright">
+<!-- /9716847/AP-Content --></p>
+<div id="div-gpt-ad-1526143560956-5" style="height:250px;width:300px">
+<p>googletag.cmd.push(function() { googletag.display(&#8216;div-gpt-ad-1526143560956-5&#8217;); });</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+</div>
+</div>
+<p>The attack on Natanz was a covert and <a href="https://www.wired.com/2013/03/stuxnet-act-of-force/" target="_blank">illegal act of force</a>, and part of spectrum of tactics employed at that time against Iran’s nuclear bomb making ambitions, including the <a href="https://en.wikipedia.org/wiki/Assassination_of_Iranian_nuclear_scientists" target="_blank">assassinations of top Iranian nuclear scientists</a>, attacks on Iranian pipelines, an international propaganda campaign, and pressure from the <a href="https://www.iaea.org/" target="_blank">International Atomic Energy Agency</a>.</p>
+<p>Stuxnet is uncommonly dangerous in the world of malware, and to the digital detectives who discovered it and the analysts tasked with figuring out what it was, who made it, and what it could do, it was their worst-case scenario, something they had hoped they would never actually see unleashed unto the world.</p>
+<blockquote>
+<p>I wouldn’t call it amazement, it was kind of a shock. <strong>It went beyond our worst fears, our worst nightmares, and this continued the more we analyzed.</strong> The more we researched, the more bizarre the whole story got. It was evident at a very early stage that just given the sophistication of this malware suggested that there must have been a nation-state involved. At least one nation-state involved in the development. ~Ralph Langer, Control Systems Security Consultant, <em><a href="http://www.zerodaysfilm.com/" target="_blank">Zero Days</a></em></p>
+<p>Here is a piece of software that should only exist in the cyber realm and it is able to affect physical equipment in a plant or factory and cause physical damage. ~Eric Chien, Semantec Security Response Team, <a href="http://www.zerodaysfilm.com/" target="_blank"><em>Zero Days</em></a></p>
+<p>Real world physical destruction. At that time things became very scary to us. Here you had malware potentially killing people, and that was something that was always Hollywoodesque to us. ~Liam O’Murchu, Semantec Security Response Team, <a href="http://www.zerodaysfilm.com/" target="_blank"><em>Zero Days</em></a></p>
+</blockquote>
+<p>Two years after Stuxnet disrupted Iran’s nuclear program, <a href="https://www.youtube.com/watch?v=6WmaZYJwJng" target="_blank">CBS News did a segment on it</a>, interviewing former head of the NSA and former director of the CIA, Retired General Michael Hayden, would say very little about it, except to warn us of the significance that Stuxnet will have on the future of warfare, representing a startling escalation into an entirely new battlefield.</p>
+<blockquote>
+<p>This was a good idea. All right. I also admit, this was a really big idea, too. The rest of the world was looking at this and saying, clearly someone has legitimated this kind of activity as acceptable in international conduct. The whole world was watching. ~General Michael Hayden, Retired</p>
+</blockquote>
+<p>[youtube https://www.youtube.com/watch?v=6WmaZYJwJng]</p>
+<h3>Zero Day is Here</h3>
+<p>One of the most startling aspects of Stuxnet is that it employs what is known as a ‘zero day’ code, a rare capacity which allows the worm to spread and function without the user having to do anything, such as download files or accidentally launch a program. In this way the worm is autonomous once released, always quietly crawling the world advancing toward its target. This combined with the fact that it attacks PLCs which are used all over the world in civilian infrastructure, including nuclear power plants, is extraordinarily dangerous as it opens the door to a new type of accidental warfare.</p>
+<p>In the 2016 film <em><a href="http://www.zerodaysfilm.com/" target="_blank">Zero Days</a></em>, an NSA source remarks on the importance and origins of Stuxnet. Her comment is to be taken as a warning that the government has released something into the world that they cannot control, that cannot be put bag in the bag, that will only evolve and further advancements in malware.</p>
+<blockquote>
+<p>I was in NSA. I believe in the agency so what I’m willing to give you will be limited but we’re talking because everyone’s getting the story wrong and we have to get it right. We have to understand these new weapons, the stakes are too high. We did Stuxnet. It’s a fact. We came so fucking close to disaster and we’re still on the edge. It was a huge, multi-national, inter-agency operation. ~NSA Source, <a href="http://www.zerodaysfilm.com/" target="_blank"><em>Zero Days</em></a></p>
+</blockquote>
+<h3>Speculative Connection to Fukushima</h3>
+<p>Although we most likely will never find confirmation, some analysts speculate that Stuxnet was involved in the <a href="http://www.wakingtimes.com/2016/10/24/fukushima-untouchable-eco-apocalypse-no-one-talking/" target="_blank">Fukushima Daiichi</a> nuclear meltdown which occurred on 3/11/2011. Evidence for this includes the fact all layers of the power plant’s cooling systems failed, even systems designed to withstand major earthquakes and severe floods. Furthermore, some claim that Stuxnet was found in Japan just prior to the catastrophe, placing it near the scene of the crime.</p>
+<p><a href="http://activistpost.net/backyardliberty.html" rel="nofollow"><img class="alignright" src="https://lh6.googleusercontent.com/-ONE8Lk_RzR8/UjeZnRyZRTI/AAAAAAAAVJw/TMNS4NzHKZo/s220/BL_158220.gif" alt=""></a>The unfortunate truth is that we will never know the full details, largely because the Japanese government and TEPCO, the energy agency that operates the plant, are more concerned with <a href="https://www.rt.com/news/347637-fukushima-meltdown-cover-up-tepco/" target="_blank">stopping information leakage about the disaster</a> and cleanup effort than they are about stopping the leakage of radioactive material.</p>
+<p>Nevertheless, <a href="http://foreignpolicy.com/2011/03/17/where-fukushima-meets-stuxnet-the-growing-threat-of-cyber-war/" target="_blank">Fukushima serves as a shocking blueprint for the coming cyber apocalypse</a>. A target-nation’s critical infrastructure mysteriously goes offline in spite of multiple layers of failsafes and backups, resulting in catastrophic, widespread damage and disruption in densely populated areas. Potentially, as is in the case of nuclear reactors, causing permanent ecological devastation and the indefinite dislocation of millions of people.</p>
+<blockquote>
+<p>We have entered into a new phase of conflict in which we use a cyber weapon to create physical destruction, and in this case, physical destruction in someone else’s critical infrastructure. ~ <a href="https://www.youtube.com/watch?v=6WmaZYJwJng" target="_blank">U.S. General Michael Hayden, Retired</a></p>
+</blockquote>
+<h3>The Coming Cyber Apocalypse</h3>
+<p>Cyber warfare is the fourth dimension of military conflict beyond land, sea and air. Cyber weapons offers unlimited range, super high-speed, and extremely low detectability, and as we push further and further into the realms of artificial intelligence, we move closer to a scenario where technology can evolve on its own, beyond its destructive genealogy.</p>
+<p>Skynet, as it is called in <em>Terminator</em>. It is almost here.</p>
+<p class="wp-caption-text" style="text-align: center"><a href="https://www.activistpost.com/wp-content/uploads/2017/01/Terminator-.jpg" rel="attachment wp-att-146057"></a>Screen capture from the 1991 film, <em>Terminator 2: Judgment Day</em>.</p>
+<p>In 2016 a massive cyber attack on the Internet brought down major news, e-commerce, and social media sites for many hours by <a href="http://www.usatoday.com/story/tech/2016/10/21/cyber-attack-takes-down-east-coast-netflix-spotify-twitter/92507806/" target="_blank">using home appliances and televisions as a distributed network of cyber-attackers</a>. Now analysts <a href="https://www.rt.com/business/372707-internet-shut-down-2017/" target="_blank">predict the Internet will be brought down completely for at least a short period of time</a> within the coming year or so. An apocalyptic prospect for commerce, finance and infrastructure. Meanwhile, the Pentagon continues to push the envelope in robotic and autonomous weapons of war.</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>There is no way to fully understand the implications and consequences of an artificially intelligent cyber conflict. There is no path to disarmament of this kind of threat, and if the cutting edge of technological development continues to be occupied by the military industrial mindset, then the human race doesn’t stand a chance. Is this really our future?</p>
+<h4 style="text-align: center"><a href="http://activistpost.net/rfidblock.html" target="_blank">RFID Scan Blockers – Available for Free (Ad)</a></h4>
+<div class="code-block code-block-1" style="margin: 0px">
+<div align="center" class="mrf-external">
+<a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1="><img src="https://www.activistpost.com/wp-content/uploads/2018/02/500.jpg"></a></p>
+<h4 style="text-align: center"><a href="https://amorain.com/?E=ikLQsSIi%2fgaXBh0SRK5s8g%3d%3d&amp;s1=" target="_blank">Secret $1.8 Million Cryptocurrency Script</a></h4>
+</div>
+<p><em>Read more articles by <a href="http://www.wakingtimes.com/category/contributors/dc/" target="_blank"><span class="s1">Dylan Charles</span></a>.</em></p>
+<p><em><a href="http://www.wakingtimes.com/category/contributors/dc" target="_blank">Dylan Charles</a> is a student and teacher of Shaolin Kung Fu, Tai Chi and Qi Gong, a practitioner of Yoga and Taoist arts, and an activist and idealist passionately engaged in the struggle for a more sustainable and just world for future generations. He is the editor of <a href="http://www.wakingtimes.com/">WakingTimes.com</a>, the proprietor of <a href="http://www.offgridoutpost.com/">OffgridOutpost.com</a>, a grateful father and a man who seeks to enlighten others with the power of inspiring information and action. He may be contacted at <a href="mailto:wakingtimes@gmail.com">wakingtimes@gmail.com</a>.</em></p>
+<p><em><span class="s1"><a href="https://www.facebook.com/WakingTimes">Like Waking Times on Facebook</a></span><span class="s2">. <a href="https://twitter.com/WakingTimes"><span class="s3">Follow Waking Times on Twitter</span></a>.</span></em></p>
+<p class="p1"><em><span class="s1">This article (<a href="http://www.wakingtimes.com/2017/01/06/stuxnet-fukushima-inevitable-cyber-apocalypse/" target="_blank">Stuxnet, Fukushima and the Inevitable Cyber Apocalypse</a>) was originally created and published by <a href="http://www.wakingtimes.com/"><span class="s2">Waking Times</span></a> and is published here under a <a href="http://creativecommons.org/licenses/by/4.0/"><span class="s2">Creative Commons</span></a> license with attribution to <a href="http://www.wakingtimes.com/category/contributors/dc" target="_blank"><span class="s2">Dylan Charles</span></a> and <a href="http://www.wakingtimes.com/"><span class="s2">WakingTimes.com</span></a>. It may be re-posted freely with proper attribution, author bio, and this copyright statement.</span></em></p>
+<p class="p1"><em>~~ Help <a href="http://www.wakingtimes.com/"><span class="s1">Waking Times</span></a> to raise the vibration by sharing this article with friends and family…</em></p>
+<p class="p1"><em>Image Credit: <a href="http://www.pixabay.com">Pixabay.com</a></em></p>
+</p></div>
+<nav class="post-nav-wrap">
+<ul class="post-nav clearfix">
+<li class="post-nav-prev">
+<a href="https://www.activistpost.com/2017/01/leaked-tapes-john-kerry-admission-u-s-pulling-for-isis-syria-russia-fighting-terror.html" rel="prev"><i class="fa fa-chevron-left"></i>Previous post</a>
+</li>
+<li class="post-nav-next">
+<a href="https://www.activistpost.com/2017/01/anything-say-around-smart-devices-can-will-used-court.html" rel="next">Next post<i class="fa fa-chevron-right"></i></a>
+</li>
+</ul>
+</nav>
+<p>	<!-- Here we load disqus comments --></p>
+<div class="dcl-disqus-thread" id="comments">
+<div id="disqus_thread"></div>
+</p></div>
+<p>	/*  */</p>
+<p>	/*  */</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+<p class="meta taggs"> <a href="https://www.sinister-sec.com/tag/dylan-charles/" rel="tag">Dylan Charles</a></p>        <p class="modified small cntr" itemprop="dateModified" >Last modified: May 14, 2018</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/syrian-electronic-army-hacks-barak-obamas-facebook-and-twitter-accounts/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/syrian-electronic-army-hacks-barak-obamas-facebook-and-twitter-accounts/">Previous Story:<br/> <strong>Syrian Electronic Army Hacks Barak Obama’s Facebook and Twitter Accounts</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/couple-in-china-sell-their-baby-daughter-to-buy-iphone/"><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="https://www.sinister-sec.com/couple-in-china-sell-their-baby-daughter-to-buy-iphone/">Next Story:<br/> <strong>Couple in China ‘Sell’ Their Baby Daughter to Buy iPhone</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d53c9c3058da"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d53c9c3058da"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d53c9c3300e1"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d53c9c3300e1"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 7.2686491012573 seconds, on 14-08-19 8:43:47 -->
