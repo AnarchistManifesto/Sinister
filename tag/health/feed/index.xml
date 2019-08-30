@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>health &#8211; Sinister Security</title>
+	<atom:link href="https://www.sinister-sec.com/tag/health/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.sinister-sec.com</link>
+	<description></description>
+	<lastBuildDate>Wed, 28 Aug 2019 09:50:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.2</generator>
+
+<image>
+	<url>https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png</url>
+	<title>health &#8211; Sinister Security</title>
+	<link>https://www.sinister-sec.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Use of alternative medicine in Sub-Saharan Africa is “significant”, concludes study</title>
+		<link>https://www.sinister-sec.com/use-of-alternative-medicine-in-sub-saharan-africa-is-significant-concludes-study/</link>
+				<pubDate>Wed, 28 Aug 2019 09:50:19 +0000</pubDate>
+		<dc:creator><![CDATA[0x000216]]></dc:creator>
+				<category><![CDATA[World]]></category>
+		<category><![CDATA[African medicine]]></category>
+		<category><![CDATA[alternative medicine]]></category>
+		<category><![CDATA[complementary medicine]]></category>
+		<category><![CDATA[disease treatments]]></category>
+		<category><![CDATA[goodhealth]]></category>
+		<category><![CDATA[goodscience]]></category>
+		<category><![CDATA[healing arts]]></category>
+		<category><![CDATA[health]]></category>
+		<category><![CDATA[Health Care]]></category>
+		<category><![CDATA[herbal medicine]]></category>
+		<category><![CDATA[herbal therapy]]></category>
+		<category><![CDATA[herbs]]></category>
+		<category><![CDATA[Medicine]]></category>
+		<category><![CDATA[mind-body therapies]]></category>
+		<category><![CDATA[natural cures]]></category>
+		<category><![CDATA[natural medicine]]></category>
+		<category><![CDATA[remedies]]></category>
+		<category><![CDATA[research]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[tcam]]></category>
+		<category><![CDATA[traditional medicine]]></category>
+
+		<guid isPermaLink="false">https://www.sinister-sec.com/use-of-alternative-medicine-in-sub-saharan-africa-is-significant-concludes-study/</guid>
+				<description><![CDATA[(Natural News) Australian researchers completed the first comprehensive and empirical study on the use of traditional, complementary, and alternative medicines (TCAM) in sub-Saharan Africa. They reported that &#8230;]]></description>
+									</item>
+	</channel>
+</rss>

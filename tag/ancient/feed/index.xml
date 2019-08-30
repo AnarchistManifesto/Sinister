@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Ancient &#8211; Sinister Security</title>
+	<atom:link href="https://www.sinister-sec.com/tag/ancient/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.sinister-sec.com</link>
+	<description></description>
+	<lastBuildDate>Fri, 20 Apr 2018 02:22:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.2</generator>
+
+<image>
+	<url>https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png</url>
+	<title>Ancient &#8211; Sinister Security</title>
+	<link>https://www.sinister-sec.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>NATIVE AMERICANS HAVE BELIEFS IN UFO. HERE’S WHY</title>
+		<link>https://www.sinister-sec.com/native-americans-have-beliefs-in-ufo/</link>
+				<pubDate>Mon, 19 Feb 2018 19:07:00 +0000</pubDate>
+		<dc:creator><![CDATA[0x000216]]></dc:creator>
+				<category><![CDATA[World]]></category>
+		<category><![CDATA[Aliens]]></category>
+		<category><![CDATA[Ancient]]></category>
+		<category><![CDATA[Space]]></category>
+		<category><![CDATA[UFO]]></category>
+
+		<guid isPermaLink="false">https://www.sinister-sec.com/?p=1757</guid>
+				<description><![CDATA[Profoundly otherworldly societies recollect a period when &#8220;individuals from the stars&#8221; unreservedly communicated with individuals from the human species.&#160; Before brave and eager Europeans &#8216;found&#8217; the &#8230;]]></description>
+									</item>
+	</channel>
+</rss>
