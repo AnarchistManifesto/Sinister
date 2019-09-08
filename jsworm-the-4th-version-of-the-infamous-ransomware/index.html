@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146051361-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146051361-1');
+</script>
+
+<title>JSWorm: The 4th Version of the Infamous Ransomware &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; JSWorm: The 4th Version of the Infamous Ransomware Comments Feed" href="https://www.sinister-sec.com/jsworm-the-4th-version-of-the-infamous-ransomware/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Some Zyxel devices can be hacked via DNS requests' href='https://www.sinister-sec.com/some-zyxel-devices-can-be-hacked-via-dns-requests/' />
+<meta name="generator" content="WordPress 5.2.3" />
+<link rel="canonical" href="https://www.sinister-sec.com/jsworm-the-4th-version-of-the-infamous-ransomware/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=124209' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fjsworm-the-4th-version-of-the-infamous-ransomware%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fjsworm-the-4th-version-of-the-infamous-ransomware%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-124209 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/jsworm-the-4th-version-of-the-infamous-ransomware/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-124209 post type-post status-publish format-standard hentry category-world">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">JSWorm: The 4th Version of the Infamous Ransomware</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/world/" rel="category tag">World</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        September 7, 2019    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="post_wrapper_inner">
+<div class="post_inner_wrapper">
+<h2>Malware researchers at Yoroi-Cybaze ZLab have analyzed the fourth version of the infamous  JSWorm Ransomware.</h2>
+<h1>Introduction</h1>
+<p>The <a href="https://securityaffairs.co/wordpress/90570/malware/dds-safe-ransomware-attack.html">ransomware </a>attacks have no end. These cyber weapons are supported by a dedicated staff that constantly update and improve the malware in order to make harder detection and decryption. As the popular <a href="https://securityaffairs.co/wordpress/87235/malware/gandcrab-ransomware-decryptor-tool.html">GandCrab</a>, which was carried on up to version 5 until its shutdown, also other ransomware are continuously supported with the purpose of creating revenues for cyber criminals. One of them is <a href="https://securityaffairs.co/wordpress/89666/malware/emsisoft-decryptor-jsworm-4-0.html">JSWorm</a>, which has been updated to version 4. </p>
+<p>Despite the name could remind to JavaScript language and a possible “worm” logic, the malware does not include either of the two characteristics.</p>
+<h1>Technical Analysis</h1>
+<table class="wp-block-table">
+<tbody>
+<tr>
+<td><strong>Hash</strong></td>
+<td>46761b8b727f3002d1c73fa6c8568ebcf2ec0066666251f66dcda9d4268e03e8</td>
+</tr>
+<tr>
+<td><strong>Threat</strong></td>
+<td>JSWorm</td>
+</tr>
+<tr>
+<td><strong>Brief Description</strong></td>
+<td>JSWorm 4.0.2</td>
+</tr>
+<tr>
+<td><strong>Ssdeep</strong></td>
+<td>3072:77LlFWt1yDzVwq4wk+KdXqSmT9C8Fi7FvSJv+R1Y:77a2XC9+KBJmT9BihSlw+</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1: Information about JSWorm 4.0.2 version</em></p>
+<p>JSWorm encrypts all the user files appending a new extension to their name. Unlike other ransomware, the extension is composed by many fields, reporting the information the user needs to move on the ransom payment phase. These fields are the same shown in the ransom note, that are: “<em>Filename.originalExtension.[Infection_ID][Attacker_email].JSWRM”<br /></em></p>
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/IlU8fpo0a8DwEzhyyuSpCvngDP-fbGDlBI_pDKDeHBsS_PheVA9JEVrttc9H20K-2-CRrItykzq5SeaGDpkdAYsWH3TEWKONdBAqcNUN-Dy0c1jYpSvmBStJfcF26j7iW-2lN9o" alt=""><figcaption>Figure 1: Infection ID and Contact E-mail </figcaption></figure>
+<p>Moreover, in the ransom note there is also a backup email, “<em>symmetries0@tutanota.com”</em>, to ensure availability in case of blacklisting. During the encryption phase, the ransomware creates an HTML Application “JSWRM-DECRYPT.hta” in each folder it encounters. The HTA file corresponds to the ransom window shown in Figure 1.</p>
+<p>To ensure the correct machine functionalities, the ransomware excludes from the encryption phase several system directories (Windows, Perflogs) and junction points like <em>Document and Settings</em>, <em>$RECYCLE.BIN</em>, <em>System Volume Information</em>, <em>MSOCache</em>. Also, for each encountered file, the malware compares it with the excluded paths and if they match, a conditional jump is taken.</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/Zk0uvt3xJGLcqwwjwRBBnUd7wFRzRKFbmHTPK0Bube4Etdadwcm1GiNfRVdwwqROT_Ys6SejtjV7UgbDNB0ktUJWdK8SY933-tej1TOsTfi0oXcqzadC9sakhwzuCiibkWvoB8k" alt=""><figcaption>Figure 2: Excluded paths</figcaption></figure>
+<p>Unlike most ransomware, JSWorm does not embed a list of file extensions to encrypt, but uses a set of extensions to exclude during the cipher step. The malware encrypts all the files whose extension is not present in the list.</p>
+<figure class="wp-block-image"><img src="https://lh6.googleusercontent.com/Z7q1xc_D4CJTa8iQI8JN9HNsqA5RFfqJ1ZqlfV5mVKoTBm1ZQ80n-Rv1caTYyXgQoHLqi3WJ0fqrz1J75l2lHAmgkHz_fpQpG1i8R60QCxmUuGJd3VzqFE7-TNdRkysOhCOA-2I" alt=""><figcaption>Figure 3: Extensions excluded from encryption</figcaption></figure>
+<figure class="wp-block-image"><img src="https://lh6.googleusercontent.com/IDSYDD3qmaXToNfJ05RGIX3romzvxR9dnZeZgum0FLfULY9yQ5lAMv-obaLWXslCJNtn6-ZTSIf_HpWg4UnaLWCys1fwQxDt4B7jam9hykIaSnLpbzJJ297gHUUY4dGq86Iuxgw" alt=""><figcaption>Figure 4: Content of “key” file contained in “C:ProgramData”</figcaption></figure>
+<p>During the encryption phase, JSWorm writes a suspicious file named “key.Infection_ID.JSWRM” in <em>“C:ProgramData”</em>.It contains the AES key used to encrypt the files. Unfortunately, the key is processed with an additional RSA encryption step before its storing. The following figure shows an example of the encrypted key. </p>
+<p>Moreover, to maximize the impact of the encryption phase, the ransomware:</p>
+<ul>
+<li>deletes the shadow copies and other system restore points automatically created by Windows;</li>
+<li>kills some processes related to common programs, like SQL server, to proceed with the encryption of the files on which these programs were operating;</li>
+<li>adds a registry key to the autorun path to show the ransom note window also after a system reboot.</li>
+</ul>
+<p>The commands invoked by JSWorm to perform the above-mentioned actions are:</p>
+<table class="wp-block-table">
+<tbody>
+<tr>
+<td>vssadmin.exe delete shadows /all /quiet</td>
+<td>Delete the Shadow Volume Copies</td>
+</tr>
+<tr>
+<td>bcdedit /set {default} bootstatuspolicy ignoreallfailures -y</td>
+<td>Disable Windows Error Recovery on startup</td>
+</tr>
+<tr>
+<td>bcdedit /set {default} recoveryenabled No -y</td>
+<td>Disable Automatic Startup Repair</td>
+</tr>
+<tr>
+<td>wbadmin delete catalog -quiet</td>
+<td>Delete the backup catalog</td>
+</tr>
+<tr>
+<td>wmic shadowcopy delete -y</td>
+<td>Another attempt to delete the Shadow Volume Copies</td>
+</tr>
+<tr>
+<td>/c reg add HKLMSOFTWAREMicrosoftWindowsCurrentVersionRun /v “zapiska” /d “C:ProgramDataJSWRM-DECRYPT.txt” -y</td>
+<td>Set persistence on startup</td>
+</tr>
+<tr>
+<td>/c taskkill.exe taskkill /f /im store.exe</td>
+<td>Kill “store.exe” process (related to MS Exchange)</td>
+</tr>
+<tr>
+<td>/c taskkill.exe taskkill /f /im sqlserver.exe</td>
+<td>Kill “sqlserver.exe” process</td>
+</tr>
+<tr>
+<td>/c taskkill.exe taskkill /f /im dns.exe</td>
+<td>Kill “dns.exe” process</td>
+</tr>
+<tr>
+<td>/c taskkill.exe taskkill /f /im sqlwriter.exe</td>
+<td>Kill “sqlwriter.exe” process</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2: Commands executed by the malware</em></p>
+<p>An example of how the malware invokes the commands using the “<em>ShellExecuteA” </em>API is shown in the following figure.</p>
+<figure class="wp-block-image"><img src="https://lh3.googleusercontent.com/VhiPep-XRnL0y6lR1J6zmQQt6cRFLKPk0q4l_6FzUpNigTn60R5jWaiQwrkco6y7Bp4IdmQymp1jzzDZ9s6b-7vbDUPJesVE5FnpGz5ZRvoZOzyozy2x-a3pevPxSSRDpGEOLNo" alt=""><figcaption>Figure 5: Disassembled routine for shadow copies deleting</figcaption></figure>
+<h3>The Encryption Scheme</h3>
+<p>The AES key the malware encrypt is generated starting from an embedded Base64 seed “MI2i6BWRFhcswznItBEl33UaIoDOwqI=”, which is converted into a byte array through CryptStringToBinaryA API before proceeding with low-level manipulation.</p>
+<figure class="wp-block-image"><img src="https://lh3.googleusercontent.com/MCzOowKlbPAIsnSn6O_hDRv5eFBgtXFFHUuJijGrPiAj1e84_8ORdQhpjwgu7K6L5lGNudGr8890mW0vwxYBu5FqgO3UDuEN7JZM90_HH2-BScM66iTi9cUMmMAw_bPhlH8faxo" alt=""><figcaption>Figure 6: Embedded initial string used to generate AES key</figcaption></figure>
+<p>The fixed string is combined with a random one to make the derived AES key different for each infection. Not even the malware writer knows the final AES key to decrypt the files, so when the user asks to recover his files, he must send the key file stored in <em>“C:ProgramData”</em>. On the other side, the attacker will receive the file, then he will decrypt the content using his private RSA key and will proceed to extract the AES key useful to decrypt the user files.</p>
+<p>To encrypt the AES key, JSWorm uses an RSA public key embedded into it in Base64 form, as shown in the following figure.</p>
+<figure class="wp-block-image"><img src="https://lh6.googleusercontent.com/ERBpcmZ4P1y9diDztf6hTsFbdKCxtRdARagkPHIICUz1LJMvWeHYRpUZrFmr-jzA0xJ4ixk86vkhagCdOnjKUYdjud1qaNkap1_iFmS7eLQVMVkTxokl4S2CwkgUzL708AVeJbI" alt=""><figcaption>Figure 7: RSA-1 public key in Base 64 encoding (on the left) and in binary encoding (on the right)</figcaption></figure>
+<p>The control flow used to encrypt the AES key is based on Windows Cryptography API, as visible in the following figure.</p>
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/y_xFdOY8e6VHMzCA1FRhU9wOAoailg8MlJR1Kh5t3Gb7_lobxvhKlhD-KXSYszZMPwvaSCmO3RDERytvwgQ6nCQWRHsl0jlUi4reNRMu-wJmYWPoDTB10Zz5ajguHfJyvTbN-nM" alt=""><figcaption>Figure 8: Entire control flow to encrypt the AES key</figcaption></figure>
+<p>After decoding of RSA public key and the initialization of a new PROV_RSA_FULL cryptographic service provider (CSP) through the <em>“CryptAcquireContextA”</em> function, the ransomware import the decoded RSA key using the <em>“CryptImportKey”</em> API. </p>
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/16qxa4HJh_NZnTiZivCiCo7w0GEnd-Z4qCEpZP7q4OIXKlTaFlaEpKdt8xiceXiBw-pkhl_l22jpzlYpTYHv6c7NMmyHEPdVUoiak1Cn47dvzSVJS5z7KYCwhJapPa6SdQC4VzU" alt=""><figcaption>Figure 9: Imported RSA key through “<em>CryptImportKey</em>” API</figcaption></figure>
+<p>The last step is the encryption routine, which is done using the “CryptEncrypt” function, as shown in the following figure.</p>
+<figure class="wp-block-image"><img src="https://lh3.googleusercontent.com/gzlHP8Ftx6FgllUnhI6eDHqfXxQiJSY617l-sQ6_fmUZ7MiEosInLg9ZGR-itdgM4JqbNYvQhfAHZWKo7eA7MkhHoR90oMIw96JY485FtVJ5H62LXJ6bczmbiswaeCmdHsRVURM" alt=""><figcaption>Figure 10: Parameters for the “CryptEncrypt” function</figcaption></figure>
+<p>A funny piece of the malware code is the Russian string used to instantiate a new mutex, “<em>kto prochtet tot sdohnet =)</em>” which means “<em>who reads will die =)</em>”.</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<figure class="wp-block-image"><img src="https://lh4.googleusercontent.com/2rpun0PKydLh9C4BbIN6bn86C47J7H37g3CdhJ-nSyI0z0UpPr6sMLGVkPYiOUt0WXgn46sUKPHximO5Xch6lSwvWHxpMFOqEuFKf9jrmh3kOzTe0eu6Yvn8SnkrRdZ1Yme7LF0" alt=""><figcaption>Figure 11: Mutex creation</figcaption></figure>
+<h2>Conclusion</h2>
+<p>The analyzed case has some features in common with most of the ransomware, including encryption scheme and the deletion of shadow copy and persistence. About the encryption scheme, the ransomware uses an AES key generated starting from an embedded Base64 seed which is converted into a byte array through CryptStringToBinaryA API. It is very common to find Ransomware relying on this library (CryptoAPI) for cryptographic task mainly for reliability and for reducing the time for development.</p>
+<p>Another interesting element is the presence of a mutex containing the string <em>“kto prochtet tot sdohnet =)”</em> in Russian language. This leads us to think that the authors could have Russian hands. Obviously, this could also be a false flag, but the Russian underground have a long tradition in such kind of cyber-crime activities: in fact, according to an <a href="https://twitter.com/antonivanovm">Anton Ivanov</a> research, senior malware analyst at<em> Kaspersky Lab,</em> even back in 2016 the Russian underground gave birth to about the 75% of the new crypto-ransomware tracked in that year, evidence of a consolidated malware writing capability.</p>
+<p>Technical details, including IoCs and Yara Rules, are available in the analysis published  the Yoroi blog.</p>
+<p><a href="https://blog.yoroi.company/research/jsworm-the-4th-version-of-the-infamous-ransomware/">https://blog.yoroi.company/research/jsworm-the-4th-version-of-the-infamous-ransomware/</a></p>
+<p><strong><!-- Error, Ad is not available at this time due to schedule/geolocation restrictions! --></strong></p>
+<p><strong><a href="http://www.linkedin.com/pub/pierluigi-paganini/b/742/559">Pierluigi Paganini</a></strong></p>
+<p><strong>(<a href="http://securityaffairs.co/wordpress/">SecurityAffairs</a> –</strong> <strong>JSWorm, malware)</strong></p>
+<p><!-- Error, Ad is not available at this time due to schedule/geolocation restrictions! --></p>
+<p><!-- Error, Ad is not available at this time due to schedule/geolocation restrictions! --> </p>
+<p><!-- Simple Share Buttons Adder (7.6.20) simplesharebuttons.com -->										</p>
+<div style="height:15px"></div>
+<p>										<br class="clear"></p>
+<hr>
+<div id="social_share_wrapper">
+<ul>
+<li>
+</li>
+<li>
+</li>
+<li>
+			<a class="pinterest_share" target="_blank" href="http://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F90811%2Fmalware%2Fjsworm-4-ransomware-analysis.html&amp;media=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2Fwp-includes%2Fimages%2Fmedia%2Fdefault.png" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="google_share" target="_blank" href="https://plus.google.com/share?url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F90811%2Fmalware%2Fjsworm-4-ransomware-analysis.html" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="linkedin_share" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F90811%2Fmalware%2Fjsworm-4-ransomware-analysis.html" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="tumblr_share" target="_blank" href="http://www.tumblr.com/share/link?url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F90811%2Fmalware%2Fjsworm-4-ransomware-analysis.html" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="email_share" target="_blank" href="mailto:?subject=JSWorm:%20The%204th%20Version%20of%20the%20Infamous%20Ransomware&amp;body=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F90811%2Fmalware%2Fjsworm-4-ransomware-analysis.html" rel="noopener noreferrer"></a>
+		</li>
+</ul>
+</div>
+<p><br class="clear"></div>
+</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+        <p class="modified small cntr" itemprop="dateModified" >Last modified: September 7, 2019</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/necs-global-facial-biometrics-program-will-solve-health-problems/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/necs-global-facial-biometrics-program-will-solve-health-problems/">Previous Story:<br/> <strong>NEC’s Global Facial Biometrics Program Will “Solve Health Problems”</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+
+
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/jsworm-the-4th-version-of-the-infamous-ransomware/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.sinister-sec.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name</label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" /></p>
+<p class="comment-form-email"><label for="email">Email</label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='124209' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d745b5a90e07"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d745b5a90e07"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d745b5aa5b18"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d745b5aa5b18"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.3'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.3'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.3'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 0.87820100784302 seconds, on 08-09-19 1:37:30 -->
