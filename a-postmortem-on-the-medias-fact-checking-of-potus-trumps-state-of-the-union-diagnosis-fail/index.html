@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146051361-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146051361-1');
+</script>
+
+<title>A postmortem on the media’s ‘fact-checking’ of POTUS Trump’s state of the union: Diagnosis FAIL &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; A postmortem on the media’s ‘fact-checking’ of POTUS Trump’s state of the union: Diagnosis FAIL Comments Feed" href="https://www.sinister-sec.com/a-postmortem-on-the-medias-fact-checking-of-potus-trumps-state-of-the-union-diagnosis-fail/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Are Congress and the White House close to a border fencing deal?' href='https://www.sinister-sec.com/are-congress-and-the-white-house-close-to-a-border-fencing-deal/' />
+<meta name="generator" content="WordPress 5.2.3" />
+<link rel="canonical" href="https://www.sinister-sec.com/a-postmortem-on-the-medias-fact-checking-of-potus-trumps-state-of-the-union-diagnosis-fail/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=128253' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fa-postmortem-on-the-medias-fact-checking-of-potus-trumps-state-of-the-union-diagnosis-fail%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fa-postmortem-on-the-medias-fact-checking-of-potus-trumps-state-of-the-union-diagnosis-fail%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-128253 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/a-postmortem-on-the-medias-fact-checking-of-potus-trumps-state-of-the-union-diagnosis-fail/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-128253 post type-post status-publish format-standard hentry category-world">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">A postmortem on the media’s ‘fact-checking’ of POTUS Trump’s state of the union: Diagnosis FAIL</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/world/" rel="category tag">World</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        September 9, 2019    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="entry clearfix">
+<div class="fcbkbttn_buttons_block" id="fcbkbttn_left">
+<div class="fcbkbttn_button">
+							<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><br />
+								<img src="https://i1.wp.com/thenationalsentinel.com/wp-content/plugins/social-buttons-pack/facebook-button-plugin/images/standard-facebook-ico.png?w=620&amp;ssl=1" alt="Fb-Button" data-recalc-dims="1"></a>
+						</div>
+<div class="fcbkbttn_like "></div>
+<div class="fb-share-button  " data-href="https://thenationalsentinel.com/2019/02/08/a-postmortem-on-the-medias-fact-checking-of-potus-trumps-state-of-the-union-fail/" data-type="button_count" data-size="small"></div>
+</div>
+<p><em>By J. D. Heyes</em></p>
+<p>When the so-called “mainstream media” (MSM) created the concept of ‘fact-checking’ it at least seemed admirable on the surface and, for that matter, a job that was naturally suited to a free press charged with comforting the afflicted and holding those in power to account.</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<p>But after some years it’s become obvious that the MSM was <a href="https://www.newstarget.com/2018-04-30-corporate-run-news-media-really-is-enemy-of-the-people.html">never really interested</a> in checking facts — that is, not <i>all</i> facts espoused by <i>all</i> people in power.</p>
+</p>
+<p>Democrats don’t get fact-checked, at least <a href="https://www.usnews.com/opinion/blogs/peter-roff/2013/05/28/study-finds-fact-checkers-biased-against-republicans">not with the same ‘vengeance’</a>the MSM reserves for Republicans and conservatives…and POTUS Donald Trump. While our president does, at times, stretch the truth or even get details wrong, at least he hasn’t looked all of us in the eye and told us things like, “If you like your health care plan, you can keep it,” and “We’re going to lower your premiums by $2,500 a year.”</p>
+<p>Needless to say, within minutes after POTUS Trump began his State of the Union Address Tuesday, the Lefty MSM had its ‘fact-checkers’ hard at work looking to hold the president accountable for virtually every syllable. (Related: <a href="https://thenationalsentinel.com/2019/02/06/massive-hit-trumps-state-of-the-union-address-scores-76-percent-approval-in-post-speech-survey/">MASSIVE hit: Trump’s State of the Union Address scores 76 percent approval in post-speech survey</a>.)</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+</p>
+<p>As noted by the <a href="https://www.washingtonexaminer.com/opinion/fact-checking-is-broken-the-petty-pedantic-pointless-picking-at-trumps-state-of-the-union"><i>Washington Examiner</i></a>, much of what passed for MSM fact-checking was “petty, pedantic, and pointless,” meaning that “the fact check is dead.”</p>
+<p>Writing for the news site, Becket Adams acknowledged that the president got some things wrong, but that isn’t very surprising since the address “wasn’t exactly a smorgasbord of falsehoods, either.”</p>
+<p>As such, the MSM fact-Nazis “be-clowned themselves” with inane claims like, essentially, ‘Jews don’t believe in Heaven.’ At one point, the president introduced a Holocaust survivor, Joshua Kaufman, who was interned at the horrific Dachau concentration camp. POTUS said that Kaufman recalled watching American tanks roll in through a hole in a cattle car where he was being held. “To me,” Joshua recalls, “the American soldiers were proof that God exists, and they came down from the sky. They came down from Heaven.”</p>
+<li><b><i>Deal: <a href="https://shareasale.com/r.cfm?b=342771&amp;u=1265227&amp;m=36800&amp;urllink=www%2Elegacyfoodstorage%2Ecom%2Fproducts%2Fdeluxe%2D2%2Dperson%2Dbug%2Dout%2Dbag&amp;afftrack=">This complete two-person Bugout Bag is all you need to survive</a></i></b>
+<p>Don’t ever mention, as president, Heaven while introducing a Jewish guest — while <i>The New York Times</i>’ Annie Karni is ‘fact-checking.’ “Jews don’t believe in Heaven,” <a href="https://twitter.com/anniekarni/status/1092987404758208514?s=19">she tweeted</a>.</p>
+<p>Except <a href="https://jewsforjudaism.org/knowledge/articles/belief-in-heaven-is-fundamental-to-judaism/">that they do</a>.<span class="Apple-converted-space"> </span></p>
+<p>Meanwhile, <i>Politico</i>’s brainiac fact-checker <a href="https://twitter.com/politico/status/1093001428900237312">dinged the president</a> for claiming that “one-in-three [female migrants] is sexually assaulted on the long journey north.”</p>
+<p>Nuh-uh! It’s <i>31 percent</i>; one-in-three is <i>33.3 </i>percent! Trump lied by 2.3 percent!</p>
+<p>Then <em>National Public Radio</em> sort of, kind of, not really “fact-checked” POTUS when he said that “exactly one century after Congress passed the constitutional amendment giving women the right to vote, we also have more women serving in Congress than at any time.”</p>
+<p><ins class="Adsbygoogle" data-ad-layout="In-Article" data-ad-format="Fluid" data-ad-client="Ca-Pub-8193958963374960" data-ad-slot="4302732352"></ins> </p>
+<p><i>That’s true</i>. But NPR posted this in response: “FACT CHECK: President Trump praised the record number of women in Congress, but that’s almost entirely because of Democrats, not Trump’s party.” So what? That’s not fact-checking, that political statement-making. And it’s petty.</p>
+<p><a href="https://www.breitbart.com/the-media/2019/02/06/nolte-the-medias-9-worst-fact-checks-of-trumps-state-of-the-union/"><i>Breitbart News</i></a>’ John Nolte found nine instances where the media fact-checkers were not just off-base, but ridiculously so, compiling a “series of tedious nit-picks” as their sources of presidential ‘fibbing.’</p>
+<p>For example, <i>The New York Times</i> rated as “false” the president’s description of the illegal border crossings and other activities as a “national emergency.”</p>
+<div id="ld-8620-9820"></div>
+</p>
+<p>False?</p>
+<blockquote class="twitter-tweet" data-width="550" data-dnt="true">
+<p lang="en" dir="ltr">Fact Check: President Trump&#8217;s State of the Union address: <a href="https://t.co/HAKTVMZfQu">https://t.co/HAKTVMZfQu</a> <a href="https://t.co/U8MYNFE7ta">pic.twitter.com/U8MYNFE7ta</a></p>
+<p>— The New York Times (@nytimes) <a href="https://twitter.com/nytimes/status/1092978709932457984?ref_src=twsrc%5Etfw">February 6, 2019</a></p>
+</blockquote>
+<p>NYTimes fact-checkers don’t get to decide such things; presidents do. It’s in the law. It’s in the Constitution. But even so, the paper went on to admit that, yeah, “a record number of families have tried to cross the border in recent months” — which has become a national emergency.<span class="Apple-converted-space"> </span></p>
+<p>There are many more, but you get the idea. The point is, as Becket Adams noted, fact-checking is indeed broken; the nitpicking and petulance demonstrated by the MSM fact-Nazis was the stuff of haters, not journalists who are serious about informing the public of what’s truly important regarding the state of the union.</p>
+</p>
+<p><strong><em>Never miss a story! Sign up for our daily email newsletter — </em></strong><strong><em><a href="http://eepurl.com/b9fn3D">Click here</a></em></strong><strong><em>!</em></strong> </p>
+<hr></li>
+</div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+        <p class="modified small cntr" itemprop="dateModified" >Last modified: September 9, 2019</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/epa-aims-to-weaken-radiation-regulations-as-fcc-gives-telecoms-2b-to-install-5g-everywhere/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/epa-aims-to-weaken-radiation-regulations-as-fcc-gives-telecoms-2b-to-install-5g-everywhere/">Previous Story:<br/> <strong>EPA Aims to Weaken Radiation Regulations As FCC Gives Telecoms $2B To Install 5G Everywhere</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d771556da85b"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d771556da85b"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d771556f28f1"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d771556f28f1"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.3'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.3'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.3'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 0.69059300422668 seconds, on 10-09-19 3:15:34 -->
