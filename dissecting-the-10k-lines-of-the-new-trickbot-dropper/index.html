@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.sinister-sec.com/xmlrpc.php">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146051361-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146051361-1');
+</script>
+
+<title>Dissecting the 10k Lines of the new TrickBot Dropper &#8211; Sinister Security</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Feed" href="https://www.sinister-sec.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Comments Feed" href="https://www.sinister-sec.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sinister Security &raquo; Dissecting the 10k Lines of the new TrickBot Dropper Comments Feed" href="https://www.sinister-sec.com/dissecting-the-10k-lines-of-the-new-trickbot-dropper/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sinister-sec.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.sinister-sec.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-style-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/styles/font-awesome.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-mobile-css'  href='https://www.sinister-sec.com/wp-content/themes/story-magazine/style-mobile.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='story-magazine-fonts-css'  href='//fonts.googleapis.com/css?family=Libre+Franklin%3A400%2C400i%2C700%7CMerriweather%3A300%2C400%2C700%2C400i%7CMontserrat%3A400%2C500%2C600%2C700%26subset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.sinister-sec.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sinister-sec.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sinister-sec.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='The Wolcott school district suffered a second ransomware attack in 4 months' href='https://www.sinister-sec.com/the-wolcott-school-district-suffered-a-second-ransomware-attack-in-4-months/' />
+<meta name="generator" content="WordPress 5.2.3" />
+<link rel="canonical" href="https://www.sinister-sec.com/dissecting-the-10k-lines-of-the-new-trickbot-dropper/" />
+<link rel='shortlink' href='https://www.sinister-sec.com/?p=134048' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fdissecting-the-10k-lines-of-the-new-trickbot-dropper%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sinister-sec.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sinister-sec.com%2Fdissecting-the-10k-lines-of-the-new-trickbot-dropper%2F&#038;format=xml" />
+      <!--Customizer CSS--> 
+      <style type="text/css">
+	  
+	  
+           	  
+           #header,.nav li ul,#fixed-nav { background-color:#ffd439; }.nav a { color:#000000; }#titles p { color:#8c8c8c; } 
+		   
+		    
+		   
+		   
+            
+      </style> 
+      <!--/Customizer CSS-->
+      <link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.sinister-sec.com/wp-content/uploads/2018/05/cropped-favicon-256x256-270x270.png" />
+</head>
+
+     
+<body class="post-template-default single single-post postid-134048 single-format-standard wp-custom-logo">
+
+<div class="postbar ">
+        
+    <div id="header" class="clearfix" itemscope itemtype="http://schema.org/WPHeader">
+    
+    	<div class="head-bg-image"><img src="" height="100" width="1200" alt="" /></div>
+    
+        <div class="container container_alt">
+            
+            <div id="titles">
+                <a href="https://www.sinister-sec.com/" class="custom-logo-link" rel="home"><img width="300" height="111" src="https://www.sinister-sec.com/wp-content/uploads/2019/08/Logo.png" class="custom-logo" alt="Sinister Security" /></a>                            </div><!-- end #titles  -->
+
+            
+    
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav-left" class="nav tmnf_custom_menu"><li id="menu-item-32911" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32911"><a href="https://www.sinister-sec.com/tag/politics/">Politics</a></li>
+<li id="menu-item-32912" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32912"><a href="https://www.sinister-sec.com/tag/technology/">Technology</a></li>
+<li id="menu-item-32913" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32913"><a href="https://www.sinister-sec.com/tag/mysteries/">Mysteries</a></li>
+<li id="menu-item-75779" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75779"><a href="https://www.sinister-sec.com/tag/science/">Science</a></li>
+</ul><ul id="main-nav-right" class="nav tmnf_custom_menu"><li id="menu-item-30399" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30399"><a href="https://www.sinister-sec.com/tag/space/">Space</a></li>
+<li id="menu-item-30400" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30400"><a href="https://www.sinister-sec.com/tag/ancient/">Ancient</a></li>
+<li id="menu-item-75796" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-75796"><a href="https://www.sinister-sec.com/tag/health/">Health</a></li>
+<li id="menu-item-30402" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-30402"><a href="https://www.sinister-sec.com/tag/news/">News</a></li>
+</ul>                
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </nav><!-- end #navigation  -->
+              
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+    
+	<div class="wrapper">
+  
+    
+      
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="https://www.sinister-sec.com/dissecting-the-10k-lines-of-the-new-trickbot-dropper/"/>
+
+<div id="core" class="container">
+   
+    <div class="postbar">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="item normal tranz p-border post-134048 post type-post status-publish format-standard hentry category-world">
+
+	<div class="post-head">
+
+        <h1 class="entry-title" itemprop="headline"><span itemprop="name">Dissecting the 10k Lines of the new TrickBot Dropper</span></h1>
+        
+          				
+		    
+	<p class="meta cat rad tranz ribbon">
+		<a href="https://www.sinister-sec.com/category/world/" rel="category tag">World</a>    </p>
+    	
+    </div>
+    
+                  
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border">
+            
+                
+	<p class="meta author tranz"> 
+        <img alt='' src='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=22&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=44&#038;d=identicon&#038;r=g 2x' class='avatar avatar-22 photo' height='22' width='22' /><span>Written by: <a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span>    </p>
+    
+        
+	<p class="meta date tranz post-date"> 
+        September 13, 2019    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            </p>
+<div class="post_wrapper_inner">
+<div class="post_inner_wrapper">
+<h2>Malware researchers at Yoroi-Cybaze analyzed the TrickBot dropper, a threat that has infected victims since 2016.</h2>
+<h2>Introduction</h2>
+<p><strong><a href="https://securityaffairs.co/wordpress/90508/malware/trickbot-targets-us-mobile-users.html">TrickBot</a></strong><a href="https://securityaffairs.co/wordpress/90508/malware/trickbot-targets-us-mobile-users.html"> </a>it is one of the best known Banking Trojan which has been infecting victims since 2016, it is considered a cyber-crime tool. But nowadays defining it a “Banking Trojan” is quite reductive: during the last years its modularity brought the malware to a higher level. In fact it can be considered a sort of <strong>malicious implant</strong> able to not only commit bank-related crimes, but also providing tools and mechanism for advanced attackers to penetrate within company networks. For instance, it has been used by several gangs to inoculate <strong><a href="https://securityaffairs.co/wordpress/90848/cyber-crime/new-bedford-ryuk-ransomware.html">Ryuk</a></strong><a href="https://securityaffairs.co/wordpress/90848/cyber-crime/new-bedford-ryuk-ransomware.html"> ransomware</a> within the core servers infrastructure, leading to severe outages and business interruption (e.g. the <a href="https://www.confsoft.it/attacco-hacker-azienda-in-tilt-non-paghiamo/">Bonfiglioli case</a>).</p>
+<p>In this report, we analyzed one of the recently weaponized Word documents spread by <a href="https://securityaffairs.co/wordpress/81264/malware/trickbot-malware-evolves.html">TrickBot </a>operators all around the globe. Revealing an interesting dropper composed by several thousand highly obfuscated Lines of Code and abusing the so-called ADS (Alternate Data Stream).</p>
+<h2>Technical Analysis</h2>
+<table class="wp-block-table">
+<tbody>
+<tr>
+<td><strong>Hash</strong></td>
+<td>07ba828eb42cfd83ea3667a5eac8f04b6d88c66e6473bcf1dba3c8bb13ad17d6</td>
+</tr>
+<tr>
+<td><strong>Threat</strong></td>
+<td>Dropper</td>
+</tr>
+<tr>
+<td><strong>Brief Description</strong></td>
+<td>TrickBot document dropper</td>
+</tr>
+<tr>
+<td><strong>Ssdeep</strong></td>
+<td>1536:KakJo2opCGqSW6zY2HRH2bUoHH4OcAPHy7ls4Zk+Q7PhLQOmB:3oo2hNx2Z2b9nJcAa7lsmg5LQOmB</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1. Sample’s information</p>
+<p>Once opened, the analyzed Word document reveals its nature through an initial, trivial, trick. The attacker simply used a white font to hide the malicious content from the unaware user (and from the endpoint agents). Just changing the font foreground color unveils some dense JavaScript code. This is code will be executed in the next stages of the infection chain, but before digging the JavaScript code, we’ll explore the macro code embedded into the malicious document.</p>
+<figure class="wp-block-image"><img src="https://lh3.googleusercontent.com/o9pnJtPU07kbFS3NSri2G0gBBcxYoPEAHa2_LVhyvd8oC6lSCt5-lcKciLx2DGpRUSqu_zAINc4eRICS7uPjPU1fJiwp9UYTbYCzN2rkSMyUOLRsvKsG5JqIniOtJRZu3D694Gs" alt=""><figcaption>Figure 1. Content of Word document</figcaption></figure>
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/sbT8K3tfj_cK30Xurd09ROf2RRNZ4ZcatHHG1RIxz78Je_MKsg0yHSKDSZI6Rs98Cc5GUf87nIGkKZMZ4M6e517Me4-dLTjmII9YpLGfwmG4HyGa_Bp3eZ7XE401TSr3H2aNJ_c" alt=""><figcaption>Figure 2. Unveiled content of Word document</figcaption></figure>
+<p>The <em>“Document_Open()” </em>function (Figure 3) is automatically executed after the opening of the Word document. It retrieves the hidden document content through the “Print #StarOk, ActiveDocument.Content.Text” statement and writes a copy of it into the <em>“%AppData%MicrosoftWordSTARTUPstati_stic.inf</em><strong><em>:com1</em></strong><em>” local file</em>. </p>
+<div class="wp-block-image">
+<figure class="aligncenter is-resized"><img src="https://lh5.googleusercontent.com/PbS05WDojUCcdwHgswLLQ89edDNqk8QoHkvzdqM0UYBk_VcmdlgGDKHGKr3RFD75KkzRdeuy6bnMxRetvtlgA-Ue3kx1jbAC2sViXK547uER-shC5lzFMGoeJfM4fixdFyRp8l0" alt="" width="473" height="478"><figcaption>Figure 3. Macro code embedded in the malicious document</figcaption></figure>
+</div>
+<p>Exploring the folder <em>“WordSTARTUP”</em> we noticed the “stati_stic.inf” file counts zero bytes. Actually, the dropper abused an old Windows File System feature, known as “<em>Alternate Data Stream</em>” (ADS), to hide its functional data in an unconventional stream. A known techniques, T1096 on Mitre Att&amp;ck framework, can be simply used by concatenating the colon operator and the stream name to the filename during any writing or reading operation. So, we extracted the content of the stream through a simple Powershell command.</p><div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<figure class="wp-block-image"><img src="https://lh4.googleusercontent.com/_Ba4xANxe67IyPASNq212e9p0o8_ZsEBqQf_8X-HnV3KbBBsKBABQWpAw8p1TWEtt-SDSK9912HAvi0501wou4SoMGEl5mocTnZErrAVndIgzKAr25YspjZes3JUmBLJkn8-sT0" alt=""><figcaption>Figure 4. Use of Alternate Data Stream to hide the payload</figcaption></figure>
+<p>The extracted payload is the initial Word document hidden content. The malicious control flow resumes with the <em>“Document_Close()” </em>function, in which the <em>“StripAllHidden()”</em> function is invoked. This routine deletes all the hidden information embedded into the document by the attacker, probably with the intent to hide any traces unintentionally embedded during the development phase. Its code has probably been borrowed from some public snippets such as the one included at the <a href="https://wordribbon.tips.net/T012438_Protecting_Hidden_Text.html">link</a>. </p>
+<p>After that, the macro code executes the data just written into the <em>“com1”</em> data stream. Since the stream contains JavaScript code, it will be executed through WScript utility using the following instructions:</p>
+<ol>
+<li>CallByName <strong>CreateObject</strong>(“wS” &amp; Chri &amp; “Ript.She” &amp; Ja), “Run”, VbMethod, <strong>Right</strong>(<strong>Right</strong>(“WhiteGunPower”, 8), Rule) &amp; “sHe” &amp; Ja &amp; ” wS” &amp; Chri &amp; “RipT” &amp; GroundOn, 0</li>
+</ol>
+<p>Which, after a little cleanup, becomes:</p>
+<ol>
+<li>CallByName <strong>CreateObject</strong>(“wScript.Shell”), “Run”, VbMethod, “powershell wscript /e:jscript “c:usersadminappdataroamingmicrosoftwordstartupstati_stic.inf:com1””, 0</li>
+</ol>
+<h3>The JavaScript Dropper</h3>
+<p>Now, let’s take a look at the JavaScript code. It is heavily obfuscated and uses randomization techniques to rename variable names and some comments, along with chunks of junk instructions resulting in a potentially low detection rate.</p>
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/NxlqcqX25jw15peF83k9BDxgX2H0OFPI-BhAiJeK30n8iDyy0P8wGXH2RTkE_x8twDJbPKt0V7_ACA_wpzmjLhaoURO2NCfzCNwJNoOCGweC5hWUcdIpnFx0jk85PXZw8SqZkyU" alt=""><figcaption>Figure 5. Example of the sample detection rate</figcaption></figure>
+<p>At first glance, the attacker purpose seems fulfilled. The script is not easily readable and appears extremely complex: almost 10 thousand lines of code and over 1800 anonymous function declared in the code.</p>
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/ytCzZQymA7sT9t7bHFYQwQcM9oPiSqLVHABhc7U5OfKO7IgZM3NqL1eG49UNeOd6PMEv7wjEPClkeKfM-lZy7QVw1CJW1m5gZLIHWXHN1uSJVMFmNTJ1bKTewsB7P__1k9Z1eXI" alt=""><figcaption>Figure 6. Content of the JavaScript file</figcaption></figure>
+<p>But after a deeper look, two key functions, named <em>“jnabron00”</em> and <em>“jnabron”, </em>emerge. These functions are used to obfuscated every comprehensible character of the script. The first one, <em>“jnabron00”</em>, is illustrated in the following figure: it returns always zero value.   </p>
+<figure class="wp-block-image"><img src="https://lh6.googleusercontent.com/EXebFoI6t-Zb7skp1FjSxHUwQ_Mfo7mWL-647sUEyH010-wduQuRvgr9wIfjI3aHd-bciJE4rWlc7vIj6UKyCc1KfJInlGKP2FTeZXw-jrTMNwmO9xMiezUNScQ74Y5JZThMaUE" alt=""><figcaption>Figure 7. Function used to obfuscate the code</figcaption></figure>
+<p>The other one, <em>“jnabron”</em>, is invoked with two parameters: an integer value (derived from some obfuscated operations) and a string which is always “Ch”.</p>
+<ol>
+<li><strong>jnabron</strong>(102, ‘Ch’)</li>
+</ol>
+<p>The purpose of this function is now easy to understand: it returns the ASCII character associated with the integer value through the<em> “String.fromCharCode”</em> JS function. Obviously, once again, to obfuscate the function internals the attacker included many junk instructions, as reported in Figure 9.</p>
+<figure class="wp-block-image"><img src="https://lh6.googleusercontent.com/6EGq-X0oXRt-WIHRrcpd-i42KhPok90oHXGXXRARNrUJshSHZIis05vu_Rq1xCJhFhT6_q3uSZGivlbPe5u1jOXfBvtQopkgDH4fO3rlKPPGpMrBCjOMfPEUBzCD0kPoPLN1_QE" alt=""><figcaption>Figure 8. Another function used to obfuscate the code</figcaption></figure>
+<p>Using a combination of the two functions, the script unpack its real instructions, causing a tedious work to the analyst who has to understand the malicious intents of the script. As shown in the following figure, tens of code lines result in a single instruction containing the real value will be included in the final script.</p>
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/aDzsYpGqKW21UUqxDkaejx5l7kx-1YDh15o_ZShyLZOGLmpoLUcSil6OvA1oLyUW3NTGnD_i2rsUkKmeUCssRXE6ctjRuVylbZ-qxHzmW9jzMLMVHXn2FIwtE0d20pN573A27uU" alt=""><figcaption>Figure 9. Example of de-obfuscation process</figcaption></figure>
+<p>After a de-obfuscation phase, some useful values are visible, such as the C2 address, the execution of a POST request, and the presence of Base64-encoded data.</p>
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/O0S60jlCYHhCqOcZTIMcBfeJKfsR0MFQ0G7lG7mcC_A5usBzmA0dEabQVAjCZy7vTovrQyvqxPPMEJ2Z6UAQz0QGY45Fv-NPwL911_QhcMK9Pl3GTjAMxo9MphhAEc2TRAwVe8k" alt=""><figcaption>Figure 10. C2 checkin code</figcaption></figure>
+<p>Analyzing this hidden control flow we discover the first action to be performed is the gathering of particular system information.  This is done through the WMI interface, specifying a particular WQL query and invoking the <em>“ExecQuery” </em>function to retrieve:</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2109552235"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<ul>
+<li>Info about Operating System</li>
+<li>Info about machine</li>
+<li>Info about current user</li>
+<li>List of all active processes</li>
+</ul>
+<figure class="wp-block-image"><img src="https://lh3.googleusercontent.com/g82xyipZust72FN4QHEoArQWUqcqfVJuNBlcm3JoJHL-qhH51k83IQxPm0miauANpEWSl_FBTfci3eTjVIQ_AT1-fmTBDHDe_qZfxKlqcvpi4BgfaKV2J2AlT7NLEklk9c519Wc" alt=""><figcaption>Figure 11. Code used to extract information about system</figcaption></figure>
+<p>These information are then sent to the command and control server during the check-in phase of the Javascript loader, along with the list of running processes.</p>
+<figure class="wp-block-image"><img src="https://lh3.googleusercontent.com/yoJwr3ejMMtxmXPRqh4javl6PaGmYJNZJ3_L8dI-fU8_TGVatP0jPL1mlD73xvhJhVLWh6mPQP27b_bLUeQPtQKkfk4wOXrMCkcHUNKvyorbGgOQDbFq27skNvADnd71ZtRFT-8" alt=""><figcaption>Figure 12. Network traffic</figcaption></figure>
+<p>Moreover, the script is able to gather a list of all files which have one of the extensions chosen by the attacker: PDF files, Office, Word and Excel documents. The result of this search is then written on a local file into the <em>“%TEMP%”</em> folder, and later uploaded to the attacker infrastructure.</p>
+<figure class="wp-block-image"><img src="https://lh4.googleusercontent.com/OGjT7aDNzZbDO7Z2-bnWDJQIv-1Zd6kdrDUbuAb3YIgCX4XOVy3zNCPOgLn6N56T4NxUZo0Ivp9j0yYVkBHlPS59W7yQbq7knvMIKwIzIpLmXZ2ktzLSnBthGl8IZ1rFmZ3bPuM" alt=""><figcaption>Figure 13. Code to extract absolute paths from specific file types</figcaption></figure>
+<h2>Conclusion</h2>
+<p>TrickBot is one of the most active Banking Trojan today, it is considered to be part of Cyber Crime arsenal and it is still under development. The malware, first appeared in 2016, during the last years adds functionalities and exploit capabilities such as  the infamous SMB Vulnerability (MS17-010) including <em>EthernalBlue</em>, <em>EthernalRomance </em>or <em>EthernalChampion</em>.</p>
+<p>The analyzed dropper contains a highly obfuscated JavaScript code counting about 10 thousand Lines of Code. This new infection chain structure represents an increased threat to companies and users, it can achieve low detection rates enabling the unnoticed delivery of TrickBot payload, which can be really dangerous for its victims: just a few days, or even a few hours in some cases, of active infection could be enough to propagate advanced ransomware attacks all across the company IT infrastructure. </p>
+<p>Technical details, including IoCs and Yara Rules, are available in the analysis published  the Yoroi blog. </p>
+<p><a href="https://blog.yoroi.company/research/dissecting-the-10k-lines-of-the-new-trickbot-dropper/">https://blog.yoroi.company/research/dissecting-the-10k-lines-of-the-new-trickbot-dropper/</a> </p>
+<table class="wp-block-table">
+<tbody>
+<tr>
+<td>       </td>
+<td>
+  <!-- Error, Ad is not available at this time due to schedule/geolocation restrictions! -->
+  </td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.linkedin.com/pub/pierluigi-paganini/b/742/559"><strong>Pierluigi Paganini</strong></a></p>
+<p><strong>(</strong><a href="http://securityaffairs.co/wordpress/"><strong>SecurityAffairs</strong></a><strong> –</strong> <strong>Trickbot, malware)</strong></p>
+<p><!-- Error, Ad is not available at this time due to schedule/geolocation restrictions! --></p>
+<p><!-- Error, Ad is not available at this time due to schedule/geolocation restrictions! --><br />
+<!-- Simple Share Buttons Adder (7.6.20) simplesharebuttons.com -->										</p>
+<div style="height:15px"></div>
+<p>										<br class="clear"></p>
+<hr>
+<div id="social_share_wrapper">
+<ul>
+<li>
+</li>
+<li>
+</li>
+<li>
+			<a class="pinterest_share" target="_blank" href="http://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F91116%2Fmalware%2Fdissecting-trickbot-dropper.html&amp;media=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2Fwp-includes%2Fimages%2Fmedia%2Fdefault.png" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="google_share" target="_blank" href="https://plus.google.com/share?url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F91116%2Fmalware%2Fdissecting-trickbot-dropper.html" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="linkedin_share" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F91116%2Fmalware%2Fdissecting-trickbot-dropper.html" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="tumblr_share" target="_blank" href="http://www.tumblr.com/share/link?url=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F91116%2Fmalware%2Fdissecting-trickbot-dropper.html" rel="noopener noreferrer"></a>
+		</li>
+<li>
+			<a class="email_share" target="_blank" href="mailto:?subject=Dissecting%20the%2010k%20Lines%20of%20the%20new%20TrickBot%20Dropper&amp;body=https%3A%2F%2Fsecurityaffairs.co%2Fwordpress%2F91116%2Fmalware%2Fdissecting-trickbot-dropper.html" rel="noopener noreferrer"></a>
+		</li>
+</ul>
+</div>
+<p><br class="clear"></div>
+</p></div>
+<div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+<div class="postinfo p-border">    
+
+        <p class="modified small cntr" itemprop="dateModified" >Last modified: September 13, 2019</p>
+	
+<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="https://www.sinister-sec.com/how-low-cholesterol-can-harm-your-health/"><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="https://www.sinister-sec.com/how-low-cholesterol-can-harm-your-health/">Previous Story:<br/> <strong>How LOW Cholesterol Can Harm Your Health</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="https://www.sinister-sec.com/author/0x000216/" title="Posts by 0x000216" rel="author">0x000216</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            
+            	<img src="https://secure.gravatar.com/avatar/9ace94534c4ce6ee116477d9786cbd2e?s=96&#038;d=identicon&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" /> 
+				
+            </div>
+            
+ 			<div class="authordesc">I Am Activist, Developer, Hacker &amp; Free Thinking Supporter I Dedicated My Life  To Foster The Creation And Expansion Of Freedom &amp; Liberty.i Feel That The Internet Has Given Way To A Revolution Of Consciousness By Providing For The Massive And Instantaneous Exchange Of Information Across The Globe.</div>
+            
+		</div>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="p-border">
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+</div><!-- #comments -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        
+	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="sidele ghost">
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d7c70a139bcc"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d7c70a139bcc"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Vertical Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="2526045703"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><div class="lowerbar section" id="lowerbar1"><div class="widget HTML" data-version="1" id="HTML7">
+	<center><h5 style="color:#141414; center;" class="title">About Us</h5></center>
+<div class="widget-content">
+<h3 style="color:#141414;font-size: 36px;font-weight: 600;text-align: center;">World<span style="color: #FFD439;">Truth</span></h3>
+<p>News And Reports On Consumer Technology Breakthroughs And Shows You What's New On Serious Current News To Get The Most Out Of The Tech In Your Life.</p>
+<center>
+<div id="footer-social-icons">
+<a href="https://www.facebook.com/WorldTruthNews" title="Facebook" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/WorldTruthNews" title="Twitter" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-twitter"></i></a>
+<a href="https://plus.google.com/u/0/+WorldTruthNews" title="Google Plus" target="_blank" rel="nofollow noopener noreferrer"><i class="fa fa-google-plus"></i></a>
+</div></center>
+</div>
+<center>
+<style>
+#footer-social-icons a {
+background: #FFD439;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+margin: 0 1px 6px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+}
+#footer-social-icons a:hover{
+background: #2e2e2e;
+}
+.list-label-widget-content li a {
+position: relative;
+display: block;
+background-color: #f7f7f7;
+margin-bottom: 5px;
+padding: 10px;
+font-size: 0.875rem;
+text-transform: capitalize;
+color: #777;
+}
+.list-label-widget-content li a:before {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #E6E6E6;
+position: absolute;
+top: 13px;
+right: 7px;
+}
+</style>
+</center>
+</div></div></div></div><div class="widget_text sidele ghost"><div class="textwidget custom-html-widget"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Square Sec -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3987358164777632"
+     data-ad-slot="7798553682"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+    </div><!-- /.container -->
+    
+        <div class="footer-icons ghost p-border"><ul class="social-menu">
+
+<li class="sprite-facebook">
+	<a title="Facebook" href="https://www.facebook.com/WorldTruthNews"><i class="fa fa-facebook-official"></i><span>Facebook</span></a>
+</li>
+<li class="sprite-twitter">
+	<a title="Twitter" href="https://twitter.com/WorldTruthNews"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+</li>
+<li class="sprite-google">
+	<a title="Google+" href="https://plus.google.com/u/0/+WorldTruthNews"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</li>
+
+
+
+
+<li class="searchicon"><a class="searchOpen" href="#" ><i class="fa fa-search"></i></a></li>
+
+</ul></div>
+    
+        <div id="footer">
+        
+            <div class="container woocommerce"> 
+            
+                
+       	        
+        
+                
+        
+                
+        
+                        
+            </div>
+                <div class="clearfix"></div>
+                
+            <div id="copyright">
+                
+                <div class="container">
+                    
+                    <ul id="menu-footer" class="bottom-menu"><li id="menu-item-30405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-30405"><a href="https://www.sinister-sec.com">Home</a></li>
+<li id="menu-item-30412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30412"><a href="https://www.sinister-sec.com/blog-page/">TERMS OF SERVICE</a></li>
+<li id="menu-item-30413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-30413"><a href="https://www.sinister-sec.com/privacy-policy/">PRIVACY POLICY</a></li>
+<li id="menu-item-75784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75784"><a href="#"><a href="mailto:cybergeeknews@gmail.com">Contact Us</a></a></li>
+<li id="menu-item-75794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75794"><a href="https://www.sinister-sec.com/75780-2/">About Us</a></li>
+</ul>                    
+                    <div id="footer-text" class="site-info">
+                        
+	<span class="credit-link">
+		Powered by <a href="https://wordpress.org" title="WordPress">WordPress</a> and <a href="https://wpmasters.org/" title="Story Magazine Theme">Story Magazine</a>.	</span>
+
+	                    </div><!-- .site-info -->
+                          
+                </div> 
+            
+            </div>
+                
+        </div><!-- /#footer  -->
+        
+    </div><!-- /.wrapper  -->
+
+</div><!-- /.postbar  -->
+
+<div id="curtain" class="tranz">
+	
+	
+
+<form class="searchform" role="search" method="get" class="search-form" action="https://www.sinister-sec.com/">
+	<label for="search-form-5d7c70a14e574"><span class="screen-reader-text">Search for:</span></label>
+	<input type="search" id="search-form-5d7c70a14e574"  class="s rad p-border" placeholder="Search &hellip;" value="" name="s" />
+	<button type="submit" class="searchSubmit ribbon"><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon">
+
+    <a title="Scroll To Top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/jquery-scrolltofixed.js?ver=5.2.3'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-content/themes/story-magazine/js/ownScript.js?ver=5.2.3'></script>
+<script type='text/javascript' src='https://www.sinister-sec.com/wp-includes/js/wp-embed.min.js?ver=5.2.3'></script>
+
+</body>
+</html><!-- WP Fastest Cache file was created in 0.65173196792603 seconds, on 14-09-19 4:46:25 -->
